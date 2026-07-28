@@ -4,14 +4,14 @@ build-backend = "hatchling.build"
 
 [project]
 name = "odu-core"
-version = "0.1.0"
+version = "1.0.0"
 description = "The 256 Odù Ifá as a canonical byte mapping, with Yorùbá orthography intact."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 keywords = ["odu", "ifa", "yoruba", "binary", "heritage-computing", "encoding"]
 classifiers = [
-  "Development Status :: 3 - Alpha",
+  "Development Status :: 4 - Beta",
   "Intended Audience :: Developers",
   "Intended Audience :: Education",
   "License :: OSI Approved :: MIT License",

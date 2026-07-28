@@ -35,9 +35,33 @@ Three things came out of it worth keeping:
 The tradition label is now `southwestern-yoruba`, Bascom's own term, rather
 than the vaguer `yoruba-nigerian`. Spec bumped to `1.0.0`.
 
-## Still blocked on a physical source
+## Also done (2026-07-28)
 
-### Enter real verses — `0 verses`
+| | |
+|---|---|
+| Corpus | 36 sourced verse citations, 19 attested compound names, 4 sources |
+| Phase 4 | `odu_core.generative` + `site/art.html` — 256 figures drawn and playable |
+| CI | `.githooks/pre-commit` active; `.github/workflows/ci.yml` ready for a remote |
+| Phase 5 | Three full scripts in `docs/scripts/`, plan in `docs/content-plan.md` |
+| Packaging | Both packages at 1.0.0, tracking the data spec. `RELEASING.md`. Not published. |
+
+## Still open
+
+### Push to a remote
+Deferred by choice — staying local for now. CI activates the moment there is
+one. This remains the only single point of failure: nine commits, one machine.
+
+### Publish the packages
+Prepared but not run, per the local-only decision. See `RELEASING.md` for the
+checklist and the two open questions (npm scope, PyPI name availability).
+
+### The remaining 221 compound names
+19 of 240 are sourced from Bascom's contents. The rest stay `null`. More would
+come from the same pass through pp. 140–563, or from Abimbola.
+
+### Verses themselves — still `0`
+
+#### Why they are still zero
 
 Cannot be done from the internet. No public-domain or openly-licensed ẹsẹ Ifá
 corpus exists; every collection found is commercial and in copyright. The

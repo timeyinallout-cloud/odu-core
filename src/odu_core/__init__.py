@@ -27,7 +27,7 @@ from .orthography import is_normalized, normalize, to_ascii
 from .seniority import TRADITION, by_seniority, senior_of, seniority_rank
 from .types import Mark, Odu, PrincipalOdu
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 __all__ = [
     "Mark",

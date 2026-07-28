@@ -1,6 +1,6 @@
 {
   "name": "@odu/core",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "The 256 Od\u00f9 If\u00e1 as a canonical byte mapping, with Yor\u00f9b\u00e1 orthography intact.",
   "type": "module",
   "main": "./dist/index.js",
@@ -28,5 +28,12 @@
     "build": "../node_modules/.bin/tsc && node scripts/fix-decl-extensions.mjs",
     "test": "node --test \"test/*.test.js\"",
     "check": "../node_modules/.bin/tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timeyin/odu-core"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
