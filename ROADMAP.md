@@ -55,9 +55,38 @@ one. This remains the only single point of failure: nine commits, one machine.
 Prepared but not run, per the local-only decision. See `RELEASING.md` for the
 checklist and the two open questions (npm scope, PyPI name availability).
 
-### The remaining 221 compound names
-19 of 240 are sourced from Bascom's contents. The rest stay `null`. More would
-come from the same pass through pp. 140–563, or from Abimbola.
+### The remaining 221 compound names — not obtainable from Bascom
+
+19 of 240 are sourced and now reach `data/odu_256.json`. **The other 221 are
+not in Bascom's book at all.** His contents list only the figures he published
+verses for — 36 of 256 — and the contracted forms appear only in that list.
+Paging through pp. 140–563 would revisit the same 36 headings.
+
+So this needs a different source, and no legitimate one has been found. The
+contracted names are lineage-specific, which is why they must be sourced
+rather than derived: the elision that turns *Ogbe Ọyẹku* into *Ogbe Yẹku* is
+a spoken convention, not a spelling rule that can be applied mechanically.
+
+`traditionalName: null` on the other 221 is therefore a true statement about
+the evidence, and should stay until a source exists.
+
+### A second independent source — the real remaining weakness
+
+Everything verified so far rests on **one book**. Bascom is careful and shows
+his working, but a single source is a single point of failure for a project
+whose whole claim is provenance.
+
+Abimbola is the obvious counterweight — he was himself a babaláwo, which
+Bascom was not. Two candidates:
+
+- *Ifá: An Exposition of Ifá Literary Corpus* (1976) — not found on the
+  Internet Archive; would need a library.
+- *Sixteen Great Poems of Ifá* (1975) — a scan exists on the Internet Archive
+  but it is an individual's upload with no licence statement for an
+  in-copyright work, outside the controlled-lending programme. **Recorded as
+  `rights: unknown` and deliberately not consulted.** Worth checking whether
+  UNESCO, the original publisher, released it openly — if so it becomes
+  usable immediately.
 
 ### Verses themselves — still `0`
 
