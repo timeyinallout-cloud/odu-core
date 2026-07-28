@@ -215,3 +215,46 @@ class TestVerification:
                     src.split(",")[0].split()[0] in o.verification.checked_against
                     for src in accepted
                 ), f"{o.name} cites an unlisted source: {o.verification.checked_against}"
+
+
+class TestTraditionalNames:
+    """Attested compound names must reach the generated dataset, not just the KB."""
+
+    def test_generated_dataset_carries_sourced_names(self):
+        import json
+        from odu_core.data import DATA_PATH
+
+        generated = json.loads(
+            (DATA_PATH.parent / "odu_256.json").read_text(encoding="utf-8")
+        )
+        named = [o for o in generated["odu"] if o["traditionalName"]]
+        assert named, "no traditional names reached data/odu_256.json"
+        assert len(named) == generated["namesSourced"]
+
+    def test_every_name_carries_its_source(self):
+        import json
+        from odu_core.data import DATA_PATH
+
+        generated = json.loads(
+            (DATA_PATH.parent / "odu_256.json").read_text(encoding="utf-8")
+        )
+        for o in generated["odu"]:
+            # A name without a citation is exactly what this project forbids.
+            if o["traditionalName"]:
+                assert o["traditionalNameSource"], f"{o['slug']}: name without source"
+            else:
+                assert o["traditionalNameSource"] is None
+
+    def test_names_match_the_canonical_names_file(self):
+        import json
+        from odu_core.data import DATA_PATH
+
+        names = json.loads(
+            (DATA_PATH.parent / "compound_names.json").read_text(encoding="utf-8")
+        )["names"]
+        generated = json.loads(
+            (DATA_PATH.parent / "odu_256.json").read_text(encoding="utf-8")
+        )
+        for o in generated["odu"]:
+            expected = names.get(o["slug"], {}).get("traditionalName")
+            assert o["traditionalName"] == expected, o["slug"]

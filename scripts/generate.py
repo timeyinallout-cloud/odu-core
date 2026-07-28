@@ -21,10 +21,24 @@ from odu_core import all_odu, convention, spec_version  # noqa: E402
 from odu_core.data import _raw, verification_summary  # noqa: E402
 
 OUT = ROOT / "data" / "odu_256.json"
+NAMES = ROOT / "data" / "compound_names.json"
+
+
+def sourced_names() -> dict:
+    """Attested compound names, keyed by slug.
+
+    Absent entries stay ``null``. That null is a statement about the evidence —
+    no source has been found for that figure's traditional name — and not a
+    placeholder waiting to be filled by inference.
+    """
+    if not NAMES.exists():
+        return {}
+    return json.loads(NAMES.read_text(encoding="utf-8")).get("names", {})
 
 
 def build() -> dict:
     summary = verification_summary()
+    names = sourced_names()
     return {
         "specVersion": spec_version(),
         "generatedBy": "scripts/generate.py",
@@ -42,6 +56,7 @@ def build() -> dict:
             "acceptedSources": summary["accepted_sources"],
             "note": _raw().get("verification", {}).get("note"),
         },
+        "namesSourced": len(names),
         "count": 256,
         "odu": [
             {
@@ -50,7 +65,8 @@ def build() -> dict:
                 "hex": f"{o.byte:02X}",
                 "name": o.name,
                 "slug": o.slug,
-                "traditionalName": o.traditional_name,
+                "traditionalName": (names.get(o.slug) or {}).get("traditionalName"),
+                "traditionalNameSource": (names.get(o.slug) or {}).get("source"),
                 "isMeji": o.is_meji,
                 "seniorityRank": o.seniority_rank,
                 "right": {"slug": o.right.slug, "name": o.right.name, "nibble": o.right.nibble},

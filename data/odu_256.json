@@ -26,6 +26,7 @@
     ],
     "note": "Structural checks are enforced by tests and catch transcription errors, but they cannot establish that the table matches tradition. Only a primary source can. Record each check with scripts/verify_odu.py."
   },
+  "namesSourced": 19,
   "count": 256,
   "odu": [
     {
@@ -35,6 +36,7 @@
       "name": "Ọ̀yẹ̀kú Méjì",
       "slug": "oyeku-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 18,
       "right": {
@@ -69,6 +71,7 @@
       "name": "Ọ̀yẹ̀kú Ọ̀kànràn",
       "slug": "oyeku-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 24,
       "right": {
@@ -103,6 +106,7 @@
       "name": "Ọ̀yẹ̀kú Òtúrúpọ̀n",
       "slug": "oyeku-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 28,
       "right": {
@@ -136,7 +140,8 @@
       "hex": "03",
       "name": "Ọ̀yẹ̀kú Ọ̀wọ́nrín",
       "slug": "oyeku-owonrin",
-      "traditionalName": null,
+      "traditionalName": "Ọyẹku Wọnrin",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ọyẹku - (Ọ)wọnrin (1))",
       "isMeji": false,
       "seniorityRank": 22,
       "right": {
@@ -171,6 +176,7 @@
       "name": "Ọ̀yẹ̀kú Ìká",
       "slug": "oyeku-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 27,
       "right": {
@@ -205,6 +211,7 @@
       "name": "Ọ̀yẹ̀kú Òfún",
       "slug": "oyeku-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 32,
       "right": {
@@ -238,7 +245,8 @@
       "hex": "06",
       "name": "Ọ̀yẹ̀kú Ìwòrì",
       "slug": "oyeku-iwori",
-      "traditionalName": null,
+      "traditionalName": "Ọyẹku Wori",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ọyẹku - (I)wori (1-3))",
       "isMeji": false,
       "seniorityRank": 19,
       "right": {
@@ -273,6 +281,7 @@
       "name": "Ọ̀yẹ̀kú Ọ̀sá",
       "slug": "oyeku-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 26,
       "right": {
@@ -307,6 +316,7 @@
       "name": "Ọ̀yẹ̀kú Ọ̀bàrà",
       "slug": "oyeku-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 23,
       "right": {
@@ -340,7 +350,8 @@
       "hex": "09",
       "name": "Ọ̀yẹ̀kú Òdí",
       "slug": "oyeku-odi",
-      "traditionalName": null,
+      "traditionalName": "Ọyẹku Di",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ọyẹku - (E)di (1-3))",
       "isMeji": false,
       "seniorityRank": 20,
       "right": {
@@ -375,6 +386,7 @@
       "name": "Ọ̀yẹ̀kú Ọ̀sẹ́",
       "slug": "oyeku-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 31,
       "right": {
@@ -409,6 +421,7 @@
       "name": "Ọ̀yẹ̀kú Òtúrá",
       "slug": "oyeku-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 29,
       "right": {
@@ -443,6 +456,7 @@
       "name": "Ọ̀yẹ̀kú Ìrosùn",
       "slug": "oyeku-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 21,
       "right": {
@@ -477,6 +491,7 @@
       "name": "Ọ̀yẹ̀kú Ìrẹtẹ̀",
       "slug": "oyeku-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 30,
       "right": {
@@ -511,6 +526,7 @@
       "name": "Ọ̀yẹ̀kú Ògúndá",
       "slug": "oyeku-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 25,
       "right": {
@@ -545,6 +561,7 @@
       "name": "Ọ̀yẹ̀kú Ogbè",
       "slug": "oyeku-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 17,
       "right": {
@@ -579,6 +596,7 @@
       "name": "Ọ̀kànràn Ọ̀yẹ̀kú",
       "slug": "okanran-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 114,
       "right": {
@@ -613,6 +631,7 @@
       "name": "Ọ̀kànràn Méjì",
       "slug": "okanran-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 120,
       "right": {
@@ -647,6 +666,7 @@
       "name": "Ọ̀kànràn Òtúrúpọ̀n",
       "slug": "okanran-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 124,
       "right": {
@@ -681,6 +701,7 @@
       "name": "Ọ̀kànràn Ọ̀wọ́nrín",
       "slug": "okanran-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 118,
       "right": {
@@ -715,6 +736,7 @@
       "name": "Ọ̀kànràn Ìká",
       "slug": "okanran-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 123,
       "right": {
@@ -749,6 +771,7 @@
       "name": "Ọ̀kànràn Òfún",
       "slug": "okanran-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 128,
       "right": {
@@ -783,6 +806,7 @@
       "name": "Ọ̀kànràn Ìwòrì",
       "slug": "okanran-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 115,
       "right": {
@@ -817,6 +841,7 @@
       "name": "Ọ̀kànràn Ọ̀sá",
       "slug": "okanran-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 122,
       "right": {
@@ -851,6 +876,7 @@
       "name": "Ọ̀kànràn Ọ̀bàrà",
       "slug": "okanran-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 119,
       "right": {
@@ -885,6 +911,7 @@
       "name": "Ọ̀kànràn Òdí",
       "slug": "okanran-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 116,
       "right": {
@@ -919,6 +946,7 @@
       "name": "Ọ̀kànràn Ọ̀sẹ́",
       "slug": "okanran-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 127,
       "right": {
@@ -953,6 +981,7 @@
       "name": "Ọ̀kànràn Òtúrá",
       "slug": "okanran-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 125,
       "right": {
@@ -987,6 +1016,7 @@
       "name": "Ọ̀kànràn Ìrosùn",
       "slug": "okanran-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 117,
       "right": {
@@ -1021,6 +1051,7 @@
       "name": "Ọ̀kànràn Ìrẹtẹ̀",
       "slug": "okanran-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 126,
       "right": {
@@ -1055,6 +1086,7 @@
       "name": "Ọ̀kànràn Ògúndá",
       "slug": "okanran-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 121,
       "right": {
@@ -1089,6 +1121,7 @@
       "name": "Ọ̀kànràn Ogbè",
       "slug": "okanran-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 113,
       "right": {
@@ -1123,6 +1156,7 @@
       "name": "Òtúrúpọ̀n Ọ̀yẹ̀kú",
       "slug": "oturupon-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 178,
       "right": {
@@ -1157,6 +1191,7 @@
       "name": "Òtúrúpọ̀n Ọ̀kànràn",
       "slug": "oturupon-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 184,
       "right": {
@@ -1191,6 +1226,7 @@
       "name": "Òtúrúpọ̀n Méjì",
       "slug": "oturupon-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 188,
       "right": {
@@ -1225,6 +1261,7 @@
       "name": "Òtúrúpọ̀n Ọ̀wọ́nrín",
       "slug": "oturupon-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 182,
       "right": {
@@ -1259,6 +1296,7 @@
       "name": "Òtúrúpọ̀n Ìká",
       "slug": "oturupon-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 187,
       "right": {
@@ -1293,6 +1331,7 @@
       "name": "Òtúrúpọ̀n Òfún",
       "slug": "oturupon-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 192,
       "right": {
@@ -1327,6 +1366,7 @@
       "name": "Òtúrúpọ̀n Ìwòrì",
       "slug": "oturupon-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 179,
       "right": {
@@ -1361,6 +1401,7 @@
       "name": "Òtúrúpọ̀n Ọ̀sá",
       "slug": "oturupon-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 186,
       "right": {
@@ -1395,6 +1436,7 @@
       "name": "Òtúrúpọ̀n Ọ̀bàrà",
       "slug": "oturupon-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 183,
       "right": {
@@ -1429,6 +1471,7 @@
       "name": "Òtúrúpọ̀n Òdí",
       "slug": "oturupon-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 180,
       "right": {
@@ -1463,6 +1506,7 @@
       "name": "Òtúrúpọ̀n Ọ̀sẹ́",
       "slug": "oturupon-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 191,
       "right": {
@@ -1497,6 +1541,7 @@
       "name": "Òtúrúpọ̀n Òtúrá",
       "slug": "oturupon-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 189,
       "right": {
@@ -1531,6 +1576,7 @@
       "name": "Òtúrúpọ̀n Ìrosùn",
       "slug": "oturupon-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 181,
       "right": {
@@ -1565,6 +1611,7 @@
       "name": "Òtúrúpọ̀n Ìrẹtẹ̀",
       "slug": "oturupon-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 190,
       "right": {
@@ -1599,6 +1646,7 @@
       "name": "Òtúrúpọ̀n Ògúndá",
       "slug": "oturupon-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 185,
       "right": {
@@ -1633,6 +1681,7 @@
       "name": "Òtúrúpọ̀n Ogbè",
       "slug": "oturupon-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 177,
       "right": {
@@ -1667,6 +1716,7 @@
       "name": "Ọ̀wọ́nrín Ọ̀yẹ̀kú",
       "slug": "owonrin-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 82,
       "right": {
@@ -1701,6 +1751,7 @@
       "name": "Ọ̀wọ́nrín Ọ̀kànràn",
       "slug": "owonrin-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 88,
       "right": {
@@ -1735,6 +1786,7 @@
       "name": "Ọ̀wọ́nrín Òtúrúpọ̀n",
       "slug": "owonrin-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 92,
       "right": {
@@ -1769,6 +1821,7 @@
       "name": "Ọ̀wọ́nrín Méjì",
       "slug": "owonrin-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 86,
       "right": {
@@ -1803,6 +1856,7 @@
       "name": "Ọ̀wọ́nrín Ìká",
       "slug": "owonrin-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 91,
       "right": {
@@ -1837,6 +1891,7 @@
       "name": "Ọ̀wọ́nrín Òfún",
       "slug": "owonrin-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 96,
       "right": {
@@ -1871,6 +1926,7 @@
       "name": "Ọ̀wọ́nrín Ìwòrì",
       "slug": "owonrin-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 83,
       "right": {
@@ -1905,6 +1961,7 @@
       "name": "Ọ̀wọ́nrín Ọ̀sá",
       "slug": "owonrin-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 90,
       "right": {
@@ -1939,6 +1996,7 @@
       "name": "Ọ̀wọ́nrín Ọ̀bàrà",
       "slug": "owonrin-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 87,
       "right": {
@@ -1973,6 +2031,7 @@
       "name": "Ọ̀wọ́nrín Òdí",
       "slug": "owonrin-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 84,
       "right": {
@@ -2007,6 +2066,7 @@
       "name": "Ọ̀wọ́nrín Ọ̀sẹ́",
       "slug": "owonrin-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 95,
       "right": {
@@ -2041,6 +2101,7 @@
       "name": "Ọ̀wọ́nrín Òtúrá",
       "slug": "owonrin-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 93,
       "right": {
@@ -2075,6 +2136,7 @@
       "name": "Ọ̀wọ́nrín Ìrosùn",
       "slug": "owonrin-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 85,
       "right": {
@@ -2108,7 +2170,8 @@
       "hex": "3D",
       "name": "Ọ̀wọ́nrín Ìrẹtẹ̀",
       "slug": "owonrin-irete",
-      "traditionalName": null,
+      "traditionalName": "Ọwọnrin Rẹtẹ",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ọwọnrin - (I)rẹtẹ (1))",
       "isMeji": false,
       "seniorityRank": 94,
       "right": {
@@ -2143,6 +2206,7 @@
       "name": "Ọ̀wọ́nrín Ògúndá",
       "slug": "owonrin-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 89,
       "right": {
@@ -2177,6 +2241,7 @@
       "name": "Ọ̀wọ́nrín Ogbè",
       "slug": "owonrin-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 81,
       "right": {
@@ -2211,6 +2276,7 @@
       "name": "Ìká Ọ̀yẹ̀kú",
       "slug": "ika-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 162,
       "right": {
@@ -2245,6 +2311,7 @@
       "name": "Ìká Ọ̀kànràn",
       "slug": "ika-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 168,
       "right": {
@@ -2279,6 +2346,7 @@
       "name": "Ìká Òtúrúpọ̀n",
       "slug": "ika-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 172,
       "right": {
@@ -2313,6 +2381,7 @@
       "name": "Ìká Ọ̀wọ́nrín",
       "slug": "ika-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 166,
       "right": {
@@ -2347,6 +2416,7 @@
       "name": "Ìká Méjì",
       "slug": "ika-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 171,
       "right": {
@@ -2381,6 +2451,7 @@
       "name": "Ìká Òfún",
       "slug": "ika-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 176,
       "right": {
@@ -2415,6 +2486,7 @@
       "name": "Ìká Ìwòrì",
       "slug": "ika-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 163,
       "right": {
@@ -2449,6 +2521,7 @@
       "name": "Ìká Ọ̀sá",
       "slug": "ika-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 170,
       "right": {
@@ -2483,6 +2556,7 @@
       "name": "Ìká Ọ̀bàrà",
       "slug": "ika-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 167,
       "right": {
@@ -2517,6 +2591,7 @@
       "name": "Ìká Òdí",
       "slug": "ika-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 164,
       "right": {
@@ -2551,6 +2626,7 @@
       "name": "Ìká Ọ̀sẹ́",
       "slug": "ika-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 175,
       "right": {
@@ -2585,6 +2661,7 @@
       "name": "Ìká Òtúrá",
       "slug": "ika-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 173,
       "right": {
@@ -2619,6 +2696,7 @@
       "name": "Ìká Ìrosùn",
       "slug": "ika-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 165,
       "right": {
@@ -2653,6 +2731,7 @@
       "name": "Ìká Ìrẹtẹ̀",
       "slug": "ika-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 174,
       "right": {
@@ -2687,6 +2766,7 @@
       "name": "Ìká Ògúndá",
       "slug": "ika-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 169,
       "right": {
@@ -2721,6 +2801,7 @@
       "name": "Ìká Ogbè",
       "slug": "ika-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 161,
       "right": {
@@ -2755,6 +2836,7 @@
       "name": "Òfún Ọ̀yẹ̀kú",
       "slug": "ofun-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 242,
       "right": {
@@ -2789,6 +2871,7 @@
       "name": "Òfún Ọ̀kànràn",
       "slug": "ofun-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 248,
       "right": {
@@ -2823,6 +2906,7 @@
       "name": "Òfún Òtúrúpọ̀n",
       "slug": "ofun-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 252,
       "right": {
@@ -2857,6 +2941,7 @@
       "name": "Òfún Ọ̀wọ́nrín",
       "slug": "ofun-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 246,
       "right": {
@@ -2891,6 +2976,7 @@
       "name": "Òfún Ìká",
       "slug": "ofun-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 251,
       "right": {
@@ -2925,6 +3011,7 @@
       "name": "Òfún Méjì",
       "slug": "ofun-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 256,
       "right": {
@@ -2959,6 +3046,7 @@
       "name": "Òfún Ìwòrì",
       "slug": "ofun-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 243,
       "right": {
@@ -2993,6 +3081,7 @@
       "name": "Òfún Ọ̀sá",
       "slug": "ofun-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 250,
       "right": {
@@ -3027,6 +3116,7 @@
       "name": "Òfún Ọ̀bàrà",
       "slug": "ofun-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 247,
       "right": {
@@ -3060,7 +3150,8 @@
       "hex": "59",
       "name": "Òfún Òdí",
       "slug": "ofun-odi",
-      "traditionalName": null,
+      "traditionalName": "Ofun Di",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ofun - (E)di (1-2))",
       "isMeji": false,
       "seniorityRank": 244,
       "right": {
@@ -3095,6 +3186,7 @@
       "name": "Òfún Ọ̀sẹ́",
       "slug": "ofun-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 255,
       "right": {
@@ -3129,6 +3221,7 @@
       "name": "Òfún Òtúrá",
       "slug": "ofun-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 253,
       "right": {
@@ -3163,6 +3256,7 @@
       "name": "Òfún Ìrosùn",
       "slug": "ofun-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 245,
       "right": {
@@ -3197,6 +3291,7 @@
       "name": "Òfún Ìrẹtẹ̀",
       "slug": "ofun-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 254,
       "right": {
@@ -3231,6 +3326,7 @@
       "name": "Òfún Ògúndá",
       "slug": "ofun-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 249,
       "right": {
@@ -3265,6 +3361,7 @@
       "name": "Òfún Ogbè",
       "slug": "ofun-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 241,
       "right": {
@@ -3298,7 +3395,8 @@
       "hex": "60",
       "name": "Ìwòrì Ọ̀yẹ̀kú",
       "slug": "iwori-oyeku",
-      "traditionalName": null,
+      "traditionalName": "Iwori Yẹku",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Iwori - (Ọ)yẹku (1-2))",
       "isMeji": false,
       "seniorityRank": 34,
       "right": {
@@ -3333,6 +3431,7 @@
       "name": "Ìwòrì Ọ̀kànràn",
       "slug": "iwori-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 40,
       "right": {
@@ -3367,6 +3466,7 @@
       "name": "Ìwòrì Òtúrúpọ̀n",
       "slug": "iwori-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 44,
       "right": {
@@ -3401,6 +3501,7 @@
       "name": "Ìwòrì Ọ̀wọ́nrín",
       "slug": "iwori-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 38,
       "right": {
@@ -3435,6 +3536,7 @@
       "name": "Ìwòrì Ìká",
       "slug": "iwori-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 43,
       "right": {
@@ -3469,6 +3571,7 @@
       "name": "Ìwòrì Òfún",
       "slug": "iwori-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 48,
       "right": {
@@ -3503,6 +3606,7 @@
       "name": "Ìwòrì Méjì",
       "slug": "iwori-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 35,
       "right": {
@@ -3537,6 +3641,7 @@
       "name": "Ìwòrì Ọ̀sá",
       "slug": "iwori-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 42,
       "right": {
@@ -3571,6 +3676,7 @@
       "name": "Ìwòrì Ọ̀bàrà",
       "slug": "iwori-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 39,
       "right": {
@@ -3605,6 +3711,7 @@
       "name": "Ìwòrì Òdí",
       "slug": "iwori-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 36,
       "right": {
@@ -3639,6 +3746,7 @@
       "name": "Ìwòrì Ọ̀sẹ́",
       "slug": "iwori-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 47,
       "right": {
@@ -3673,6 +3781,7 @@
       "name": "Ìwòrì Òtúrá",
       "slug": "iwori-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 45,
       "right": {
@@ -3707,6 +3816,7 @@
       "name": "Ìwòrì Ìrosùn",
       "slug": "iwori-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 37,
       "right": {
@@ -3741,6 +3851,7 @@
       "name": "Ìwòrì Ìrẹtẹ̀",
       "slug": "iwori-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 46,
       "right": {
@@ -3775,6 +3886,7 @@
       "name": "Ìwòrì Ògúndá",
       "slug": "iwori-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 41,
       "right": {
@@ -3809,6 +3921,7 @@
       "name": "Ìwòrì Ogbè",
       "slug": "iwori-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 33,
       "right": {
@@ -3843,6 +3956,7 @@
       "name": "Ọ̀sá Ọ̀yẹ̀kú",
       "slug": "osa-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 146,
       "right": {
@@ -3877,6 +3991,7 @@
       "name": "Ọ̀sá Ọ̀kànràn",
       "slug": "osa-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 152,
       "right": {
@@ -3911,6 +4026,7 @@
       "name": "Ọ̀sá Òtúrúpọ̀n",
       "slug": "osa-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 156,
       "right": {
@@ -3945,6 +4061,7 @@
       "name": "Ọ̀sá Ọ̀wọ́nrín",
       "slug": "osa-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 150,
       "right": {
@@ -3979,6 +4096,7 @@
       "name": "Ọ̀sá Ìká",
       "slug": "osa-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 155,
       "right": {
@@ -4013,6 +4131,7 @@
       "name": "Ọ̀sá Òfún",
       "slug": "osa-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 160,
       "right": {
@@ -4047,6 +4166,7 @@
       "name": "Ọ̀sá Ìwòrì",
       "slug": "osa-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 147,
       "right": {
@@ -4081,6 +4201,7 @@
       "name": "Ọ̀sá Méjì",
       "slug": "osa-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 154,
       "right": {
@@ -4115,6 +4236,7 @@
       "name": "Ọ̀sá Ọ̀bàrà",
       "slug": "osa-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 151,
       "right": {
@@ -4149,6 +4271,7 @@
       "name": "Ọ̀sá Òdí",
       "slug": "osa-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 148,
       "right": {
@@ -4183,6 +4306,7 @@
       "name": "Ọ̀sá Ọ̀sẹ́",
       "slug": "osa-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 159,
       "right": {
@@ -4217,6 +4341,7 @@
       "name": "Ọ̀sá Òtúrá",
       "slug": "osa-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 157,
       "right": {
@@ -4251,6 +4376,7 @@
       "name": "Ọ̀sá Ìrosùn",
       "slug": "osa-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 149,
       "right": {
@@ -4285,6 +4411,7 @@
       "name": "Ọ̀sá Ìrẹtẹ̀",
       "slug": "osa-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 158,
       "right": {
@@ -4318,7 +4445,8 @@
       "hex": "7E",
       "name": "Ọ̀sá Ògúndá",
       "slug": "osa-ogunda",
-      "traditionalName": null,
+      "traditionalName": "Ọsa Gunda",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ọsa - (O)gunda (1))",
       "isMeji": false,
       "seniorityRank": 153,
       "right": {
@@ -4353,6 +4481,7 @@
       "name": "Ọ̀sá Ogbè",
       "slug": "osa-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 145,
       "right": {
@@ -4387,6 +4516,7 @@
       "name": "Ọ̀bàrà Ọ̀yẹ̀kú",
       "slug": "obara-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 98,
       "right": {
@@ -4421,6 +4551,7 @@
       "name": "Ọ̀bàrà Ọ̀kànràn",
       "slug": "obara-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 104,
       "right": {
@@ -4455,6 +4586,7 @@
       "name": "Ọ̀bàrà Òtúrúpọ̀n",
       "slug": "obara-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 108,
       "right": {
@@ -4489,6 +4621,7 @@
       "name": "Ọ̀bàrà Ọ̀wọ́nrín",
       "slug": "obara-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 102,
       "right": {
@@ -4523,6 +4656,7 @@
       "name": "Ọ̀bàrà Ìká",
       "slug": "obara-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 107,
       "right": {
@@ -4557,6 +4691,7 @@
       "name": "Ọ̀bàrà Òfún",
       "slug": "obara-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 112,
       "right": {
@@ -4591,6 +4726,7 @@
       "name": "Ọ̀bàrà Ìwòrì",
       "slug": "obara-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 99,
       "right": {
@@ -4625,6 +4761,7 @@
       "name": "Ọ̀bàrà Ọ̀sá",
       "slug": "obara-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 106,
       "right": {
@@ -4659,6 +4796,7 @@
       "name": "Ọ̀bàrà Méjì",
       "slug": "obara-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 103,
       "right": {
@@ -4693,6 +4831,7 @@
       "name": "Ọ̀bàrà Òdí",
       "slug": "obara-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 100,
       "right": {
@@ -4727,6 +4866,7 @@
       "name": "Ọ̀bàrà Ọ̀sẹ́",
       "slug": "obara-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 111,
       "right": {
@@ -4761,6 +4901,7 @@
       "name": "Ọ̀bàrà Òtúrá",
       "slug": "obara-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 109,
       "right": {
@@ -4795,6 +4936,7 @@
       "name": "Ọ̀bàrà Ìrosùn",
       "slug": "obara-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 101,
       "right": {
@@ -4829,6 +4971,7 @@
       "name": "Ọ̀bàrà Ìrẹtẹ̀",
       "slug": "obara-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 110,
       "right": {
@@ -4863,6 +5006,7 @@
       "name": "Ọ̀bàrà Ògúndá",
       "slug": "obara-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 105,
       "right": {
@@ -4897,6 +5041,7 @@
       "name": "Ọ̀bàrà Ogbè",
       "slug": "obara-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 97,
       "right": {
@@ -4931,6 +5076,7 @@
       "name": "Òdí Ọ̀yẹ̀kú",
       "slug": "odi-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 50,
       "right": {
@@ -4964,7 +5110,8 @@
       "hex": "91",
       "name": "Òdí Ọ̀kànràn",
       "slug": "odi-okanran",
-      "traditionalName": null,
+      "traditionalName": "Edi Kanran",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Edi - (Ọ)kanran (1-8))",
       "isMeji": false,
       "seniorityRank": 56,
       "right": {
@@ -4999,6 +5146,7 @@
       "name": "Òdí Òtúrúpọ̀n",
       "slug": "odi-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 60,
       "right": {
@@ -5033,6 +5181,7 @@
       "name": "Òdí Ọ̀wọ́nrín",
       "slug": "odi-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 54,
       "right": {
@@ -5067,6 +5216,7 @@
       "name": "Òdí Ìká",
       "slug": "odi-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 59,
       "right": {
@@ -5101,6 +5251,7 @@
       "name": "Òdí Òfún",
       "slug": "odi-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 64,
       "right": {
@@ -5135,6 +5286,7 @@
       "name": "Òdí Ìwòrì",
       "slug": "odi-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 51,
       "right": {
@@ -5169,6 +5321,7 @@
       "name": "Òdí Ọ̀sá",
       "slug": "odi-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 58,
       "right": {
@@ -5203,6 +5356,7 @@
       "name": "Òdí Ọ̀bàrà",
       "slug": "odi-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 55,
       "right": {
@@ -5237,6 +5391,7 @@
       "name": "Òdí Méjì",
       "slug": "odi-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 52,
       "right": {
@@ -5271,6 +5426,7 @@
       "name": "Òdí Ọ̀sẹ́",
       "slug": "odi-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 63,
       "right": {
@@ -5305,6 +5461,7 @@
       "name": "Òdí Òtúrá",
       "slug": "odi-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 61,
       "right": {
@@ -5338,7 +5495,8 @@
       "hex": "9C",
       "name": "Òdí Ìrosùn",
       "slug": "odi-irosun",
-      "traditionalName": null,
+      "traditionalName": "Edi Rosun",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Edi - (I)rosun (1-2))",
       "isMeji": false,
       "seniorityRank": 53,
       "right": {
@@ -5373,6 +5531,7 @@
       "name": "Òdí Ìrẹtẹ̀",
       "slug": "odi-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 62,
       "right": {
@@ -5407,6 +5566,7 @@
       "name": "Òdí Ògúndá",
       "slug": "odi-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 57,
       "right": {
@@ -5441,6 +5601,7 @@
       "name": "Òdí Ogbè",
       "slug": "odi-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 49,
       "right": {
@@ -5475,6 +5636,7 @@
       "name": "Ọ̀sẹ́ Ọ̀yẹ̀kú",
       "slug": "ose-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 226,
       "right": {
@@ -5509,6 +5671,7 @@
       "name": "Ọ̀sẹ́ Ọ̀kànràn",
       "slug": "ose-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 232,
       "right": {
@@ -5543,6 +5706,7 @@
       "name": "Ọ̀sẹ́ Òtúrúpọ̀n",
       "slug": "ose-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 236,
       "right": {
@@ -5577,6 +5741,7 @@
       "name": "Ọ̀sẹ́ Ọ̀wọ́nrín",
       "slug": "ose-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 230,
       "right": {
@@ -5611,6 +5776,7 @@
       "name": "Ọ̀sẹ́ Ìká",
       "slug": "ose-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 235,
       "right": {
@@ -5645,6 +5811,7 @@
       "name": "Ọ̀sẹ́ Òfún",
       "slug": "ose-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 240,
       "right": {
@@ -5679,6 +5846,7 @@
       "name": "Ọ̀sẹ́ Ìwòrì",
       "slug": "ose-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 227,
       "right": {
@@ -5713,6 +5881,7 @@
       "name": "Ọ̀sẹ́ Ọ̀sá",
       "slug": "ose-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 234,
       "right": {
@@ -5747,6 +5916,7 @@
       "name": "Ọ̀sẹ́ Ọ̀bàrà",
       "slug": "ose-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 231,
       "right": {
@@ -5781,6 +5951,7 @@
       "name": "Ọ̀sẹ́ Òdí",
       "slug": "ose-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 228,
       "right": {
@@ -5815,6 +5986,7 @@
       "name": "Ọ̀sẹ́ Méjì",
       "slug": "ose-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 239,
       "right": {
@@ -5848,7 +6020,8 @@
       "hex": "AB",
       "name": "Ọ̀sẹ́ Òtúrá",
       "slug": "ose-otura",
-      "traditionalName": null,
+      "traditionalName": "Ọsẹ Tura",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ọsẹ - (O)tura (1))",
       "isMeji": false,
       "seniorityRank": 237,
       "right": {
@@ -5883,6 +6056,7 @@
       "name": "Ọ̀sẹ́ Ìrosùn",
       "slug": "ose-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 229,
       "right": {
@@ -5917,6 +6091,7 @@
       "name": "Ọ̀sẹ́ Ìrẹtẹ̀",
       "slug": "ose-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 238,
       "right": {
@@ -5951,6 +6126,7 @@
       "name": "Ọ̀sẹ́ Ògúndá",
       "slug": "ose-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 233,
       "right": {
@@ -5985,6 +6161,7 @@
       "name": "Ọ̀sẹ́ Ogbè",
       "slug": "ose-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 225,
       "right": {
@@ -6019,6 +6196,7 @@
       "name": "Òtúrá Ọ̀yẹ̀kú",
       "slug": "otura-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 194,
       "right": {
@@ -6053,6 +6231,7 @@
       "name": "Òtúrá Ọ̀kànràn",
       "slug": "otura-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 200,
       "right": {
@@ -6087,6 +6266,7 @@
       "name": "Òtúrá Òtúrúpọ̀n",
       "slug": "otura-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 204,
       "right": {
@@ -6121,6 +6301,7 @@
       "name": "Òtúrá Ọ̀wọ́nrín",
       "slug": "otura-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 198,
       "right": {
@@ -6155,6 +6336,7 @@
       "name": "Òtúrá Ìká",
       "slug": "otura-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 203,
       "right": {
@@ -6189,6 +6371,7 @@
       "name": "Òtúrá Òfún",
       "slug": "otura-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 208,
       "right": {
@@ -6223,6 +6406,7 @@
       "name": "Òtúrá Ìwòrì",
       "slug": "otura-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 195,
       "right": {
@@ -6257,6 +6441,7 @@
       "name": "Òtúrá Ọ̀sá",
       "slug": "otura-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 202,
       "right": {
@@ -6291,6 +6476,7 @@
       "name": "Òtúrá Ọ̀bàrà",
       "slug": "otura-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 199,
       "right": {
@@ -6325,6 +6511,7 @@
       "name": "Òtúrá Òdí",
       "slug": "otura-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 196,
       "right": {
@@ -6359,6 +6546,7 @@
       "name": "Òtúrá Ọ̀sẹ́",
       "slug": "otura-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 207,
       "right": {
@@ -6393,6 +6581,7 @@
       "name": "Òtúrá Méjì",
       "slug": "otura-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 205,
       "right": {
@@ -6427,6 +6616,7 @@
       "name": "Òtúrá Ìrosùn",
       "slug": "otura-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 197,
       "right": {
@@ -6461,6 +6651,7 @@
       "name": "Òtúrá Ìrẹtẹ̀",
       "slug": "otura-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 206,
       "right": {
@@ -6495,6 +6686,7 @@
       "name": "Òtúrá Ògúndá",
       "slug": "otura-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 201,
       "right": {
@@ -6529,6 +6721,7 @@
       "name": "Òtúrá Ogbè",
       "slug": "otura-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 193,
       "right": {
@@ -6563,6 +6756,7 @@
       "name": "Ìrosùn Ọ̀yẹ̀kú",
       "slug": "irosun-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 66,
       "right": {
@@ -6597,6 +6791,7 @@
       "name": "Ìrosùn Ọ̀kànràn",
       "slug": "irosun-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 72,
       "right": {
@@ -6631,6 +6826,7 @@
       "name": "Ìrosùn Òtúrúpọ̀n",
       "slug": "irosun-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 76,
       "right": {
@@ -6665,6 +6861,7 @@
       "name": "Ìrosùn Ọ̀wọ́nrín",
       "slug": "irosun-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 70,
       "right": {
@@ -6699,6 +6896,7 @@
       "name": "Ìrosùn Ìká",
       "slug": "irosun-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 75,
       "right": {
@@ -6733,6 +6931,7 @@
       "name": "Ìrosùn Òfún",
       "slug": "irosun-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 80,
       "right": {
@@ -6767,6 +6966,7 @@
       "name": "Ìrosùn Ìwòrì",
       "slug": "irosun-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 67,
       "right": {
@@ -6801,6 +7001,7 @@
       "name": "Ìrosùn Ọ̀sá",
       "slug": "irosun-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 74,
       "right": {
@@ -6835,6 +7036,7 @@
       "name": "Ìrosùn Ọ̀bàrà",
       "slug": "irosun-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 71,
       "right": {
@@ -6869,6 +7071,7 @@
       "name": "Ìrosùn Òdí",
       "slug": "irosun-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 68,
       "right": {
@@ -6903,6 +7106,7 @@
       "name": "Ìrosùn Ọ̀sẹ́",
       "slug": "irosun-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 79,
       "right": {
@@ -6937,6 +7141,7 @@
       "name": "Ìrosùn Òtúrá",
       "slug": "irosun-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 77,
       "right": {
@@ -6971,6 +7176,7 @@
       "name": "Ìrosùn Méjì",
       "slug": "irosun-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 69,
       "right": {
@@ -7005,6 +7211,7 @@
       "name": "Ìrosùn Ìrẹtẹ̀",
       "slug": "irosun-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 78,
       "right": {
@@ -7039,6 +7246,7 @@
       "name": "Ìrosùn Ògúndá",
       "slug": "irosun-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 73,
       "right": {
@@ -7073,6 +7281,7 @@
       "name": "Ìrosùn Ogbè",
       "slug": "irosun-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 65,
       "right": {
@@ -7107,6 +7316,7 @@
       "name": "Ìrẹtẹ̀ Ọ̀yẹ̀kú",
       "slug": "irete-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 210,
       "right": {
@@ -7141,6 +7351,7 @@
       "name": "Ìrẹtẹ̀ Ọ̀kànràn",
       "slug": "irete-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 216,
       "right": {
@@ -7175,6 +7386,7 @@
       "name": "Ìrẹtẹ̀ Òtúrúpọ̀n",
       "slug": "irete-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 220,
       "right": {
@@ -7209,6 +7421,7 @@
       "name": "Ìrẹtẹ̀ Ọ̀wọ́nrín",
       "slug": "irete-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 214,
       "right": {
@@ -7243,6 +7456,7 @@
       "name": "Ìrẹtẹ̀ Ìká",
       "slug": "irete-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 219,
       "right": {
@@ -7277,6 +7491,7 @@
       "name": "Ìrẹtẹ̀ Òfún",
       "slug": "irete-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 224,
       "right": {
@@ -7311,6 +7526,7 @@
       "name": "Ìrẹtẹ̀ Ìwòrì",
       "slug": "irete-iwori",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 211,
       "right": {
@@ -7345,6 +7561,7 @@
       "name": "Ìrẹtẹ̀ Ọ̀sá",
       "slug": "irete-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 218,
       "right": {
@@ -7379,6 +7596,7 @@
       "name": "Ìrẹtẹ̀ Ọ̀bàrà",
       "slug": "irete-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 215,
       "right": {
@@ -7413,6 +7631,7 @@
       "name": "Ìrẹtẹ̀ Òdí",
       "slug": "irete-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 212,
       "right": {
@@ -7447,6 +7666,7 @@
       "name": "Ìrẹtẹ̀ Ọ̀sẹ́",
       "slug": "irete-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 223,
       "right": {
@@ -7481,6 +7701,7 @@
       "name": "Ìrẹtẹ̀ Òtúrá",
       "slug": "irete-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 221,
       "right": {
@@ -7515,6 +7736,7 @@
       "name": "Ìrẹtẹ̀ Ìrosùn",
       "slug": "irete-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 213,
       "right": {
@@ -7549,6 +7771,7 @@
       "name": "Ìrẹtẹ̀ Méjì",
       "slug": "irete-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 222,
       "right": {
@@ -7583,6 +7806,7 @@
       "name": "Ìrẹtẹ̀ Ògúndá",
       "slug": "irete-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 217,
       "right": {
@@ -7617,6 +7841,7 @@
       "name": "Ìrẹtẹ̀ Ogbè",
       "slug": "irete-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 209,
       "right": {
@@ -7651,6 +7876,7 @@
       "name": "Ògúndá Ọ̀yẹ̀kú",
       "slug": "ogunda-oyeku",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 130,
       "right": {
@@ -7685,6 +7911,7 @@
       "name": "Ògúndá Ọ̀kànràn",
       "slug": "ogunda-okanran",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 136,
       "right": {
@@ -7719,6 +7946,7 @@
       "name": "Ògúndá Òtúrúpọ̀n",
       "slug": "ogunda-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 140,
       "right": {
@@ -7753,6 +7981,7 @@
       "name": "Ògúndá Ọ̀wọ́nrín",
       "slug": "ogunda-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 134,
       "right": {
@@ -7787,6 +8016,7 @@
       "name": "Ògúndá Ìká",
       "slug": "ogunda-ika",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 139,
       "right": {
@@ -7821,6 +8051,7 @@
       "name": "Ògúndá Òfún",
       "slug": "ogunda-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 144,
       "right": {
@@ -7854,7 +8085,8 @@
       "hex": "E6",
       "name": "Ògúndá Ìwòrì",
       "slug": "ogunda-iwori",
-      "traditionalName": null,
+      "traditionalName": "Ogunda Wori",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ogunda - (I)wori (1))",
       "isMeji": false,
       "seniorityRank": 131,
       "right": {
@@ -7889,6 +8121,7 @@
       "name": "Ògúndá Ọ̀sá",
       "slug": "ogunda-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 138,
       "right": {
@@ -7923,6 +8156,7 @@
       "name": "Ògúndá Ọ̀bàrà",
       "slug": "ogunda-obara",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 135,
       "right": {
@@ -7957,6 +8191,7 @@
       "name": "Ògúndá Òdí",
       "slug": "ogunda-odi",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 132,
       "right": {
@@ -7991,6 +8226,7 @@
       "name": "Ògúndá Ọ̀sẹ́",
       "slug": "ogunda-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 143,
       "right": {
@@ -8025,6 +8261,7 @@
       "name": "Ògúndá Òtúrá",
       "slug": "ogunda-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 141,
       "right": {
@@ -8059,6 +8296,7 @@
       "name": "Ògúndá Ìrosùn",
       "slug": "ogunda-irosun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 133,
       "right": {
@@ -8093,6 +8331,7 @@
       "name": "Ògúndá Ìrẹtẹ̀",
       "slug": "ogunda-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 142,
       "right": {
@@ -8127,6 +8366,7 @@
       "name": "Ògúndá Méjì",
       "slug": "ogunda-ogunda",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 137,
       "right": {
@@ -8161,6 +8401,7 @@
       "name": "Ògúndá Ogbè",
       "slug": "ogunda-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 129,
       "right": {
@@ -8194,7 +8435,8 @@
       "hex": "F0",
       "name": "Ogbè Ọ̀yẹ̀kú",
       "slug": "ogbe-oyeku",
-      "traditionalName": null,
+      "traditionalName": "Ogbe Yẹku",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ogbe - (Ọ)yẹku (1-3))",
       "isMeji": false,
       "seniorityRank": 2,
       "right": {
@@ -8228,7 +8470,8 @@
       "hex": "F1",
       "name": "Ogbè Ọ̀kànràn",
       "slug": "ogbe-okanran",
-      "traditionalName": null,
+      "traditionalName": "Ogbe Kanran",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ogbe - (Ọ)kanran (1-6))",
       "isMeji": false,
       "seniorityRank": 8,
       "right": {
@@ -8263,6 +8506,7 @@
       "name": "Ogbè Òtúrúpọ̀n",
       "slug": "ogbe-oturupon",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 12,
       "right": {
@@ -8297,6 +8541,7 @@
       "name": "Ogbè Ọ̀wọ́nrín",
       "slug": "ogbe-owonrin",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 6,
       "right": {
@@ -8330,7 +8575,8 @@
       "hex": "F4",
       "name": "Ogbè Ìká",
       "slug": "ogbe-ika",
-      "traditionalName": null,
+      "traditionalName": "Ogbe Ka",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ogbe - (I)ka (1-3))",
       "isMeji": false,
       "seniorityRank": 11,
       "right": {
@@ -8365,6 +8611,7 @@
       "name": "Ogbè Òfún",
       "slug": "ogbe-ofun",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 16,
       "right": {
@@ -8398,7 +8645,8 @@
       "hex": "F6",
       "name": "Ogbè Ìwòrì",
       "slug": "ogbe-iwori",
-      "traditionalName": null,
+      "traditionalName": "Ogbe Wori",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ogbe - (I)wori (1-4))",
       "isMeji": false,
       "seniorityRank": 3,
       "right": {
@@ -8433,6 +8681,7 @@
       "name": "Ogbè Ọ̀sá",
       "slug": "ogbe-osa",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 10,
       "right": {
@@ -8466,7 +8715,8 @@
       "hex": "F8",
       "name": "Ogbè Ọ̀bàrà",
       "slug": "ogbe-obara",
-      "traditionalName": null,
+      "traditionalName": "Ogbe Bara",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ogbe - (Ọ)bara (1-4))",
       "isMeji": false,
       "seniorityRank": 7,
       "right": {
@@ -8500,7 +8750,8 @@
       "hex": "F9",
       "name": "Ogbè Òdí",
       "slug": "ogbe-odi",
-      "traditionalName": null,
+      "traditionalName": "Ogbe Di",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ogbe - (E)di (1-4))",
       "isMeji": false,
       "seniorityRank": 4,
       "right": {
@@ -8535,6 +8786,7 @@
       "name": "Ogbè Ọ̀sẹ́",
       "slug": "ogbe-ose",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 15,
       "right": {
@@ -8569,6 +8821,7 @@
       "name": "Ogbè Òtúrá",
       "slug": "ogbe-otura",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 13,
       "right": {
@@ -8602,7 +8855,8 @@
       "hex": "FC",
       "name": "Ogbè Ìrosùn",
       "slug": "ogbe-irosun",
-      "traditionalName": null,
+      "traditionalName": "Ogbe Rosun",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ogbe - (I)rosun (1-5))",
       "isMeji": false,
       "seniorityRank": 5,
       "right": {
@@ -8637,6 +8891,7 @@
       "name": "Ogbè Ìrẹtẹ̀",
       "slug": "ogbe-irete",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": false,
       "seniorityRank": 14,
       "right": {
@@ -8670,7 +8925,8 @@
       "hex": "FE",
       "name": "Ogbè Ògúndá",
       "slug": "ogbe-ogunda",
-      "traditionalName": null,
+      "traditionalName": "Ogbe Gunda",
+      "traditionalNameSource": "Bascom 1969, p. v-vi (Ogbe - (O)gunda (1-3))",
       "isMeji": false,
       "seniorityRank": 9,
       "right": {
@@ -8705,6 +8961,7 @@
       "name": "Èjì Ogbè",
       "slug": "ogbe-ogbe",
       "traditionalName": null,
+      "traditionalNameSource": null,
       "isMeji": true,
       "seniorityRank": 1,
       "right": {

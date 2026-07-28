@@ -34,6 +34,8 @@ export interface Odu {
    * been sourced — these vary by lineage and are never generated.
    */
   readonly traditionalName: string | null;
+  /** Where the traditional name came from. `null` whenever the name is. */
+  readonly traditionalNameSource: string | null;
   readonly isMeji: boolean;
   /** Position in the traditional 256 ordering, 1-256. */
   readonly seniorityRank: number;
@@ -70,5 +72,7 @@ export interface Dataset {
   readonly convention: Convention;
   readonly verification: Verification;
   readonly count: number;
+  /** How many of the 256 have an attested traditional name. */
+  readonly namesSourced: number;
   readonly odu: Odu[];
 }
