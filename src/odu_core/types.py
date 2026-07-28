@@ -13,6 +13,29 @@ from typing import Literal
 Mark = Literal["I", "II"]
 """A single line of a leg. ``I`` is one mark, ``II`` is two marks."""
 
+VerificationStatus = Literal["unverified", "verified", "disputed"]
+"""Whether a figure has been checked against a primary source.
+
+``disputed`` is deliberately available: sources disagree about seniority and
+about some figures, and a project about provenance needs somewhere to record
+that honestly rather than silently picking a winner.
+"""
+
+
+@dataclass(frozen=True, slots=True)
+class Verification:
+    """What is known about whether a figure's bit pattern is correct."""
+
+    status: VerificationStatus = "unverified"
+    checked_against: str | None = None
+    checked_on: str | None = None
+    checked_by: str | None = None
+    note: str | None = None
+
+    @property
+    def is_verified(self) -> bool:
+        return self.status == "verified"
+
 
 @dataclass(frozen=True, slots=True)
 class PrincipalOdu:
@@ -35,6 +58,9 @@ class PrincipalOdu:
 
     nibble: int
     """The leg as a 4-bit integer, 0-15. Top line is the most significant bit."""
+
+    verification: Verification = Verification()
+    """Whether this figure has been checked against a primary source."""
 
     @property
     def bits(self) -> str:

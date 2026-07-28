@@ -197,7 +197,7 @@ def render_index(db: sqlite3.Connection | None) -> str:
             f"{summary['sources']} sources"
         )
     else:
-        stat_line = "No database yet — run <code>python3 scripts/init_kb.py</code>."
+        stat_line = "No database yet — run <code>python3 scripts/ingest.py</code>."
 
     body = f"""
 <h1>Odù knowledge base</h1>
@@ -237,7 +237,7 @@ def main() -> int:
     else:
         print(f"no database at {show(DB_PATH)} — building an empty site")
         if not SCHEMA_PATH.exists():
-            print("schema missing too; run scripts/init_kb.py first", file=sys.stderr)
+            print("schema missing too; run scripts/ingest.py first", file=sys.stderr)
             return 1
 
     (OUT / "odu").mkdir(parents=True, exist_ok=True)

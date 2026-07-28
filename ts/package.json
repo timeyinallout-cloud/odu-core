@@ -1,0 +1,32 @@
+{
+  "name": "@odu/core",
+  "version": "0.2.0",
+  "description": "The 256 Od\u00f9 If\u00e1 as a canonical byte mapping, with Yor\u00f9b\u00e1 orthography intact.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "data"
+  ],
+  "keywords": [
+    "odu",
+    "ifa",
+    "yoruba",
+    "binary",
+    "heritage-computing",
+    "encoding"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "../node_modules/.bin/tsc",
+    "test": "node --test \"test/*.test.js\"",
+    "check": "../node_modules/.bin/tsc --noEmit"
+  }
+}

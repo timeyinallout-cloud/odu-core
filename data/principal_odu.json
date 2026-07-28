@@ -1,5 +1,5 @@
 {
-  "specVersion": "0.1.0",
+  "specVersion": "0.2.0",
   "convention": {
     "singleMarkBit": 1,
     "doubleMarkBit": 0,
@@ -9,135 +9,338 @@
     "seniorityTradition": "yoruba-nigerian",
     "note": "These four choices fully determine the byte<->Odu mapping. Changing any of them changes every byte value in the generated table. Do not change without bumping specVersion's major component."
   },
-  "verificationStatus": "UNVERIFIED - bit patterns are internally consistent (see tests) but have NOT been checked against a primary source. Verify against Bascom (1969) Ifa Divination, Table 1, and Abimbola (1976) before publishing.",
   "odu": [
     {
       "rank": 1,
       "name": "Ogbè",
       "mejiName": "Èjì Ogbè",
       "slug": "ogbe",
-      "marks": ["I", "I", "I", "I"],
-      "nibble": 15
+      "marks": [
+        "I",
+        "I",
+        "I",
+        "I"
+      ],
+      "nibble": 15,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 2,
       "name": "Ọ̀yẹ̀kú",
       "mejiName": "Ọ̀yẹ̀kú Méjì",
       "slug": "oyeku",
-      "marks": ["II", "II", "II", "II"],
-      "nibble": 0
+      "marks": [
+        "II",
+        "II",
+        "II",
+        "II"
+      ],
+      "nibble": 0,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 3,
       "name": "Ìwòrì",
       "mejiName": "Ìwòrì Méjì",
       "slug": "iwori",
-      "marks": ["II", "I", "I", "II"],
-      "nibble": 6
+      "marks": [
+        "II",
+        "I",
+        "I",
+        "II"
+      ],
+      "nibble": 6,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 4,
       "name": "Òdí",
       "mejiName": "Òdí Méjì",
       "slug": "odi",
-      "marks": ["I", "II", "II", "I"],
-      "nibble": 9
+      "marks": [
+        "I",
+        "II",
+        "II",
+        "I"
+      ],
+      "nibble": 9,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 5,
       "name": "Ìrosùn",
       "mejiName": "Ìrosùn Méjì",
       "slug": "irosun",
-      "marks": ["I", "I", "II", "II"],
-      "nibble": 12
+      "marks": [
+        "I",
+        "I",
+        "II",
+        "II"
+      ],
+      "nibble": 12,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 6,
       "name": "Ọ̀wọ́nrín",
       "mejiName": "Ọ̀wọ́nrín Méjì",
       "slug": "owonrin",
-      "marks": ["II", "II", "I", "I"],
-      "nibble": 3
+      "marks": [
+        "II",
+        "II",
+        "I",
+        "I"
+      ],
+      "nibble": 3,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 7,
       "name": "Ọ̀bàrà",
       "mejiName": "Ọ̀bàrà Méjì",
       "slug": "obara",
-      "marks": ["I", "II", "II", "II"],
-      "nibble": 8
+      "marks": [
+        "I",
+        "II",
+        "II",
+        "II"
+      ],
+      "nibble": 8,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 8,
       "name": "Ọ̀kànràn",
       "mejiName": "Ọ̀kànràn Méjì",
       "slug": "okanran",
-      "marks": ["II", "II", "II", "I"],
-      "nibble": 1
+      "marks": [
+        "II",
+        "II",
+        "II",
+        "I"
+      ],
+      "nibble": 1,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 9,
       "name": "Ògúndá",
       "mejiName": "Ògúndá Méjì",
       "slug": "ogunda",
-      "marks": ["I", "I", "I", "II"],
-      "nibble": 14
+      "marks": [
+        "I",
+        "I",
+        "I",
+        "II"
+      ],
+      "nibble": 14,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 10,
       "name": "Ọ̀sá",
       "mejiName": "Ọ̀sá Méjì",
       "slug": "osa",
-      "marks": ["II", "I", "I", "I"],
-      "nibble": 7
+      "marks": [
+        "II",
+        "I",
+        "I",
+        "I"
+      ],
+      "nibble": 7,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 11,
       "name": "Ìká",
       "mejiName": "Ìká Méjì",
       "slug": "ika",
-      "marks": ["II", "I", "II", "II"],
-      "nibble": 4
+      "marks": [
+        "II",
+        "I",
+        "II",
+        "II"
+      ],
+      "nibble": 4,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 12,
       "name": "Òtúrúpọ̀n",
       "mejiName": "Òtúrúpọ̀n Méjì",
       "slug": "oturupon",
-      "marks": ["II", "II", "I", "II"],
-      "nibble": 2
+      "marks": [
+        "II",
+        "II",
+        "I",
+        "II"
+      ],
+      "nibble": 2,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 13,
       "name": "Òtúrá",
       "mejiName": "Òtúrá Méjì",
       "slug": "otura",
-      "marks": ["I", "II", "I", "I"],
-      "nibble": 11
+      "marks": [
+        "I",
+        "II",
+        "I",
+        "I"
+      ],
+      "nibble": 11,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 14,
       "name": "Ìrẹtẹ̀",
       "mejiName": "Ìrẹtẹ̀ Méjì",
       "slug": "irete",
-      "marks": ["I", "I", "II", "I"],
-      "nibble": 13
+      "marks": [
+        "I",
+        "I",
+        "II",
+        "I"
+      ],
+      "nibble": 13,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 15,
       "name": "Ọ̀sẹ́",
       "mejiName": "Ọ̀sẹ́ Méjì",
       "slug": "ose",
-      "marks": ["I", "II", "I", "II"],
-      "nibble": 10
+      "marks": [
+        "I",
+        "II",
+        "I",
+        "II"
+      ],
+      "nibble": 10,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     },
     {
       "rank": 16,
       "name": "Òfún",
       "mejiName": "Òfún Méjì",
       "slug": "ofun",
-      "marks": ["II", "I", "II", "I"],
-      "nibble": 5
+      "marks": [
+        "II",
+        "I",
+        "II",
+        "I"
+      ],
+      "nibble": 5,
+      "verification": {
+        "status": "unverified",
+        "checkedAgainst": null,
+        "checkedOn": null,
+        "checkedBy": null,
+        "note": null
+      }
     }
-  ]
+  ],
+  "verification": {
+    "summary": "Per-figure verification state lives on each entry below.",
+    "acceptedSources": [
+      "Bascom, William R. (1969) Ifa Divination, Indiana University Press",
+      "Abimbola, Wande (1976) Ifá: An Exposition of Ifá Literary Corpus, Oxford University Press"
+    ],
+    "structuralChecks": [
+      "the 16 legs cover every 4-bit value exactly once",
+      "each consecutive seniority pair is a bitwise complement or reversal"
+    ],
+    "note": "Structural checks are enforced by tests and catch transcription errors, but they cannot establish that the table matches tradition. Only a primary source can. Record each check with scripts/verify_odu.py."
+  }
 }

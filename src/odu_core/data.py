@@ -15,9 +15,15 @@ from pathlib import Path
 from typing import Any
 
 from .orthography import is_normalized
-from .types import PrincipalOdu
+from .types import PrincipalOdu, Verification
 
-__all__ = ["principal_odu", "convention", "spec_version", "DATA_PATH"]
+__all__ = [
+    "principal_odu",
+    "convention",
+    "spec_version",
+    "verification_summary",
+    "DATA_PATH",
+]
 
 
 def _locate() -> Path:
@@ -58,6 +64,31 @@ def convention() -> dict[str, Any]:
 
 
 @cache
+def verification_summary() -> dict[str, Any]:
+    """How much of the canonical table has been checked against a source.
+
+    The count is what matters: a project whose value rests on provenance should
+    be able to state, at any moment, exactly how much of its foundation is
+    still taken on trust.
+    """
+    figures = principal_odu()
+    by_status: dict[str, list[str]] = {}
+    for o in figures:
+        by_status.setdefault(o.verification.status, []).append(o.name)
+
+    verified = len(by_status.get("verified", []))
+    return {
+        "verified": verified,
+        "unverified": len(by_status.get("unverified", [])),
+        "disputed": len(by_status.get("disputed", [])),
+        "total": len(figures),
+        "complete": verified == len(figures),
+        "by_status": by_status,
+        "accepted_sources": _raw().get("verification", {}).get("acceptedSources", []),
+    }
+
+
+@cache
 def principal_odu() -> tuple[PrincipalOdu, ...]:
     """The 16 principal Odù in traditional seniority order.
 
@@ -87,6 +118,7 @@ def principal_odu() -> tuple[PrincipalOdu, ...]:
             if not is_normalized(entry[field]):
                 raise ValueError(f"{entry['name']}: {field} is not NFC-normalized")
 
+        v = entry.get("verification") or {}
         result.append(
             PrincipalOdu(
                 rank=entry["rank"],
@@ -95,6 +127,13 @@ def principal_odu() -> tuple[PrincipalOdu, ...]:
                 slug=entry["slug"],
                 marks=marks,  # type: ignore[arg-type]
                 nibble=entry["nibble"],
+                verification=Verification(
+                    status=v.get("status", "unverified"),
+                    checked_against=v.get("checkedAgainst"),
+                    checked_on=v.get("checkedOn"),
+                    checked_by=v.get("checkedBy"),
+                    note=v.get("note"),
+                ),
             )
         )
 

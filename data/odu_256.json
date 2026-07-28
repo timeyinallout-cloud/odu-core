@@ -1,5 +1,5 @@
 {
-  "specVersion": "0.1.0",
+  "specVersion": "0.2.0",
   "generatedBy": "scripts/generate.py",
   "source": "data/principal_odu.json",
   "warning": "DERIVED FILE — do not edit by hand. Regenerate instead.",
@@ -12,7 +12,18 @@
     "seniorityTradition": "yoruba-nigerian",
     "note": "These four choices fully determine the byte<->Odu mapping. Changing any of them changes every byte value in the generated table. Do not change without bumping specVersion's major component."
   },
-  "verificationStatus": "UNVERIFIED - bit patterns are internally consistent (see tests) but have NOT been checked against a primary source. Verify against Bascom (1969) Ifa Divination, Table 1, and Abimbola (1976) before publishing.",
+  "verification": {
+    "verified": 0,
+    "unverified": 16,
+    "disputed": 0,
+    "total": 16,
+    "complete": false,
+    "acceptedSources": [
+      "Bascom, William R. (1969) Ifa Divination, Indiana University Press",
+      "Abimbola, Wande (1976) Ifá: An Exposition of Ifá Literary Corpus, Oxford University Press"
+    ],
+    "note": "Structural checks are enforced by tests and catch transcription errors, but they cannot establish that the table matches tradition. Only a primary source can. Record each check with scripts/verify_odu.py."
+  },
   "count": 256,
   "odu": [
     {

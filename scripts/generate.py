@@ -18,19 +18,30 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from odu_core import all_odu, convention, spec_version  # noqa: E402
-from odu_core.data import _raw  # noqa: E402
+from odu_core.data import _raw, verification_summary  # noqa: E402
 
 OUT = ROOT / "data" / "odu_256.json"
 
 
 def build() -> dict:
+    summary = verification_summary()
     return {
         "specVersion": spec_version(),
         "generatedBy": "scripts/generate.py",
         "source": "data/principal_odu.json",
         "warning": "DERIVED FILE — do not edit by hand. Regenerate instead.",
         "convention": convention(),
-        "verificationStatus": _raw()["verificationStatus"],
+        # Carried through so a consumer of this file alone can still tell how
+        # much of the mapping rests on a checked source.
+        "verification": {
+            "verified": summary["verified"],
+            "unverified": summary["unverified"],
+            "disputed": summary["disputed"],
+            "total": summary["total"],
+            "complete": summary["complete"],
+            "acceptedSources": summary["accepted_sources"],
+            "note": _raw().get("verification", {}).get("note"),
+        },
         "count": 256,
         "odu": [
             {

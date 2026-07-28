@@ -94,14 +94,48 @@ bits against a 24-word BIP-39 phrase's 264. **If you are encoding a wallet seed,
 use BIP-39** — it is specified, audited, and interoperable across wallets. This
 layer is built for memory, teaching, and art.
 
-## Knowledge base
-
-Sourced content keyed to the 256 figures, in SQLite against `kb/schema.sql`.
+## Building
 
 ```sh
-python3 scripts/init_kb.py        # create kb/odu.db, seeded with sources only
-python3 scripts/build_kb_site.py  # generate site/ — 256 permalinks + index
-python3 -m http.server -d site
+make          # everything, in dependency order
+make test     # Python (129) and TypeScript (26) suites
+make check    # validate content, type-check, report verification coverage
+make clean    # remove derived artifacts
+```
+
+Everything derives from `data/principal_odu.json`. The Makefile encodes the
+order so it cannot be got wrong by running scripts out of sequence.
+
+## TypeScript
+
+`ts/` is a thin binding that **reads** `data/odu_256.json` rather than
+re-deriving the mapping. Two implementations that each compute the table can
+drift apart; one that computes and one that reads cannot.
+
+```ts
+import { fromByte, toPhrase, formatPhrase } from "@odu/core";
+
+fromByte(255).name;                        // 'Èjì Ogbè'
+formatPhrase(toPhrase(new TextEncoder().encode("Ifá")));
+```
+
+Its test suite asserts against `ts/test/fixtures/parity.json`, generated from
+the Python implementation, so the two cannot silently disagree about a name, a
+seniority rank, or a checksum.
+
+## Knowledge base
+
+Sourced content keyed to the 256 figures.
+
+**`kb/content/` is the corpus; `kb/odu.db` is a derived index.** The database is
+rebuilt from scratch on every ingest and is not version-controlled — whatever
+holds the truth must be the thing that gets reviewed and diffed, and a binary
+SQLite file fails that.
+
+```sh
+python3 scripts/ingest.py --check   # validate content files, write nothing
+python3 scripts/ingest.py           # rebuild kb/odu.db
+python3 scripts/build_kb_site.py    # generate site/ — 256 permalinks + index
 ```
 
 **Nothing can be stored without a source.** `source_id` is `NOT NULL` on every
@@ -173,9 +207,23 @@ every consecutive pair in seniority order is either a bitwise complement or a
 bit-reversal of its partner, both enforced by tests. That catches transcription
 errors but it does not establish correctness.
 
-Before publishing, check the table against Bascom, *Ifa Divination* (1969) and
-Abimbola, *Ifá: An Exposition of Ifá Literary Corpus* (1976). The
-`verificationStatus` field in the JSON tracks this.
+Verification is tracked per figure rather than as one blanket disclaimer, so the
+work is resumable and the current state is a fact rather than a memory:
+
+```sh
+python3 scripts/verify_odu.py --status      # what is still open
+python3 scripts/verify_odu.py ogbe \
+    --against "Bascom 1969, Table 1, p. 44" --by "Your Name"
+```
+
+`--against` and `--by` are both required — a verification without a source and a
+name records nothing checkable. `odu verify` exits non-zero while any figure is
+unverified, so CI can gate on it. Figures can also be marked `disputed`, because
+sources genuinely disagree and a project about provenance needs somewhere to say
+so rather than silently picking a winner.
+
+This is the one part of the project that cannot be automated: it needs a person
+with the book open. What is automated is the tracking.
 
 The 240 compound figures carry descriptive `"<right> <left>"` names. Their
 contracted traditional names vary by lineage and are left as

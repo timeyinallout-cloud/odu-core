@@ -128,6 +128,24 @@ def cmd_spec(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_verify(args: argparse.Namespace) -> int:
+    """Report how much of the canonical table rests on a primary source."""
+    from .data import verification_summary
+
+    s = verification_summary()
+    print(f"{s['verified']} of {s['total']} figures verified against a source")
+    if s["disputed"]:
+        print(f"{s['disputed']} disputed")
+    if s["unverified"]:
+        print(f"{s['unverified']} still to check\n")
+        for name in s["by_status"].get("unverified", []):
+            print(f"  · {name}")
+        print("\nRecord a check with: python3 scripts/verify_odu.py <slug> "
+              "--against ... --by ...")
+    # Non-zero while the foundation is still unverified, so CI can gate on it.
+    return 0 if s["complete"] else 1
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="odu",
@@ -175,6 +193,11 @@ def build_parser() -> argparse.ArgumentParser:
 
     spc = sub.add_parser("spec", help="show the bit conventions in use")
     spc.set_defaults(func=cmd_spec)
+
+    vfy = sub.add_parser(
+        "verify", help="report verification coverage (exits 1 while incomplete)"
+    )
+    vfy.set_defaults(func=cmd_verify)
 
     return parser
 

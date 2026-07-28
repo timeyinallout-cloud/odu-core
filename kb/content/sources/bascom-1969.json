@@ -1,0 +1,14 @@
+{
+  "source": {
+    "slug": "bascom-1969",
+    "kind": "book",
+    "title": "Ifa Divination: Communication Between Gods and Men in West Africa",
+    "author": "William R. Bascom",
+    "year": 1969,
+    "publisher": "Indiana University Press",
+    "rights": "all-rights-reserved",
+    "notes": "Primary reference for the figures and their ordering. Verify data/principal_odu.json against this. Publication details unverified against a physical copy."
+  },
+  "verses": [],
+  "notes": []
+}
