@@ -1,5 +1,5 @@
 {
-  "specVersion": "0.2.0",
+  "specVersion": "1.0.0",
   "generatedBy": "scripts/generate.py",
   "source": "data/principal_odu.json",
   "warning": "DERIVED FILE — do not edit by hand. Regenerate instead.",
@@ -9,15 +9,16 @@
     "lineOrder": "top-to-bottom",
     "mostSignificantLine": "top",
     "legToNibble": "right-leg-is-high-nibble",
-    "seniorityTradition": "yoruba-nigerian",
-    "note": "These four choices fully determine the byte<->Odu mapping. Changing any of them changes every byte value in the generated table. Do not change without bumping specVersion's major component."
+    "seniorityTradition": "southwestern-yoruba",
+    "note": "These four choices fully determine the byte<->Odu mapping. Changing any of them changes every byte value in the generated table. Do not change without bumping specVersion's major component.",
+    "seniorityNote": "Bascom's terminology. He examined 86 lists from 61 sources and found this order predominant (42 of 86, including 30 of 60 Yoruba lists, 5 of 6 Cuban, and the single Brazilian list). Twenty-one other rankings are recorded. Bascom 1969 pp. 47-48."
   },
   "verification": {
-    "verified": 0,
-    "unverified": 16,
+    "verified": 16,
+    "unverified": 0,
     "disputed": 0,
     "total": 16,
-    "complete": false,
+    "complete": true,
     "acceptedSources": [
       "Bascom, William R. (1969) Ifa Divination, Indiana University Press",
       "Abimbola, Wande (1976) Ifá: An Exposition of Ifá Literary Corpus, Oxford University Press",

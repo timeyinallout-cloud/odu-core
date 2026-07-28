@@ -185,3 +185,33 @@ class TestFigure:
 
     def test_single_and_double_marks_differ(self):
         assert from_byte(255).figure() != from_byte(0).figure()
+
+
+class TestVerification:
+    """The dataset's foundation is verified; these keep it honest."""
+
+    def test_every_figure_is_verified(self):
+        from odu_core.data import verification_summary
+
+        s = verification_summary()
+        assert s["complete"], f"{s['unverified']} figures still unverified"
+        assert s["verified"] == 16
+
+    def test_no_figure_claims_verification_without_a_source_and_checker(self):
+        for o in principal_odu():
+            if o.verification.status == "verified":
+                assert o.verification.checked_against, f"{o.name}: no source"
+                assert o.verification.checked_by, f"{o.name}: no checker"
+                assert o.verification.checked_on, f"{o.name}: no date"
+
+    def test_verified_against_a_named_accepted_source(self):
+        from odu_core.data import verification_summary
+
+        accepted = verification_summary()["accepted_sources"]
+        assert accepted, "no accepted sources recorded"
+        for o in principal_odu():
+            if o.verification.status == "verified":
+                assert any(
+                    src.split(",")[0].split()[0] in o.verification.checked_against
+                    for src in accepted
+                ), f"{o.name} cites an unlisted source: {o.verification.checked_against}"

@@ -18,7 +18,7 @@ from .types import Odu
 
 __all__ = ["seniority_rank", "by_seniority", "senior_of", "TRADITION"]
 
-TRADITION = "yoruba-nigerian"
+TRADITION = "southwestern-yoruba"
 """The seniority tradition this module implements.
 
 Other traditions order the principal Odù differently — the Cuban Lucumí
