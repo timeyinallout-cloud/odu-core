@@ -81,12 +81,17 @@ Bascom was not. Two candidates:
 
 - *Ifá: An Exposition of Ifá Literary Corpus* (1976) — not found on the
   Internet Archive; would need a library.
-- *Sixteen Great Poems of Ifá* (1975) — a scan exists on the Internet Archive
-  but it is an individual's upload with no licence statement for an
-  in-copyright work, outside the controlled-lending programme. **Recorded as
-  `rights: unknown` and deliberately not consulted.** Worth checking whether
-  UNESCO, the original publisher, released it openly — if so it becomes
-  usable immediately.
+- *Sixteen Great Poems of Ifá* (1975) — **checked; UNESCO is not the
+  publisher.** The UNESDOC record (ark:/48223/pf0000019827) gives the imprint
+  as *Niamey: OAU Centre for Linguistic and Historical Studies by Oral
+  Tradition, 1975*, with the note "Pub. with the financial assistance of
+  UNESCO". UNESCO funded it, the OAU published it — so its open-access policy
+  does not apply, and UNESDOC itself states "Full-text not available".
+  Widely miscited as "UNESCO 1975", including in academic bibliographies.
+
+  Legitimate routes remain: `library@unesco.org` and `archives@unesco.org`
+  (the addresses UNESDOC gives), CELHTO directly, or a library holding call
+  number `896(662.1) ABI`. The archive.org scan stays unused.
 
 ### Verses themselves — still `0`
 
