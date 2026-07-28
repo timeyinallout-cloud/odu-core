@@ -1,0 +1,15 @@
+{
+  "source": {
+    "slug": "olagunju-2023",
+    "kind": "article",
+    "title": "Algebraic characterization of Ifa main divination codes",
+    "author": "A. Olagunju, A. James, E. Adeyefa, F. Joseph",
+    "year": 2023,
+    "publisher": "Scientific African, volume 20, article e01729",
+    "url": "https://doi.org/10.1016/j.sciaf.2023.e01729",
+    "rights": "all-rights-reserved",
+    "notes": "Gold open access under CC BY-NC-ND. Represents the 16 main Odù as 4x2 matrices over {0,1} and shows they form an abelian group under addition mod 2 — the most promising citable source for verifying data/principal_odu.json. NOT YET CONSULTED: the full text sits behind a CAPTCHA and no mirror hosts the PDF, so the bit-pattern table has not been read. Citation verified via Semantic Scholar and OpenAlex 2026-07-28; rights recorded as all-rights-reserved because NC-ND forbids the derivative use republishing would be."
+  },
+  "verses": [],
+  "notes": []
+}

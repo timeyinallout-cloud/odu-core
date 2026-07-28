@@ -20,7 +20,8 @@
     "complete": false,
     "acceptedSources": [
       "Bascom, William R. (1969) Ifa Divination, Indiana University Press",
-      "Abimbola, Wande (1976) Ifá: An Exposition of Ifá Literary Corpus, Oxford University Press"
+      "Abimbola, Wande (1976) Ifá: An Exposition of Ifá Literary Corpus, Oxford University Press",
+      "Olagunju, James, Adeyefa & Joseph (2023) Algebraic characterization of Ifa main divination codes, Scientific African 20:e01729, doi:10.1016/j.sciaf.2023.e01729"
     ],
     "note": "Structural checks are enforced by tests and catch transcription errors, but they cannot establish that the table matches tradition. Only a primary source can. Record each check with scripts/verify_odu.py."
   },

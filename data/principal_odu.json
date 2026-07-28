@@ -335,12 +335,14 @@
     "summary": "Per-figure verification state lives on each entry below.",
     "acceptedSources": [
       "Bascom, William R. (1969) Ifa Divination, Indiana University Press",
-      "Abimbola, Wande (1976) Ifá: An Exposition of Ifá Literary Corpus, Oxford University Press"
+      "Abimbola, Wande (1976) Ifá: An Exposition of Ifá Literary Corpus, Oxford University Press",
+      "Olagunju, James, Adeyefa & Joseph (2023) Algebraic characterization of Ifa main divination codes, Scientific African 20:e01729, doi:10.1016/j.sciaf.2023.e01729"
     ],
     "structuralChecks": [
       "the 16 legs cover every 4-bit value exactly once",
       "each consecutive seniority pair is a bitwise complement or reversal"
     ],
-    "note": "Structural checks are enforced by tests and catch transcription errors, but they cannot establish that the table matches tradition. Only a primary source can. Record each check with scripts/verify_odu.py."
+    "note": "Structural checks are enforced by tests and catch transcription errors, but they cannot establish that the table matches tradition. Only a primary source can. Record each check with scripts/verify_odu.py.",
+    "webVerificationAttempted": "2026-07-28: attempted from public web sources and FAILED. No primary or peer-reviewed table could be read — the Scientific African paper is CAPTCHA-gated with no mirror, and no page found actually carried the bit patterns. A search-engine summary asserted patterns differing from this table for Ọ̀sá and Òtúrúpọ̀n, but that claim could not be traced to any real page and was NOT acted on. Status of all 16 remains unverified."
   }
 }
