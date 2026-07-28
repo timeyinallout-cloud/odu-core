@@ -1,0 +1,111 @@
+# odu-core
+
+The 256 Odù Ifá as a canonical byte mapping, with Yorùbá orthography intact.
+
+An Odù figure is two legs of four lines each, and every line carries either one
+mark or two. That is four bits per leg, eight bits per figure, and exactly 256
+figures — a bijection with the byte that needs no padding and loses nothing.
+
+```python
+from odu_core import from_byte, encode, decode
+
+from_byte(255).name          # 'Èjì Ogbè'
+from_byte(0).name            # 'Ọ̀yẹ̀kú Méjì'
+from_byte(44).name           # 'Òtúrúpọ̀n Ìrosùn'
+
+decode(encode(b"hello")) == b"hello"   # True
+```
+
+## The data is the project
+
+`data/principal_odu.json` holds the 16 principal Odù and is the single source of
+truth. Everything else — all 256 figures, every byte value, every ordering — is
+derived from it. `data/odu_256.json` is the generated artifact other languages
+and surfaces import, so nothing re-derives the mapping for itself.
+
+Regenerate after any change to the canonical 16:
+
+```sh
+python3 scripts/generate.py
+```
+
+## Conventions
+
+Four choices fully determine the mapping. Change any one and every byte value
+means something different, so they are recorded in the data file rather than
+buried in code:
+
+| Choice | This library |
+|---|---|
+| Single mark | `1` |
+| Double mark | `0` |
+| Line order | top to bottom, top line most significant |
+| Leg order | right leg is the high nibble |
+| Seniority | Yorùbá / Nigerian ordering |
+
+There is no universal digital standard for any of these. Interoperability with
+anyone else's work depends on stating them explicitly, which is why
+`spec_version()` exists — encoded data, generated art, and mnemonics are only
+meaningful against a known version.
+
+## Seniority is not numeric order
+
+Ogbè is the most senior Odù, but its leg is `1111` — byte 255, last numerically.
+The two orderings are genuinely different and neither follows from the other by
+arithmetic on the byte.
+
+This is why the library indexes by **bit pattern**, not by rank. Bit patterns are
+structural and uncontested; seniority varies by lineage and region, so it lives
+as an attribute that can hold more than one tradition. Adding the Lucumí ordering
+means adding a field to the JSON, not rewriting the mapping.
+
+```python
+from odu_core import by_seniority
+by_seniority()[0].name       # 'Èjì Ogbè'  (byte 255)
+```
+
+## Orthography
+
+Yorùbá carries two independent diacritic systems: sub-dots that distinguish
+letters (ẹ, ọ, ṣ) and tone marks that carry pitch (à, á). Both are meaningful —
+stripping either produces a different word, not a cosmetic variant.
+
+Canonical data keeps full diacritics and is NFC-normalized (tested). ASCII slugs
+exist alongside as identifiers only, and the conversion is deliberately one-way.
+
+```python
+from odu_core import principal
+principal("Ọ̀yẹ̀kú") is principal("oyeku")   # True — both resolve
+```
+
+## Status and verification
+
+**The bit patterns are unverified against a primary source.** They are
+internally consistent — the 16 legs cover every 4-bit value exactly once, and
+every consecutive pair in seniority order is either a bitwise complement or a
+bit-reversal of its partner, both enforced by tests. That catches transcription
+errors but it does not establish correctness.
+
+Before publishing, check the table against Bascom, *Ifa Divination* (1969) and
+Abimbola, *Ifá: An Exposition of Ifá Literary Corpus* (1976). The
+`verificationStatus` field in the JSON tracks this.
+
+The 240 compound figures carry descriptive `"<right> <left>"` names. Their
+contracted traditional names vary by lineage and are left as
+`traditionalName: null` — those must come from a citable source, never from
+generation.
+
+## Tests
+
+```sh
+python3 -m pytest tests/ -q
+```
+
+The mapping is small enough to test exhaustively, so every assertion about the
+256 figures checks all 256 rather than sampling.
+
+## License
+
+MIT for the code and the structural mapping. Verse content added later needs
+separate terms — some published collections are copyrighted, and oral
+contributions need attribution and consent terms agreed with contributors.

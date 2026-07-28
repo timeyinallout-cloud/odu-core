@@ -1,0 +1,8723 @@
+{
+  "specVersion": "0.1.0",
+  "generatedBy": "scripts/generate.py",
+  "source": "data/principal_odu.json",
+  "warning": "DERIVED FILE — do not edit by hand. Regenerate instead.",
+  "convention": {
+    "singleMarkBit": 1,
+    "doubleMarkBit": 0,
+    "lineOrder": "top-to-bottom",
+    "mostSignificantLine": "top",
+    "legToNibble": "right-leg-is-high-nibble",
+    "seniorityTradition": "yoruba-nigerian",
+    "note": "These four choices fully determine the byte<->Odu mapping. Changing any of them changes every byte value in the generated table. Do not change without bumping specVersion's major component."
+  },
+  "verificationStatus": "UNVERIFIED - bit patterns are internally consistent (see tests) but have NOT been checked against a primary source. Verify against Bascom (1969) Ifa Divination, Table 1, and Abimbola (1976) before publishing.",
+  "count": 256,
+  "odu": [
+    {
+      "byte": 0,
+      "bits": "00000000",
+      "hex": "00",
+      "name": "Ọ̀yẹ̀kú Méjì",
+      "slug": "oyeku-oyeku",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 18,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 1,
+      "bits": "00000001",
+      "hex": "01",
+      "name": "Ọ̀yẹ̀kú Ọ̀kànràn",
+      "slug": "oyeku-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 24,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 2,
+      "bits": "00000010",
+      "hex": "02",
+      "name": "Ọ̀yẹ̀kú Òtúrúpọ̀n",
+      "slug": "oyeku-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 28,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 3,
+      "bits": "00000011",
+      "hex": "03",
+      "name": "Ọ̀yẹ̀kú Ọ̀wọ́nrín",
+      "slug": "oyeku-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 22,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 4,
+      "bits": "00000100",
+      "hex": "04",
+      "name": "Ọ̀yẹ̀kú Ìká",
+      "slug": "oyeku-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 27,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 5,
+      "bits": "00000101",
+      "hex": "05",
+      "name": "Ọ̀yẹ̀kú Òfún",
+      "slug": "oyeku-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 32,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 6,
+      "bits": "00000110",
+      "hex": "06",
+      "name": "Ọ̀yẹ̀kú Ìwòrì",
+      "slug": "oyeku-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 19,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 7,
+      "bits": "00000111",
+      "hex": "07",
+      "name": "Ọ̀yẹ̀kú Ọ̀sá",
+      "slug": "oyeku-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 26,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 8,
+      "bits": "00001000",
+      "hex": "08",
+      "name": "Ọ̀yẹ̀kú Ọ̀bàrà",
+      "slug": "oyeku-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 23,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 9,
+      "bits": "00001001",
+      "hex": "09",
+      "name": "Ọ̀yẹ̀kú Òdí",
+      "slug": "oyeku-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 20,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 10,
+      "bits": "00001010",
+      "hex": "0A",
+      "name": "Ọ̀yẹ̀kú Ọ̀sẹ́",
+      "slug": "oyeku-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 31,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 11,
+      "bits": "00001011",
+      "hex": "0B",
+      "name": "Ọ̀yẹ̀kú Òtúrá",
+      "slug": "oyeku-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 29,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 12,
+      "bits": "00001100",
+      "hex": "0C",
+      "name": "Ọ̀yẹ̀kú Ìrosùn",
+      "slug": "oyeku-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 21,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 13,
+      "bits": "00001101",
+      "hex": "0D",
+      "name": "Ọ̀yẹ̀kú Ìrẹtẹ̀",
+      "slug": "oyeku-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 30,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 14,
+      "bits": "00001110",
+      "hex": "0E",
+      "name": "Ọ̀yẹ̀kú Ògúndá",
+      "slug": "oyeku-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 25,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 15,
+      "bits": "00001111",
+      "hex": "0F",
+      "name": "Ọ̀yẹ̀kú Ogbè",
+      "slug": "oyeku-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 17,
+      "right": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 16,
+      "bits": "00010000",
+      "hex": "10",
+      "name": "Ọ̀kànràn Ọ̀yẹ̀kú",
+      "slug": "okanran-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 114,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 17,
+      "bits": "00010001",
+      "hex": "11",
+      "name": "Ọ̀kànràn Méjì",
+      "slug": "okanran-okanran",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 120,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 18,
+      "bits": "00010010",
+      "hex": "12",
+      "name": "Ọ̀kànràn Òtúrúpọ̀n",
+      "slug": "okanran-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 124,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 19,
+      "bits": "00010011",
+      "hex": "13",
+      "name": "Ọ̀kànràn Ọ̀wọ́nrín",
+      "slug": "okanran-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 118,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 20,
+      "bits": "00010100",
+      "hex": "14",
+      "name": "Ọ̀kànràn Ìká",
+      "slug": "okanran-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 123,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 21,
+      "bits": "00010101",
+      "hex": "15",
+      "name": "Ọ̀kànràn Òfún",
+      "slug": "okanran-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 128,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 22,
+      "bits": "00010110",
+      "hex": "16",
+      "name": "Ọ̀kànràn Ìwòrì",
+      "slug": "okanran-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 115,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 23,
+      "bits": "00010111",
+      "hex": "17",
+      "name": "Ọ̀kànràn Ọ̀sá",
+      "slug": "okanran-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 122,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 24,
+      "bits": "00011000",
+      "hex": "18",
+      "name": "Ọ̀kànràn Ọ̀bàrà",
+      "slug": "okanran-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 119,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 25,
+      "bits": "00011001",
+      "hex": "19",
+      "name": "Ọ̀kànràn Òdí",
+      "slug": "okanran-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 116,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 26,
+      "bits": "00011010",
+      "hex": "1A",
+      "name": "Ọ̀kànràn Ọ̀sẹ́",
+      "slug": "okanran-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 127,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 27,
+      "bits": "00011011",
+      "hex": "1B",
+      "name": "Ọ̀kànràn Òtúrá",
+      "slug": "okanran-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 125,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 28,
+      "bits": "00011100",
+      "hex": "1C",
+      "name": "Ọ̀kànràn Ìrosùn",
+      "slug": "okanran-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 117,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 29,
+      "bits": "00011101",
+      "hex": "1D",
+      "name": "Ọ̀kànràn Ìrẹtẹ̀",
+      "slug": "okanran-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 126,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 30,
+      "bits": "00011110",
+      "hex": "1E",
+      "name": "Ọ̀kànràn Ògúndá",
+      "slug": "okanran-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 121,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 31,
+      "bits": "00011111",
+      "hex": "1F",
+      "name": "Ọ̀kànràn Ogbè",
+      "slug": "okanran-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 113,
+      "right": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 32,
+      "bits": "00100000",
+      "hex": "20",
+      "name": "Òtúrúpọ̀n Ọ̀yẹ̀kú",
+      "slug": "oturupon-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 178,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 33,
+      "bits": "00100001",
+      "hex": "21",
+      "name": "Òtúrúpọ̀n Ọ̀kànràn",
+      "slug": "oturupon-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 184,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 34,
+      "bits": "00100010",
+      "hex": "22",
+      "name": "Òtúrúpọ̀n Méjì",
+      "slug": "oturupon-oturupon",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 188,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 35,
+      "bits": "00100011",
+      "hex": "23",
+      "name": "Òtúrúpọ̀n Ọ̀wọ́nrín",
+      "slug": "oturupon-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 182,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 36,
+      "bits": "00100100",
+      "hex": "24",
+      "name": "Òtúrúpọ̀n Ìká",
+      "slug": "oturupon-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 187,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 37,
+      "bits": "00100101",
+      "hex": "25",
+      "name": "Òtúrúpọ̀n Òfún",
+      "slug": "oturupon-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 192,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 38,
+      "bits": "00100110",
+      "hex": "26",
+      "name": "Òtúrúpọ̀n Ìwòrì",
+      "slug": "oturupon-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 179,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 39,
+      "bits": "00100111",
+      "hex": "27",
+      "name": "Òtúrúpọ̀n Ọ̀sá",
+      "slug": "oturupon-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 186,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 40,
+      "bits": "00101000",
+      "hex": "28",
+      "name": "Òtúrúpọ̀n Ọ̀bàrà",
+      "slug": "oturupon-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 183,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 41,
+      "bits": "00101001",
+      "hex": "29",
+      "name": "Òtúrúpọ̀n Òdí",
+      "slug": "oturupon-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 180,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 42,
+      "bits": "00101010",
+      "hex": "2A",
+      "name": "Òtúrúpọ̀n Ọ̀sẹ́",
+      "slug": "oturupon-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 191,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 43,
+      "bits": "00101011",
+      "hex": "2B",
+      "name": "Òtúrúpọ̀n Òtúrá",
+      "slug": "oturupon-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 189,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 44,
+      "bits": "00101100",
+      "hex": "2C",
+      "name": "Òtúrúpọ̀n Ìrosùn",
+      "slug": "oturupon-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 181,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 45,
+      "bits": "00101101",
+      "hex": "2D",
+      "name": "Òtúrúpọ̀n Ìrẹtẹ̀",
+      "slug": "oturupon-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 190,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 46,
+      "bits": "00101110",
+      "hex": "2E",
+      "name": "Òtúrúpọ̀n Ògúndá",
+      "slug": "oturupon-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 185,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 47,
+      "bits": "00101111",
+      "hex": "2F",
+      "name": "Òtúrúpọ̀n Ogbè",
+      "slug": "oturupon-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 177,
+      "right": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 48,
+      "bits": "00110000",
+      "hex": "30",
+      "name": "Ọ̀wọ́nrín Ọ̀yẹ̀kú",
+      "slug": "owonrin-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 82,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 49,
+      "bits": "00110001",
+      "hex": "31",
+      "name": "Ọ̀wọ́nrín Ọ̀kànràn",
+      "slug": "owonrin-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 88,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 50,
+      "bits": "00110010",
+      "hex": "32",
+      "name": "Ọ̀wọ́nrín Òtúrúpọ̀n",
+      "slug": "owonrin-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 92,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 51,
+      "bits": "00110011",
+      "hex": "33",
+      "name": "Ọ̀wọ́nrín Méjì",
+      "slug": "owonrin-owonrin",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 86,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 52,
+      "bits": "00110100",
+      "hex": "34",
+      "name": "Ọ̀wọ́nrín Ìká",
+      "slug": "owonrin-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 91,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 53,
+      "bits": "00110101",
+      "hex": "35",
+      "name": "Ọ̀wọ́nrín Òfún",
+      "slug": "owonrin-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 96,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 54,
+      "bits": "00110110",
+      "hex": "36",
+      "name": "Ọ̀wọ́nrín Ìwòrì",
+      "slug": "owonrin-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 83,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 55,
+      "bits": "00110111",
+      "hex": "37",
+      "name": "Ọ̀wọ́nrín Ọ̀sá",
+      "slug": "owonrin-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 90,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 56,
+      "bits": "00111000",
+      "hex": "38",
+      "name": "Ọ̀wọ́nrín Ọ̀bàrà",
+      "slug": "owonrin-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 87,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 57,
+      "bits": "00111001",
+      "hex": "39",
+      "name": "Ọ̀wọ́nrín Òdí",
+      "slug": "owonrin-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 84,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 58,
+      "bits": "00111010",
+      "hex": "3A",
+      "name": "Ọ̀wọ́nrín Ọ̀sẹ́",
+      "slug": "owonrin-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 95,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 59,
+      "bits": "00111011",
+      "hex": "3B",
+      "name": "Ọ̀wọ́nrín Òtúrá",
+      "slug": "owonrin-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 93,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 60,
+      "bits": "00111100",
+      "hex": "3C",
+      "name": "Ọ̀wọ́nrín Ìrosùn",
+      "slug": "owonrin-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 85,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 61,
+      "bits": "00111101",
+      "hex": "3D",
+      "name": "Ọ̀wọ́nrín Ìrẹtẹ̀",
+      "slug": "owonrin-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 94,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 62,
+      "bits": "00111110",
+      "hex": "3E",
+      "name": "Ọ̀wọ́nrín Ògúndá",
+      "slug": "owonrin-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 89,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 63,
+      "bits": "00111111",
+      "hex": "3F",
+      "name": "Ọ̀wọ́nrín Ogbè",
+      "slug": "owonrin-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 81,
+      "right": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 64,
+      "bits": "01000000",
+      "hex": "40",
+      "name": "Ìká Ọ̀yẹ̀kú",
+      "slug": "ika-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 162,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 65,
+      "bits": "01000001",
+      "hex": "41",
+      "name": "Ìká Ọ̀kànràn",
+      "slug": "ika-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 168,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 66,
+      "bits": "01000010",
+      "hex": "42",
+      "name": "Ìká Òtúrúpọ̀n",
+      "slug": "ika-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 172,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 67,
+      "bits": "01000011",
+      "hex": "43",
+      "name": "Ìká Ọ̀wọ́nrín",
+      "slug": "ika-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 166,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 68,
+      "bits": "01000100",
+      "hex": "44",
+      "name": "Ìká Méjì",
+      "slug": "ika-ika",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 171,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 69,
+      "bits": "01000101",
+      "hex": "45",
+      "name": "Ìká Òfún",
+      "slug": "ika-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 176,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 70,
+      "bits": "01000110",
+      "hex": "46",
+      "name": "Ìká Ìwòrì",
+      "slug": "ika-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 163,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 71,
+      "bits": "01000111",
+      "hex": "47",
+      "name": "Ìká Ọ̀sá",
+      "slug": "ika-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 170,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 72,
+      "bits": "01001000",
+      "hex": "48",
+      "name": "Ìká Ọ̀bàrà",
+      "slug": "ika-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 167,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 73,
+      "bits": "01001001",
+      "hex": "49",
+      "name": "Ìká Òdí",
+      "slug": "ika-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 164,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 74,
+      "bits": "01001010",
+      "hex": "4A",
+      "name": "Ìká Ọ̀sẹ́",
+      "slug": "ika-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 175,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 75,
+      "bits": "01001011",
+      "hex": "4B",
+      "name": "Ìká Òtúrá",
+      "slug": "ika-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 173,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 76,
+      "bits": "01001100",
+      "hex": "4C",
+      "name": "Ìká Ìrosùn",
+      "slug": "ika-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 165,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 77,
+      "bits": "01001101",
+      "hex": "4D",
+      "name": "Ìká Ìrẹtẹ̀",
+      "slug": "ika-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 174,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 78,
+      "bits": "01001110",
+      "hex": "4E",
+      "name": "Ìká Ògúndá",
+      "slug": "ika-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 169,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 79,
+      "bits": "01001111",
+      "hex": "4F",
+      "name": "Ìká Ogbè",
+      "slug": "ika-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 161,
+      "right": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 80,
+      "bits": "01010000",
+      "hex": "50",
+      "name": "Òfún Ọ̀yẹ̀kú",
+      "slug": "ofun-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 242,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 81,
+      "bits": "01010001",
+      "hex": "51",
+      "name": "Òfún Ọ̀kànràn",
+      "slug": "ofun-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 248,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 82,
+      "bits": "01010010",
+      "hex": "52",
+      "name": "Òfún Òtúrúpọ̀n",
+      "slug": "ofun-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 252,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 83,
+      "bits": "01010011",
+      "hex": "53",
+      "name": "Òfún Ọ̀wọ́nrín",
+      "slug": "ofun-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 246,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 84,
+      "bits": "01010100",
+      "hex": "54",
+      "name": "Òfún Ìká",
+      "slug": "ofun-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 251,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 85,
+      "bits": "01010101",
+      "hex": "55",
+      "name": "Òfún Méjì",
+      "slug": "ofun-ofun",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 256,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 86,
+      "bits": "01010110",
+      "hex": "56",
+      "name": "Òfún Ìwòrì",
+      "slug": "ofun-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 243,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 87,
+      "bits": "01010111",
+      "hex": "57",
+      "name": "Òfún Ọ̀sá",
+      "slug": "ofun-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 250,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 88,
+      "bits": "01011000",
+      "hex": "58",
+      "name": "Òfún Ọ̀bàrà",
+      "slug": "ofun-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 247,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 89,
+      "bits": "01011001",
+      "hex": "59",
+      "name": "Òfún Òdí",
+      "slug": "ofun-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 244,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 90,
+      "bits": "01011010",
+      "hex": "5A",
+      "name": "Òfún Ọ̀sẹ́",
+      "slug": "ofun-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 255,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 91,
+      "bits": "01011011",
+      "hex": "5B",
+      "name": "Òfún Òtúrá",
+      "slug": "ofun-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 253,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 92,
+      "bits": "01011100",
+      "hex": "5C",
+      "name": "Òfún Ìrosùn",
+      "slug": "ofun-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 245,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 93,
+      "bits": "01011101",
+      "hex": "5D",
+      "name": "Òfún Ìrẹtẹ̀",
+      "slug": "ofun-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 254,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 94,
+      "bits": "01011110",
+      "hex": "5E",
+      "name": "Òfún Ògúndá",
+      "slug": "ofun-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 249,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 95,
+      "bits": "01011111",
+      "hex": "5F",
+      "name": "Òfún Ogbè",
+      "slug": "ofun-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 241,
+      "right": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 96,
+      "bits": "01100000",
+      "hex": "60",
+      "name": "Ìwòrì Ọ̀yẹ̀kú",
+      "slug": "iwori-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 34,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 97,
+      "bits": "01100001",
+      "hex": "61",
+      "name": "Ìwòrì Ọ̀kànràn",
+      "slug": "iwori-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 40,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 98,
+      "bits": "01100010",
+      "hex": "62",
+      "name": "Ìwòrì Òtúrúpọ̀n",
+      "slug": "iwori-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 44,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 99,
+      "bits": "01100011",
+      "hex": "63",
+      "name": "Ìwòrì Ọ̀wọ́nrín",
+      "slug": "iwori-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 38,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 100,
+      "bits": "01100100",
+      "hex": "64",
+      "name": "Ìwòrì Ìká",
+      "slug": "iwori-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 43,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 101,
+      "bits": "01100101",
+      "hex": "65",
+      "name": "Ìwòrì Òfún",
+      "slug": "iwori-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 48,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 102,
+      "bits": "01100110",
+      "hex": "66",
+      "name": "Ìwòrì Méjì",
+      "slug": "iwori-iwori",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 35,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 103,
+      "bits": "01100111",
+      "hex": "67",
+      "name": "Ìwòrì Ọ̀sá",
+      "slug": "iwori-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 42,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 104,
+      "bits": "01101000",
+      "hex": "68",
+      "name": "Ìwòrì Ọ̀bàrà",
+      "slug": "iwori-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 39,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 105,
+      "bits": "01101001",
+      "hex": "69",
+      "name": "Ìwòrì Òdí",
+      "slug": "iwori-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 36,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 106,
+      "bits": "01101010",
+      "hex": "6A",
+      "name": "Ìwòrì Ọ̀sẹ́",
+      "slug": "iwori-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 47,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 107,
+      "bits": "01101011",
+      "hex": "6B",
+      "name": "Ìwòrì Òtúrá",
+      "slug": "iwori-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 45,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 108,
+      "bits": "01101100",
+      "hex": "6C",
+      "name": "Ìwòrì Ìrosùn",
+      "slug": "iwori-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 37,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 109,
+      "bits": "01101101",
+      "hex": "6D",
+      "name": "Ìwòrì Ìrẹtẹ̀",
+      "slug": "iwori-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 46,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 110,
+      "bits": "01101110",
+      "hex": "6E",
+      "name": "Ìwòrì Ògúndá",
+      "slug": "iwori-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 41,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 111,
+      "bits": "01101111",
+      "hex": "6F",
+      "name": "Ìwòrì Ogbè",
+      "slug": "iwori-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 33,
+      "right": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 112,
+      "bits": "01110000",
+      "hex": "70",
+      "name": "Ọ̀sá Ọ̀yẹ̀kú",
+      "slug": "osa-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 146,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 113,
+      "bits": "01110001",
+      "hex": "71",
+      "name": "Ọ̀sá Ọ̀kànràn",
+      "slug": "osa-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 152,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 114,
+      "bits": "01110010",
+      "hex": "72",
+      "name": "Ọ̀sá Òtúrúpọ̀n",
+      "slug": "osa-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 156,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 115,
+      "bits": "01110011",
+      "hex": "73",
+      "name": "Ọ̀sá Ọ̀wọ́nrín",
+      "slug": "osa-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 150,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 116,
+      "bits": "01110100",
+      "hex": "74",
+      "name": "Ọ̀sá Ìká",
+      "slug": "osa-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 155,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 117,
+      "bits": "01110101",
+      "hex": "75",
+      "name": "Ọ̀sá Òfún",
+      "slug": "osa-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 160,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 118,
+      "bits": "01110110",
+      "hex": "76",
+      "name": "Ọ̀sá Ìwòrì",
+      "slug": "osa-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 147,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 119,
+      "bits": "01110111",
+      "hex": "77",
+      "name": "Ọ̀sá Méjì",
+      "slug": "osa-osa",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 154,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 120,
+      "bits": "01111000",
+      "hex": "78",
+      "name": "Ọ̀sá Ọ̀bàrà",
+      "slug": "osa-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 151,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 121,
+      "bits": "01111001",
+      "hex": "79",
+      "name": "Ọ̀sá Òdí",
+      "slug": "osa-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 148,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 122,
+      "bits": "01111010",
+      "hex": "7A",
+      "name": "Ọ̀sá Ọ̀sẹ́",
+      "slug": "osa-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 159,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 123,
+      "bits": "01111011",
+      "hex": "7B",
+      "name": "Ọ̀sá Òtúrá",
+      "slug": "osa-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 157,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 124,
+      "bits": "01111100",
+      "hex": "7C",
+      "name": "Ọ̀sá Ìrosùn",
+      "slug": "osa-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 149,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 125,
+      "bits": "01111101",
+      "hex": "7D",
+      "name": "Ọ̀sá Ìrẹtẹ̀",
+      "slug": "osa-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 158,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 126,
+      "bits": "01111110",
+      "hex": "7E",
+      "name": "Ọ̀sá Ògúndá",
+      "slug": "osa-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 153,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 127,
+      "bits": "01111111",
+      "hex": "7F",
+      "name": "Ọ̀sá Ogbè",
+      "slug": "osa-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 145,
+      "right": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 128,
+      "bits": "10000000",
+      "hex": "80",
+      "name": "Ọ̀bàrà Ọ̀yẹ̀kú",
+      "slug": "obara-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 98,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 129,
+      "bits": "10000001",
+      "hex": "81",
+      "name": "Ọ̀bàrà Ọ̀kànràn",
+      "slug": "obara-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 104,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 130,
+      "bits": "10000010",
+      "hex": "82",
+      "name": "Ọ̀bàrà Òtúrúpọ̀n",
+      "slug": "obara-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 108,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 131,
+      "bits": "10000011",
+      "hex": "83",
+      "name": "Ọ̀bàrà Ọ̀wọ́nrín",
+      "slug": "obara-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 102,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 132,
+      "bits": "10000100",
+      "hex": "84",
+      "name": "Ọ̀bàrà Ìká",
+      "slug": "obara-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 107,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 133,
+      "bits": "10000101",
+      "hex": "85",
+      "name": "Ọ̀bàrà Òfún",
+      "slug": "obara-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 112,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 134,
+      "bits": "10000110",
+      "hex": "86",
+      "name": "Ọ̀bàrà Ìwòrì",
+      "slug": "obara-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 99,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 135,
+      "bits": "10000111",
+      "hex": "87",
+      "name": "Ọ̀bàrà Ọ̀sá",
+      "slug": "obara-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 106,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 136,
+      "bits": "10001000",
+      "hex": "88",
+      "name": "Ọ̀bàrà Méjì",
+      "slug": "obara-obara",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 103,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 137,
+      "bits": "10001001",
+      "hex": "89",
+      "name": "Ọ̀bàrà Òdí",
+      "slug": "obara-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 100,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 138,
+      "bits": "10001010",
+      "hex": "8A",
+      "name": "Ọ̀bàrà Ọ̀sẹ́",
+      "slug": "obara-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 111,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 139,
+      "bits": "10001011",
+      "hex": "8B",
+      "name": "Ọ̀bàrà Òtúrá",
+      "slug": "obara-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 109,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 140,
+      "bits": "10001100",
+      "hex": "8C",
+      "name": "Ọ̀bàrà Ìrosùn",
+      "slug": "obara-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 101,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 141,
+      "bits": "10001101",
+      "hex": "8D",
+      "name": "Ọ̀bàrà Ìrẹtẹ̀",
+      "slug": "obara-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 110,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 142,
+      "bits": "10001110",
+      "hex": "8E",
+      "name": "Ọ̀bàrà Ògúndá",
+      "slug": "obara-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 105,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 143,
+      "bits": "10001111",
+      "hex": "8F",
+      "name": "Ọ̀bàrà Ogbè",
+      "slug": "obara-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 97,
+      "right": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 144,
+      "bits": "10010000",
+      "hex": "90",
+      "name": "Òdí Ọ̀yẹ̀kú",
+      "slug": "odi-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 50,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 145,
+      "bits": "10010001",
+      "hex": "91",
+      "name": "Òdí Ọ̀kànràn",
+      "slug": "odi-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 56,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 146,
+      "bits": "10010010",
+      "hex": "92",
+      "name": "Òdí Òtúrúpọ̀n",
+      "slug": "odi-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 60,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 147,
+      "bits": "10010011",
+      "hex": "93",
+      "name": "Òdí Ọ̀wọ́nrín",
+      "slug": "odi-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 54,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 148,
+      "bits": "10010100",
+      "hex": "94",
+      "name": "Òdí Ìká",
+      "slug": "odi-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 59,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 149,
+      "bits": "10010101",
+      "hex": "95",
+      "name": "Òdí Òfún",
+      "slug": "odi-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 64,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 150,
+      "bits": "10010110",
+      "hex": "96",
+      "name": "Òdí Ìwòrì",
+      "slug": "odi-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 51,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 151,
+      "bits": "10010111",
+      "hex": "97",
+      "name": "Òdí Ọ̀sá",
+      "slug": "odi-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 58,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 152,
+      "bits": "10011000",
+      "hex": "98",
+      "name": "Òdí Ọ̀bàrà",
+      "slug": "odi-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 55,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 153,
+      "bits": "10011001",
+      "hex": "99",
+      "name": "Òdí Méjì",
+      "slug": "odi-odi",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 52,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 154,
+      "bits": "10011010",
+      "hex": "9A",
+      "name": "Òdí Ọ̀sẹ́",
+      "slug": "odi-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 63,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 155,
+      "bits": "10011011",
+      "hex": "9B",
+      "name": "Òdí Òtúrá",
+      "slug": "odi-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 61,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 156,
+      "bits": "10011100",
+      "hex": "9C",
+      "name": "Òdí Ìrosùn",
+      "slug": "odi-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 53,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 157,
+      "bits": "10011101",
+      "hex": "9D",
+      "name": "Òdí Ìrẹtẹ̀",
+      "slug": "odi-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 62,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 158,
+      "bits": "10011110",
+      "hex": "9E",
+      "name": "Òdí Ògúndá",
+      "slug": "odi-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 57,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 159,
+      "bits": "10011111",
+      "hex": "9F",
+      "name": "Òdí Ogbè",
+      "slug": "odi-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 49,
+      "right": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 160,
+      "bits": "10100000",
+      "hex": "A0",
+      "name": "Ọ̀sẹ́ Ọ̀yẹ̀kú",
+      "slug": "ose-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 226,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 161,
+      "bits": "10100001",
+      "hex": "A1",
+      "name": "Ọ̀sẹ́ Ọ̀kànràn",
+      "slug": "ose-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 232,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 162,
+      "bits": "10100010",
+      "hex": "A2",
+      "name": "Ọ̀sẹ́ Òtúrúpọ̀n",
+      "slug": "ose-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 236,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 163,
+      "bits": "10100011",
+      "hex": "A3",
+      "name": "Ọ̀sẹ́ Ọ̀wọ́nrín",
+      "slug": "ose-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 230,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 164,
+      "bits": "10100100",
+      "hex": "A4",
+      "name": "Ọ̀sẹ́ Ìká",
+      "slug": "ose-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 235,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 165,
+      "bits": "10100101",
+      "hex": "A5",
+      "name": "Ọ̀sẹ́ Òfún",
+      "slug": "ose-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 240,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 166,
+      "bits": "10100110",
+      "hex": "A6",
+      "name": "Ọ̀sẹ́ Ìwòrì",
+      "slug": "ose-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 227,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 167,
+      "bits": "10100111",
+      "hex": "A7",
+      "name": "Ọ̀sẹ́ Ọ̀sá",
+      "slug": "ose-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 234,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 168,
+      "bits": "10101000",
+      "hex": "A8",
+      "name": "Ọ̀sẹ́ Ọ̀bàrà",
+      "slug": "ose-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 231,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 169,
+      "bits": "10101001",
+      "hex": "A9",
+      "name": "Ọ̀sẹ́ Òdí",
+      "slug": "ose-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 228,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 170,
+      "bits": "10101010",
+      "hex": "AA",
+      "name": "Ọ̀sẹ́ Méjì",
+      "slug": "ose-ose",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 239,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 171,
+      "bits": "10101011",
+      "hex": "AB",
+      "name": "Ọ̀sẹ́ Òtúrá",
+      "slug": "ose-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 237,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 172,
+      "bits": "10101100",
+      "hex": "AC",
+      "name": "Ọ̀sẹ́ Ìrosùn",
+      "slug": "ose-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 229,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 173,
+      "bits": "10101101",
+      "hex": "AD",
+      "name": "Ọ̀sẹ́ Ìrẹtẹ̀",
+      "slug": "ose-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 238,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 174,
+      "bits": "10101110",
+      "hex": "AE",
+      "name": "Ọ̀sẹ́ Ògúndá",
+      "slug": "ose-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 233,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 175,
+      "bits": "10101111",
+      "hex": "AF",
+      "name": "Ọ̀sẹ́ Ogbè",
+      "slug": "ose-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 225,
+      "right": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 176,
+      "bits": "10110000",
+      "hex": "B0",
+      "name": "Òtúrá Ọ̀yẹ̀kú",
+      "slug": "otura-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 194,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 177,
+      "bits": "10110001",
+      "hex": "B1",
+      "name": "Òtúrá Ọ̀kànràn",
+      "slug": "otura-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 200,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 178,
+      "bits": "10110010",
+      "hex": "B2",
+      "name": "Òtúrá Òtúrúpọ̀n",
+      "slug": "otura-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 204,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 179,
+      "bits": "10110011",
+      "hex": "B3",
+      "name": "Òtúrá Ọ̀wọ́nrín",
+      "slug": "otura-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 198,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 180,
+      "bits": "10110100",
+      "hex": "B4",
+      "name": "Òtúrá Ìká",
+      "slug": "otura-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 203,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 181,
+      "bits": "10110101",
+      "hex": "B5",
+      "name": "Òtúrá Òfún",
+      "slug": "otura-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 208,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 182,
+      "bits": "10110110",
+      "hex": "B6",
+      "name": "Òtúrá Ìwòrì",
+      "slug": "otura-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 195,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 183,
+      "bits": "10110111",
+      "hex": "B7",
+      "name": "Òtúrá Ọ̀sá",
+      "slug": "otura-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 202,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 184,
+      "bits": "10111000",
+      "hex": "B8",
+      "name": "Òtúrá Ọ̀bàrà",
+      "slug": "otura-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 199,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 185,
+      "bits": "10111001",
+      "hex": "B9",
+      "name": "Òtúrá Òdí",
+      "slug": "otura-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 196,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 186,
+      "bits": "10111010",
+      "hex": "BA",
+      "name": "Òtúrá Ọ̀sẹ́",
+      "slug": "otura-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 207,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 187,
+      "bits": "10111011",
+      "hex": "BB",
+      "name": "Òtúrá Méjì",
+      "slug": "otura-otura",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 205,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 188,
+      "bits": "10111100",
+      "hex": "BC",
+      "name": "Òtúrá Ìrosùn",
+      "slug": "otura-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 197,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 189,
+      "bits": "10111101",
+      "hex": "BD",
+      "name": "Òtúrá Ìrẹtẹ̀",
+      "slug": "otura-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 206,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 190,
+      "bits": "10111110",
+      "hex": "BE",
+      "name": "Òtúrá Ògúndá",
+      "slug": "otura-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 201,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 191,
+      "bits": "10111111",
+      "hex": "BF",
+      "name": "Òtúrá Ogbè",
+      "slug": "otura-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 193,
+      "right": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 192,
+      "bits": "11000000",
+      "hex": "C0",
+      "name": "Ìrosùn Ọ̀yẹ̀kú",
+      "slug": "irosun-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 66,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 193,
+      "bits": "11000001",
+      "hex": "C1",
+      "name": "Ìrosùn Ọ̀kànràn",
+      "slug": "irosun-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 72,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 194,
+      "bits": "11000010",
+      "hex": "C2",
+      "name": "Ìrosùn Òtúrúpọ̀n",
+      "slug": "irosun-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 76,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 195,
+      "bits": "11000011",
+      "hex": "C3",
+      "name": "Ìrosùn Ọ̀wọ́nrín",
+      "slug": "irosun-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 70,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 196,
+      "bits": "11000100",
+      "hex": "C4",
+      "name": "Ìrosùn Ìká",
+      "slug": "irosun-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 75,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 197,
+      "bits": "11000101",
+      "hex": "C5",
+      "name": "Ìrosùn Òfún",
+      "slug": "irosun-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 80,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 198,
+      "bits": "11000110",
+      "hex": "C6",
+      "name": "Ìrosùn Ìwòrì",
+      "slug": "irosun-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 67,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 199,
+      "bits": "11000111",
+      "hex": "C7",
+      "name": "Ìrosùn Ọ̀sá",
+      "slug": "irosun-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 74,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 200,
+      "bits": "11001000",
+      "hex": "C8",
+      "name": "Ìrosùn Ọ̀bàrà",
+      "slug": "irosun-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 71,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 201,
+      "bits": "11001001",
+      "hex": "C9",
+      "name": "Ìrosùn Òdí",
+      "slug": "irosun-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 68,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 202,
+      "bits": "11001010",
+      "hex": "CA",
+      "name": "Ìrosùn Ọ̀sẹ́",
+      "slug": "irosun-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 79,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 203,
+      "bits": "11001011",
+      "hex": "CB",
+      "name": "Ìrosùn Òtúrá",
+      "slug": "irosun-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 77,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 204,
+      "bits": "11001100",
+      "hex": "CC",
+      "name": "Ìrosùn Méjì",
+      "slug": "irosun-irosun",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 69,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 205,
+      "bits": "11001101",
+      "hex": "CD",
+      "name": "Ìrosùn Ìrẹtẹ̀",
+      "slug": "irosun-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 78,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 206,
+      "bits": "11001110",
+      "hex": "CE",
+      "name": "Ìrosùn Ògúndá",
+      "slug": "irosun-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 73,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 207,
+      "bits": "11001111",
+      "hex": "CF",
+      "name": "Ìrosùn Ogbè",
+      "slug": "irosun-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 65,
+      "right": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 208,
+      "bits": "11010000",
+      "hex": "D0",
+      "name": "Ìrẹtẹ̀ Ọ̀yẹ̀kú",
+      "slug": "irete-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 210,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 209,
+      "bits": "11010001",
+      "hex": "D1",
+      "name": "Ìrẹtẹ̀ Ọ̀kànràn",
+      "slug": "irete-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 216,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 210,
+      "bits": "11010010",
+      "hex": "D2",
+      "name": "Ìrẹtẹ̀ Òtúrúpọ̀n",
+      "slug": "irete-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 220,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 211,
+      "bits": "11010011",
+      "hex": "D3",
+      "name": "Ìrẹtẹ̀ Ọ̀wọ́nrín",
+      "slug": "irete-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 214,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 212,
+      "bits": "11010100",
+      "hex": "D4",
+      "name": "Ìrẹtẹ̀ Ìká",
+      "slug": "irete-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 219,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 213,
+      "bits": "11010101",
+      "hex": "D5",
+      "name": "Ìrẹtẹ̀ Òfún",
+      "slug": "irete-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 224,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 214,
+      "bits": "11010110",
+      "hex": "D6",
+      "name": "Ìrẹtẹ̀ Ìwòrì",
+      "slug": "irete-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 211,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 215,
+      "bits": "11010111",
+      "hex": "D7",
+      "name": "Ìrẹtẹ̀ Ọ̀sá",
+      "slug": "irete-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 218,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 216,
+      "bits": "11011000",
+      "hex": "D8",
+      "name": "Ìrẹtẹ̀ Ọ̀bàrà",
+      "slug": "irete-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 215,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 217,
+      "bits": "11011001",
+      "hex": "D9",
+      "name": "Ìrẹtẹ̀ Òdí",
+      "slug": "irete-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 212,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 218,
+      "bits": "11011010",
+      "hex": "DA",
+      "name": "Ìrẹtẹ̀ Ọ̀sẹ́",
+      "slug": "irete-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 223,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 219,
+      "bits": "11011011",
+      "hex": "DB",
+      "name": "Ìrẹtẹ̀ Òtúrá",
+      "slug": "irete-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 221,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 220,
+      "bits": "11011100",
+      "hex": "DC",
+      "name": "Ìrẹtẹ̀ Ìrosùn",
+      "slug": "irete-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 213,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 221,
+      "bits": "11011101",
+      "hex": "DD",
+      "name": "Ìrẹtẹ̀ Méjì",
+      "slug": "irete-irete",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 222,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 222,
+      "bits": "11011110",
+      "hex": "DE",
+      "name": "Ìrẹtẹ̀ Ògúndá",
+      "slug": "irete-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 217,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 223,
+      "bits": "11011111",
+      "hex": "DF",
+      "name": "Ìrẹtẹ̀ Ogbè",
+      "slug": "irete-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 209,
+      "right": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 224,
+      "bits": "11100000",
+      "hex": "E0",
+      "name": "Ògúndá Ọ̀yẹ̀kú",
+      "slug": "ogunda-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 130,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 225,
+      "bits": "11100001",
+      "hex": "E1",
+      "name": "Ògúndá Ọ̀kànràn",
+      "slug": "ogunda-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 136,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 226,
+      "bits": "11100010",
+      "hex": "E2",
+      "name": "Ògúndá Òtúrúpọ̀n",
+      "slug": "ogunda-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 140,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 227,
+      "bits": "11100011",
+      "hex": "E3",
+      "name": "Ògúndá Ọ̀wọ́nrín",
+      "slug": "ogunda-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 134,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 228,
+      "bits": "11100100",
+      "hex": "E4",
+      "name": "Ògúndá Ìká",
+      "slug": "ogunda-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 139,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 229,
+      "bits": "11100101",
+      "hex": "E5",
+      "name": "Ògúndá Òfún",
+      "slug": "ogunda-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 144,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 230,
+      "bits": "11100110",
+      "hex": "E6",
+      "name": "Ògúndá Ìwòrì",
+      "slug": "ogunda-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 131,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 231,
+      "bits": "11100111",
+      "hex": "E7",
+      "name": "Ògúndá Ọ̀sá",
+      "slug": "ogunda-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 138,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 232,
+      "bits": "11101000",
+      "hex": "E8",
+      "name": "Ògúndá Ọ̀bàrà",
+      "slug": "ogunda-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 135,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 233,
+      "bits": "11101001",
+      "hex": "E9",
+      "name": "Ògúndá Òdí",
+      "slug": "ogunda-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 132,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 234,
+      "bits": "11101010",
+      "hex": "EA",
+      "name": "Ògúndá Ọ̀sẹ́",
+      "slug": "ogunda-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 143,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 235,
+      "bits": "11101011",
+      "hex": "EB",
+      "name": "Ògúndá Òtúrá",
+      "slug": "ogunda-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 141,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 236,
+      "bits": "11101100",
+      "hex": "EC",
+      "name": "Ògúndá Ìrosùn",
+      "slug": "ogunda-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 133,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 237,
+      "bits": "11101101",
+      "hex": "ED",
+      "name": "Ògúndá Ìrẹtẹ̀",
+      "slug": "ogunda-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 142,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 238,
+      "bits": "11101110",
+      "hex": "EE",
+      "name": "Ògúndá Méjì",
+      "slug": "ogunda-ogunda",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 137,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 239,
+      "bits": "11101111",
+      "hex": "EF",
+      "name": "Ògúndá Ogbè",
+      "slug": "ogunda-ogbe",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 129,
+      "right": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 240,
+      "bits": "11110000",
+      "hex": "F0",
+      "name": "Ogbè Ọ̀yẹ̀kú",
+      "slug": "ogbe-oyeku",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 2,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "oyeku",
+        "name": "Ọ̀yẹ̀kú",
+        "nibble": 0
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 241,
+      "bits": "11110001",
+      "hex": "F1",
+      "name": "Ogbè Ọ̀kànràn",
+      "slug": "ogbe-okanran",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 8,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "okanran",
+        "name": "Ọ̀kànràn",
+        "nibble": 1
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 242,
+      "bits": "11110010",
+      "hex": "F2",
+      "name": "Ogbè Òtúrúpọ̀n",
+      "slug": "ogbe-oturupon",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 12,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "oturupon",
+        "name": "Òtúrúpọ̀n",
+        "nibble": 2
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 243,
+      "bits": "11110011",
+      "hex": "F3",
+      "name": "Ogbè Ọ̀wọ́nrín",
+      "slug": "ogbe-owonrin",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 6,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "owonrin",
+        "name": "Ọ̀wọ́nrín",
+        "nibble": 3
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 244,
+      "bits": "11110100",
+      "hex": "F4",
+      "name": "Ogbè Ìká",
+      "slug": "ogbe-ika",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 11,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "ika",
+        "name": "Ìká",
+        "nibble": 4
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 245,
+      "bits": "11110101",
+      "hex": "F5",
+      "name": "Ogbè Òfún",
+      "slug": "ogbe-ofun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 16,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "ofun",
+        "name": "Òfún",
+        "nibble": 5
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 246,
+      "bits": "11110110",
+      "hex": "F6",
+      "name": "Ogbè Ìwòrì",
+      "slug": "ogbe-iwori",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 3,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "iwori",
+        "name": "Ìwòrì",
+        "nibble": 6
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 247,
+      "bits": "11110111",
+      "hex": "F7",
+      "name": "Ogbè Ọ̀sá",
+      "slug": "ogbe-osa",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 10,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "osa",
+        "name": "Ọ̀sá",
+        "nibble": 7
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "II",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 248,
+      "bits": "11111000",
+      "hex": "F8",
+      "name": "Ogbè Ọ̀bàrà",
+      "slug": "ogbe-obara",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 7,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "obara",
+        "name": "Ọ̀bàrà",
+        "nibble": 8
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 249,
+      "bits": "11111001",
+      "hex": "F9",
+      "name": "Ogbè Òdí",
+      "slug": "ogbe-odi",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 4,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "odi",
+        "name": "Òdí",
+        "nibble": 9
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 250,
+      "bits": "11111010",
+      "hex": "FA",
+      "name": "Ogbè Ọ̀sẹ́",
+      "slug": "ogbe-ose",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 15,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "ose",
+        "name": "Ọ̀sẹ́",
+        "nibble": 10
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 251,
+      "bits": "11111011",
+      "hex": "FB",
+      "name": "Ogbè Òtúrá",
+      "slug": "ogbe-otura",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 13,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "otura",
+        "name": "Òtúrá",
+        "nibble": 11
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "II",
+          "I",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 252,
+      "bits": "11111100",
+      "hex": "FC",
+      "name": "Ogbè Ìrosùn",
+      "slug": "ogbe-irosun",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 5,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "irosun",
+        "name": "Ìrosùn",
+        "nibble": 12
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 253,
+      "bits": "11111101",
+      "hex": "FD",
+      "name": "Ogbè Ìrẹtẹ̀",
+      "slug": "ogbe-irete",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 14,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "irete",
+        "name": "Ìrẹtẹ̀",
+        "nibble": 13
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "II",
+          "I"
+        ]
+      }
+    },
+    {
+      "byte": 254,
+      "bits": "11111110",
+      "hex": "FE",
+      "name": "Ogbè Ògúndá",
+      "slug": "ogbe-ogunda",
+      "traditionalName": null,
+      "isMeji": false,
+      "seniorityRank": 9,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "ogunda",
+        "name": "Ògúndá",
+        "nibble": 14
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "II"
+        ]
+      }
+    },
+    {
+      "byte": 255,
+      "bits": "11111111",
+      "hex": "FF",
+      "name": "Èjì Ogbè",
+      "slug": "ogbe-ogbe",
+      "traditionalName": null,
+      "isMeji": true,
+      "seniorityRank": 1,
+      "right": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "left": {
+        "slug": "ogbe",
+        "name": "Ogbè",
+        "nibble": 15
+      },
+      "marks": {
+        "right": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ],
+        "left": [
+          "I",
+          "I",
+          "I",
+          "I"
+        ]
+      }
+    }
+  ]
+}

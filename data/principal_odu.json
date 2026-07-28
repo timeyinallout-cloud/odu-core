@@ -1,0 +1,143 @@
+{
+  "specVersion": "0.1.0",
+  "convention": {
+    "singleMarkBit": 1,
+    "doubleMarkBit": 0,
+    "lineOrder": "top-to-bottom",
+    "mostSignificantLine": "top",
+    "legToNibble": "right-leg-is-high-nibble",
+    "seniorityTradition": "yoruba-nigerian",
+    "note": "These four choices fully determine the byte<->Odu mapping. Changing any of them changes every byte value in the generated table. Do not change without bumping specVersion's major component."
+  },
+  "verificationStatus": "UNVERIFIED - bit patterns are internally consistent (see tests) but have NOT been checked against a primary source. Verify against Bascom (1969) Ifa Divination, Table 1, and Abimbola (1976) before publishing.",
+  "odu": [
+    {
+      "rank": 1,
+      "name": "Ogbè",
+      "mejiName": "Èjì Ogbè",
+      "slug": "ogbe",
+      "marks": ["I", "I", "I", "I"],
+      "nibble": 15
+    },
+    {
+      "rank": 2,
+      "name": "Ọ̀yẹ̀kú",
+      "mejiName": "Ọ̀yẹ̀kú Méjì",
+      "slug": "oyeku",
+      "marks": ["II", "II", "II", "II"],
+      "nibble": 0
+    },
+    {
+      "rank": 3,
+      "name": "Ìwòrì",
+      "mejiName": "Ìwòrì Méjì",
+      "slug": "iwori",
+      "marks": ["II", "I", "I", "II"],
+      "nibble": 6
+    },
+    {
+      "rank": 4,
+      "name": "Òdí",
+      "mejiName": "Òdí Méjì",
+      "slug": "odi",
+      "marks": ["I", "II", "II", "I"],
+      "nibble": 9
+    },
+    {
+      "rank": 5,
+      "name": "Ìrosùn",
+      "mejiName": "Ìrosùn Méjì",
+      "slug": "irosun",
+      "marks": ["I", "I", "II", "II"],
+      "nibble": 12
+    },
+    {
+      "rank": 6,
+      "name": "Ọ̀wọ́nrín",
+      "mejiName": "Ọ̀wọ́nrín Méjì",
+      "slug": "owonrin",
+      "marks": ["II", "II", "I", "I"],
+      "nibble": 3
+    },
+    {
+      "rank": 7,
+      "name": "Ọ̀bàrà",
+      "mejiName": "Ọ̀bàrà Méjì",
+      "slug": "obara",
+      "marks": ["I", "II", "II", "II"],
+      "nibble": 8
+    },
+    {
+      "rank": 8,
+      "name": "Ọ̀kànràn",
+      "mejiName": "Ọ̀kànràn Méjì",
+      "slug": "okanran",
+      "marks": ["II", "II", "II", "I"],
+      "nibble": 1
+    },
+    {
+      "rank": 9,
+      "name": "Ògúndá",
+      "mejiName": "Ògúndá Méjì",
+      "slug": "ogunda",
+      "marks": ["I", "I", "I", "II"],
+      "nibble": 14
+    },
+    {
+      "rank": 10,
+      "name": "Ọ̀sá",
+      "mejiName": "Ọ̀sá Méjì",
+      "slug": "osa",
+      "marks": ["II", "I", "I", "I"],
+      "nibble": 7
+    },
+    {
+      "rank": 11,
+      "name": "Ìká",
+      "mejiName": "Ìká Méjì",
+      "slug": "ika",
+      "marks": ["II", "I", "II", "II"],
+      "nibble": 4
+    },
+    {
+      "rank": 12,
+      "name": "Òtúrúpọ̀n",
+      "mejiName": "Òtúrúpọ̀n Méjì",
+      "slug": "oturupon",
+      "marks": ["II", "II", "I", "II"],
+      "nibble": 2
+    },
+    {
+      "rank": 13,
+      "name": "Òtúrá",
+      "mejiName": "Òtúrá Méjì",
+      "slug": "otura",
+      "marks": ["I", "II", "I", "I"],
+      "nibble": 11
+    },
+    {
+      "rank": 14,
+      "name": "Ìrẹtẹ̀",
+      "mejiName": "Ìrẹtẹ̀ Méjì",
+      "slug": "irete",
+      "marks": ["I", "I", "II", "I"],
+      "nibble": 13
+    },
+    {
+      "rank": 15,
+      "name": "Ọ̀sẹ́",
+      "mejiName": "Ọ̀sẹ́ Méjì",
+      "slug": "ose",
+      "marks": ["I", "II", "I", "II"],
+      "nibble": 10
+    },
+    {
+      "rank": 16,
+      "name": "Òfún",
+      "mejiName": "Òfún Méjì",
+      "slug": "ofun",
+      "marks": ["II", "I", "II", "I"],
+      "nibble": 5
+    }
+  ]
+}
