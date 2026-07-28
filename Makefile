@@ -13,6 +13,7 @@
 PY      := python3
 TSC     := ./node_modules/.bin/tsc
 DATA    := data/principal_odu.json
+NAMES   := data/compound_names.json
 DERIVED := data/odu_256.json
 
 .DEFAULT_GOAL := build
@@ -22,7 +23,9 @@ build: $(DERIVED) kb site art web ts
 
 # Everything downstream depends on this, so it is a real file target rather
 # than a phony one — nothing rebuilds if the canonical data has not changed.
-$(DERIVED): $(DATA) scripts/generate.py src/odu_core/*.py
+# compound_names.json feeds traditionalName into the dataset, so a change
+# there must regenerate too — omitting it left the artifact silently stale.
+$(DERIVED): $(DATA) $(NAMES) scripts/generate.py src/odu_core/*.py
 	$(PY) scripts/generate.py
 
 ## Rebuild the knowledge base from the versioned content files.

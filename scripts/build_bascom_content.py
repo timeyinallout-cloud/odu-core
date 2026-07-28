@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import json
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -106,22 +107,43 @@ LEG_ORDER_NOTE = (
 )
 
 
-def contracted(notation: str) -> str | None:
-    """Derive the contracted name where the dash-and-parenthesis marks it.
+def drop_initial_vowel(name: str) -> str:
+    """Remove a name's first vowel *and its tone mark*, keeping the rest intact.
 
-    ``Ogbe - (Ọ)yẹku`` gives ``Ogbe Yẹku``. Entries without that exact pattern
-    are left alone: guessing at an elision would manufacture a traditional name,
-    which is the one thing this dataset must never do.
+    Yorùbá tone marks are combining characters, so the leading vowel of
+    ``Ọ̀yẹ̀kú`` is two codepoints — the letter and its grave. Slicing by
+    character would strip the letter and orphan the accent onto the next one.
     """
-    head = notation.split(" (")[0]
+    decomposed = unicodedata.normalize("NFD", name)
+    i = 1
+    while i < len(decomposed) and unicodedata.combining(decomposed[i]):
+        i += 1
+    return unicodedata.normalize("NFC", decomposed[i:])
+
+
+def contracted(first: str, second: str, notation: str) -> str | None:
+    """Build the contracted name in the dataset's own tone-marked orthography.
+
+    Bascom prints ``Ogbe - (Ọ)yẹku`` — the parenthesised letter is elided, so
+    the name is spoken *Ogbe Yẹku*. He omits tone marks throughout, which would
+    leave these 19 names orthographically inconsistent with the rest of the
+    dataset. In a tone language that is not a cosmetic difference.
+
+    So the elision is taken from Bascom and the tone marks from our own
+    principal names, which are themselves verified against his Table 1 and
+    Table 3. Nothing here is inferred: both inputs are sourced, and the
+    operation is dropping a vowel.
+
+    Open linguistic question, deliberately not resolved: whether elision shifts
+    the tone of the syllables that remain. The forms below assume it does not.
+    """
     if " - (" not in notation:
         return None
-    left, rest = notation.split(" - (", 1)
-    elided, tail = rest.split(")", 1)
-    second = tail.split(" (")[0].strip()
-    if not second or not elided:
+    head = principal(first).name
+    tail = drop_initial_vowel(principal(second).name)
+    if not tail:
         return None
-    return f"{left.strip()} {second[0].upper()}{second[1:]}"
+    return f"{head} {tail[0].upper()}{tail[1:]}"
 
 
 def main() -> int:
@@ -140,7 +162,7 @@ def main() -> int:
             ),
         })
 
-        name = contracted(notation)
+        name = contracted(first, second, notation)
         if name:
             derived += 1
             notes.append({
@@ -175,14 +197,19 @@ def main() -> int:
     # base. One transcription, two outputs — never two transcriptions.
     names = {}
     for first, second, notation, _count, pages in ENTRIES:
-        name = contracted(notation)
+        name = contracted(first, second, notation)
         if not name:
             continue
         odu = from_legs(principal(first), principal(second))
         names[odu.slug] = {
             "traditionalName": name,
             "source": f"Bascom 1969, p. v-vi ({notation})",
-            "note": "contracted form; the parenthesised letter is elided",
+            "note": (
+                "Contracted form. Elision from Bascom's notation; tone marks "
+                "carried over from this dataset's principal names, which are "
+                "verified against Bascom Table 1 p. 4 and Table 3 p. 48. "
+                "Bascom himself omits tone marks."
+            ),
         }
 
     NAMES.write_text(

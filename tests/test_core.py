@@ -258,3 +258,42 @@ class TestTraditionalNames:
         for o in generated["odu"]:
             expected = names.get(o["slug"], {}).get("traditionalName")
             assert o["traditionalName"] == expected, o["slug"]
+
+    def test_contracted_names_carry_tone_marks(self):
+        """Yorùbá tone is meaningful; a tone-less name is a different word.
+
+        The source (Bascom) omits tone marks, so these are composed: the
+        elision is his, the tone comes from our own verified principal names.
+        Losing it again would leave the corpus inconsistent with itself.
+        """
+        import json
+        import unicodedata
+        from odu_core.data import DATA_PATH
+
+        names = json.loads(
+            (DATA_PATH.parent / "compound_names.json").read_text(encoding="utf-8")
+        )["names"]
+        assert names, "no compound names recorded"
+        for slug, entry in names.items():
+            name = entry["traditionalName"]
+            decomposed = unicodedata.normalize("NFD", name)
+            assert any(unicodedata.combining(c) for c in decomposed), (
+                f"{slug}: {name!r} has no tone marks"
+            )
+            assert unicodedata.is_normalized("NFC", name), f"{slug}: not NFC"
+
+    def test_contracted_name_starts_with_its_principal(self):
+        """The head of a contracted name is the first leg, unaltered."""
+        import json
+        from odu_core.data import DATA_PATH
+        from odu_core import principal
+
+        names = json.loads(
+            (DATA_PATH.parent / "compound_names.json").read_text(encoding="utf-8")
+        )["names"]
+        for slug, entry in names.items():
+            first = slug.split("-")[0]
+            assert entry["traditionalName"].startswith(principal(first).name), (
+                f"{slug}: {entry['traditionalName']!r} does not open with "
+                f"{principal(first).name!r}"
+            )
