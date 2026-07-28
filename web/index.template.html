@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Odù Mnemonic — bytes as Odù Ifá</title>
+<style>
+  :root {
+    --bg: #fbf9f6; --fg: #1c1a17; --dim: #6b6560; --line: #e0dad2;
+    --card: #fff; --accent: #7a4b1e; --ok: #2f6b3f; --bad: #a03028;
+    --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16140f; --fg: #ece6dd; --dim: #9a938a; --line: #2f2a23;
+      --card: #1e1b16; --accent: #d9a566; --ok: #7cc08e; --bad: #e08076;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2rem 1.25rem 4rem; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+  }
+  main { max-width: 62rem; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin: 0 0 .3rem; letter-spacing: -.01em; }
+  .sub { color: var(--dim); margin: 0 0 1.5rem; }
+  .warn {
+    border-left: 3px solid var(--accent); background: var(--card);
+    padding: .75rem 1rem; margin: 0 0 1.75rem; font-size: .9rem; color: var(--dim);
+  }
+  .warn strong { color: var(--fg); }
+  .grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+  @media (min-width: 56rem) { .grid { grid-template-columns: 1fr 1fr; } }
+  section {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 10px; padding: 1.1rem 1.15rem 1.35rem;
+  }
+  h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: .09em;
+       color: var(--dim); margin: 0 0 .9rem; font-weight: 600; }
+  label { display: block; font-size: .8rem; color: var(--dim); margin: .8rem 0 .3rem; }
+  textarea, input[type=text], select {
+    width: 100%; background: var(--bg); color: var(--fg); font-family: var(--mono);
+    border: 1px solid var(--line); border-radius: 6px; padding: .6rem .7rem;
+    font-size: .88rem; resize: vertical;
+  }
+  textarea { min-height: 5.5rem; }
+  textarea:focus, input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-top: .9rem; }
+  button {
+    background: var(--accent); color: var(--bg); border: 0; border-radius: 6px;
+    padding: .5rem .95rem; font-size: .88rem; font-weight: 600; cursor: pointer;
+  }
+  button.ghost { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+  button:hover { filter: brightness(1.08); }
+  .out {
+    margin-top: 1rem; font-family: var(--mono); font-size: .85rem;
+    background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
+    padding: .75rem; white-space: pre-wrap; word-break: break-word; min-height: 3rem;
+  }
+  .meta { font-size: .8rem; color: var(--dim); margin-top: .6rem; }
+  .meta.ok { color: var(--ok); }
+  .meta.bad { color: var(--bad); }
+  .figures { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1rem; }
+  .fig {
+    border: 1px solid var(--line); border-radius: 6px; padding: .45rem .5rem .35rem;
+    text-align: center; min-width: 4.4rem;
+  }
+  .fig pre { font-family: var(--mono); font-size: .62rem; line-height: 1.25;
+             margin: 0 0 .3rem; color: var(--fg); }
+  .fig .nm { font-size: .58rem; color: var(--dim); display: block; }
+  .fig.csum { border-color: var(--accent); }
+  footer { color: var(--dim); font-size: .82rem; margin-top: 2.5rem;
+           border-top: 1px solid var(--line); padding-top: 1rem; }
+  code { font-family: var(--mono); font-size: .85em; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Odù Mnemonic</h1>
+  <p class="sub">Every byte is one of the 256 Odù Ifá. Two legs, four lines each, one mark or two — eight bits exactly.</p>
+
+  <div class="warn">
+    <strong>Demo, not a wallet tool.</strong> The trailing checksum figure catches
+    typos and transpositions; it is not encryption, and a phrase reveals its bytes
+    to anyone holding it. Each figure carries 8 bits where a BIP-39 word carries 11.
+    For wallet seeds use BIP-39. Everything here runs locally — nothing is sent anywhere.
+  </div>
+
+  <div class="grid">
+    <section>
+      <h2>Encode</h2>
+      <label for="mode">Input</label>
+      <select id="mode">
+        <option value="text">UTF-8 text</option>
+        <option value="hex">Hex bytes</option>
+      </select>
+      <label for="src">Value</label>
+      <textarea id="src" spellcheck="false">heritage computing</textarea>
+      <div class="row">
+        <button id="enc">Encode</button>
+        <button id="rand" class="ghost">Random 32 bytes</button>
+      </div>
+      <div class="out" id="encOut"></div>
+      <div class="meta" id="encMeta"></div>
+      <div class="figures" id="encFigs"></div>
+    </section>
+
+    <section>
+      <h2>Decode</h2>
+      <label for="phrase">Phrase — slugs, names, or numbered</label>
+      <textarea id="phrase" spellcheck="false" placeholder="ogbe-oyeku iwori-ika …"></textarea>
+      <div class="row">
+        <button id="dec">Decode</button>
+        <button id="copy" class="ghost">Copy encoded phrase</button>
+      </div>
+      <div class="out" id="decOut"></div>
+      <div class="meta" id="decMeta"></div>
+    </section>
+  </div>
+
+  <footer>
+    Data generated from <code>data/principal_odu.json</code>, spec
+    <span id="spec"></span>. Conventions: single mark = 1, top line most
+    significant, right leg is the high nibble.
+    <strong>Bit patterns are unverified against a primary source.</strong>
+  </footer>
+</main>
+
+<script>
+const DATA = /*__ODU_DATA__*/null;
+const BY_SLUG = new Map(), BY_NAME = new Map();
+DATA.odu.forEach(o => {
+  BY_SLUG.set(o.slug, o);
+  BY_NAME.set(fold(o.name), o);
+});
+document.getElementById('spec').textContent = DATA.specVersion;
+
+function fold(s) {
+  return s.normalize('NFD').replace(/\p{Mn}/gu, '').toLowerCase().trim();
+}
+
+// The platform's own SHA-256 — no hand-rolled crypto in the demo.
+async function checksumByte(bytes) {
+  const digest = await crypto.subtle.digest('SHA-256', bytes);
+  return new Uint8Array(digest)[0];
+}
+
+async function toPhrase(payload) {
+  const c = await checksumByte(payload);
+  return [...payload, c].map(b => DATA.odu[b]);
+}
+
+function parsePhrase(text) {
+  let s = text.replace(/[·•/,;|\n\r\t]+/g, ' ').replace(/\b\d{1,3}[.)]\s*/g, ' ').trim();
+  if (!s) throw new Error('Phrase is empty.');
+  const words = s.split(/\s+/);
+  let chunks;
+  if (words.some(w => w.includes('-'))) {
+    chunks = words;
+  } else if (words.length % 2 === 0) {
+    chunks = [];               // every figure name is two words
+    for (let i = 0; i < words.length; i += 2) chunks.push(words[i] + ' ' + words[i + 1]);
+  } else {
+    throw new Error(`Cannot split ${words.length} words into figures — every figure name is two words. Use slug form or separate figures with "·".`);
+  }
+  return chunks.map(c => {
+    const hit = BY_SLUG.get(fold(c)) || BY_NAME.get(fold(c));
+    if (!hit) throw new Error(`"${c}" is not a figure.`);
+    return hit;
+  });
+}
+
+async function fromPhrase(text) {
+  const figs = parsePhrase(text);
+  if (figs.length < 1) throw new Error('A phrase needs at least the checksum figure.');
+  const raw = Uint8Array.from(figs.map(f => f.byte));
+  const payload = raw.slice(0, -1), given = raw[raw.length - 1];
+  const want = await checksumByte(payload);
+  if (given !== want) {
+    throw new Error(`Checksum mismatch: phrase ends with ${figs[figs.length-1].name} (0x${given.toString(16).padStart(2,'0').toUpperCase()}) but its ${payload.length} payload figures require 0x${want.toString(16).padStart(2,'0').toUpperCase()}. Usually a mistyped or transposed figure.`);
+  }
+  return payload;
+}
+
+function drawFigure(o) {
+  return o.marks.right.map((r, i) => {
+    const l = o.marks.left[i];
+    return (r === 'I' ? '  I' : 'I I') + '  ' + (l === 'I' ? 'I' : 'I I');
+  }).join('\n');
+}
+
+function renderFigures(el, figs) {
+  el.innerHTML = '';
+  figs.forEach((o, i) => {
+    const d = document.createElement('div');
+    d.className = 'fig' + (i === figs.length - 1 ? ' csum' : '');
+    d.innerHTML = `<pre>${drawFigure(o)}</pre><span class="nm">${o.name}</span>`;
+    d.title = `byte ${o.byte} (0x${o.byte.toString(16).padStart(2,'0').toUpperCase()}) — ${o.slug}` +
+              (i === figs.length - 1 ? ' — checksum' : '');
+    el.appendChild(d);
+  });
+}
+
+let lastPhrase = '';
+
+async function doEncode() {
+  const out = document.getElementById('encOut'), meta = document.getElementById('encMeta');
+  try {
+    const mode = document.getElementById('mode').value;
+    const raw = document.getElementById('src').value;
+    let payload;
+    if (mode === 'hex') {
+      const h = raw.replace(/[\s_]/g, '');
+      if (h.length % 2 || /[^0-9a-fA-F]/.test(h)) throw new Error('Not valid hex.');
+      payload = Uint8Array.from(h.match(/../g) || [], b => parseInt(b, 16));
+    } else {
+      payload = new TextEncoder().encode(raw);
+    }
+    const figs = await toPhrase(payload);
+    lastPhrase = figs.map(f => f.slug).join(' ');
+    out.textContent = lastPhrase + '\n\n' + figs.map(f => f.name).join(' · ');
+    meta.className = 'meta ok';
+    meta.textContent = `${figs.length} figures — ${payload.length * 8} bits of payload plus a checksum figure.`;
+    renderFigures(document.getElementById('encFigs'), figs);
+    document.getElementById('phrase').value = lastPhrase;
+  } catch (e) {
+    out.textContent = ''; meta.className = 'meta bad'; meta.textContent = e.message;
+    document.getElementById('encFigs').innerHTML = '';
+  }
+}
+
+async function doDecode() {
+  const out = document.getElementById('decOut'), meta = document.getElementById('decMeta');
+  try {
+    const payload = await fromPhrase(document.getElementById('phrase').value);
+    const hex = [...payload].map(b => b.toString(16).padStart(2, '0')).join('');
+    let text = '';
+    try { text = new TextDecoder('utf-8', { fatal: true }).decode(payload); }
+    catch { text = '(not valid UTF-8)'; }
+    out.textContent = `hex   ${hex || '(empty)'}\ntext  ${text}`;
+    meta.className = 'meta ok';
+    meta.textContent = `Checksum verified — ${payload.length} bytes recovered.`;
+  } catch (e) {
+    out.textContent = ''; meta.className = 'meta bad'; meta.textContent = e.message;
+  }
+}
+
+document.getElementById('enc').onclick = doEncode;
+document.getElementById('dec').onclick = doDecode;
+document.getElementById('rand').onclick = () => {
+  const b = crypto.getRandomValues(new Uint8Array(32));
+  document.getElementById('mode').value = 'hex';
+  document.getElementById('src').value = [...b].map(x => x.toString(16).padStart(2, '0')).join('');
+  doEncode();
+};
+document.getElementById('copy').onclick = () => {
+  if (lastPhrase) navigator.clipboard?.writeText(lastPhrase);
+};
+
+doEncode();
+</script>
+</body>
+</html>

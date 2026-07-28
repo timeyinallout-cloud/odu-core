@@ -48,6 +48,52 @@ anyone else's work depends on stating them explicitly, which is why
 `spec_version()` exists — encoded data, generated art, and mnemonics are only
 meaningful against a known version.
 
+## Mnemonic phrases
+
+Bytes become figures, with a checksum figure appended so that a mistyped or
+transposed figure is caught on decode instead of silently yielding different
+bytes.
+
+```python
+from odu_core.mnemonic import to_phrase, from_phrase, format_phrase
+
+phrase = to_phrase(b"heritage computing")
+format_phrase(phrase, "display")   # 'Ìwòrì Ọ̀bàrà · Ìwòrì Òfún · …'
+from_phrase(phrase)                # b'heritage computing'
+```
+
+From the command line:
+
+```sh
+odu encode --text "Ifá" --style display
+odu random --bytes 32 --style numbered
+odu decode "ika-odi iwori-iwori irosun-owonrin ose-okanran irosun-ofun"
+odu show 44          # describe and draw one figure
+odu table            # the 16 principal Odù
+odu spec             # the bit conventions in use
+```
+
+Slug form (`ika-odi`) is the canonical written form — ASCII, one token per
+figure. Display form keeps full orthography and needs a separator, since figure
+names are themselves two words. Both parse back.
+
+A browser demo of the same thing lives in `web/`:
+
+```sh
+python3 scripts/build_web.py && python3 -m http.server -d web
+```
+
+### Before using this for key material
+
+The checksum detects accidental corruption. It is not authentication, it is not
+encryption, and it adds no entropy — a phrase reveals exactly the bytes it
+encodes to anyone holding it.
+
+Each figure carries 8 bits where a BIP-39 word carries 11, so 24 figures are 192
+bits against a 24-word BIP-39 phrase's 264. **If you are encoding a wallet seed,
+use BIP-39** — it is specified, audited, and interoperable across wallets. This
+layer is built for memory, teaching, and art.
+
 ## Seniority is not numeric order
 
 Ogbè is the most senior Odù, but its leg is `1111` — byte 255, last numerically.
