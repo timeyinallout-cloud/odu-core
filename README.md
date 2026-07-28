@@ -94,6 +94,47 @@ bits against a 24-word BIP-39 phrase's 264. **If you are encoding a wallet seed,
 use BIP-39** — it is specified, audited, and interoperable across wallets. This
 layer is built for memory, teaching, and art.
 
+## Knowledge base
+
+Sourced content keyed to the 256 figures, in SQLite against `kb/schema.sql`.
+
+```sh
+python3 scripts/init_kb.py        # create kb/odu.db, seeded with sources only
+python3 scripts/build_kb_site.py  # generate site/ — 256 permalinks + index
+python3 -m http.server -d site
+```
+
+**Nothing can be stored without a source.** `source_id` is `NOT NULL` on every
+content table, so an unattributed verse does not merely get flagged — it fails
+to insert. A corpus that cannot say where a line came from has no value, and a
+corpus of living sacred material that cannot say so is worse than empty.
+
+**The corpus ships empty, deliberately.** No verse in this repository was
+generated. Filling it means sitting with the sources and entering records one at
+a time, which is the slow part of the project and the part that cannot be
+automated.
+
+### Publication is default-deny
+
+The site generator reads only the `publishable_*` views. A record reaches the
+public site only if *all* of these hold:
+
+| Gate | Reason |
+|---|---|
+| `status = 'published'` | drafts stay private |
+| `restricted = 0` | some ẹsẹ Ifá are initiation-restricted |
+| source permits reproduction | citable ≠ republishable |
+| every contributor still consents | consent is withdrawable, and withdrawal propagates |
+
+Forgetting any one of them hides the record rather than exposing it. Withdrawing
+a contributor's consent retracts their material from the next build while
+leaving citation-only records intact — there is an end-to-end test for exactly
+that.
+
+A source under copyright is still useful: store a `page_reference` instead of
+the text. Attempting to store reproduced text from such a source raises rather
+than silently accepting it.
+
 ## Seniority is not numeric order
 
 Ogbè is the most senior Odù, but its leg is `1111` — byte 255, last numerically.

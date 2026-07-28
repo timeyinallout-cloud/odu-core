@@ -7,6 +7,7 @@ corruption being caught rather than about happy-path round trips.
 from __future__ import annotations
 
 import os
+import random
 import sys
 from pathlib import Path
 
@@ -72,20 +73,32 @@ class TestChecksum:
         with pytest.raises(ChecksumError):
             from_phrase(figures)
 
-    def test_corruption_is_caught_across_many_random_trials(self):
-        """Every single-figure corruption of a random phrase should be caught."""
+    def test_corruption_is_caught_at_the_expected_rate(self):
+        """A one-byte checksum catches corruption ~255/256 of the time.
+
+        The residual 1/256 is the design, not a defect: a corrupted phrase can
+        land on a payload whose checksum happens to match. So this asserts the
+        detection *rate* rather than demanding every trial be caught — the
+        latter fails outright about 18% of the time at 50 trials. The seed is
+        fixed so the result is reproducible rather than occasionally red.
+        """
         from odu_core import from_byte
 
-        for _ in range(50):
-            payload = os.urandom(8)
+        rng = random.Random(20260728)
+        trials, detected = 500, 0
+        for _ in range(trials):
+            payload = bytes(rng.randrange(256) for _ in range(8))
             figures = list(to_phrase(payload))
-            i = os.urandom(1)[0] % len(figures)
-            original = figures[i]
-            figures[i] = from_byte((original.byte + 1 + os.urandom(1)[0] % 255) % 256)
-            if figures[i].byte == original.byte:
-                continue
-            with pytest.raises(ChecksumError):
+            i = rng.randrange(len(figures))
+            # Offset 1-255 guarantees the figure actually changes.
+            figures[i] = from_byte((figures[i].byte + rng.randrange(1, 256)) % 256)
+            try:
                 from_phrase(figures)
+            except ChecksumError:
+                detected += 1
+
+        rate = detected / trials
+        assert rate > 0.97, f"detection rate {rate:.3f} is below the expected ~0.996"
 
     def test_checksum_is_deterministic(self):
         assert checksum_byte(b"hello") == checksum_byte(b"hello")

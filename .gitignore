@@ -6,3 +6,7 @@ build/
 *.egg-info/
 .venv/
 web/index.html
+site/
+kb/odu.db
+node_modules/
+package-lock.json
