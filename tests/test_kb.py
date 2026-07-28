@@ -263,3 +263,64 @@ class TestNamesAreFactsNotExpression:
         assert db.execute(
             "SELECT COUNT(*) FROM publishable_note WHERE odu_byte=242"
         ).fetchone()[0] == 0
+
+
+class TestRecordings:
+    """A recording is a pointer, which is why it can exist where text cannot."""
+
+    def test_recording_needs_a_source(self, db):
+        from odu_core.kb import add_recording
+
+        with pytest.raises(KbError, match="no source"):
+            add_recording(db, path="https://example.com/v", source_id=999, odu_byte=255)
+
+    def test_recording_must_attach_to_something(self, db, closed_source):
+        from odu_core.kb import add_recording
+
+        with pytest.raises(KbError, match="figure or a verse"):
+            add_recording(db, path="https://example.com/v", source_id=closed_source)
+
+    def test_recording_needs_a_path(self, db, closed_source):
+        from odu_core.kb import add_recording
+
+        with pytest.raises(KbError, match="path or URL"):
+            add_recording(db, path="  ", source_id=closed_source, odu_byte=255)
+
+    def test_pointer_stores_from_a_copyrighted_source(self, db, closed_source):
+        from odu_core.kb import add_recording
+
+        # Citing where a recitation can be heard reproduces nothing, so unlike
+        # verse text this is allowed against a rights-reserved source.
+        rid = add_recording(
+            db, path="https://example.com/v", source_id=closed_source, odu_byte=255
+        )
+        assert rid > 0
+
+    def test_draft_recordings_do_not_publish(self, db, closed_source):
+        from odu_core.kb import add_recording
+
+        add_recording(
+            db, path="https://example.com/v", source_id=closed_source,
+            odu_byte=255, status="draft",
+        )
+        assert db.execute(
+            "SELECT COUNT(*) FROM publishable_recording"
+        ).fetchone()[0] == 0
+
+    def test_published_recording_still_gated_on_reproduction(self, db, closed_source):
+        from odu_core.kb import add_recording
+
+        add_recording(
+            db, path="https://example.com/v", source_id=closed_source,
+            odu_byte=255, status="published",
+        )
+        assert db.execute(
+            "SELECT COUNT(*) FROM publishable_recording"
+        ).fetchone()[0] == 0
+
+    @pytest.mark.parametrize("bad", [-1, 256])
+    def test_recording_byte_validated(self, db, closed_source, bad):
+        from odu_core.kb import add_recording
+
+        with pytest.raises(KbError, match="not a valid figure"):
+            add_recording(db, path="https://x/v", source_id=closed_source, odu_byte=bad)

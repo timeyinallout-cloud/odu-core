@@ -29,6 +29,7 @@ from odu_core.kb import (  # noqa: E402
     REPRODUCIBLE_RIGHTS,
     add_contributor,
     add_note,
+    add_recording,
     add_source,
     add_translation,
     add_verse,
@@ -225,6 +226,25 @@ def ingest_source_file(db, path: Path, contributors: dict[str, int],
                 )
             except Exception as exc:  # noqa: BLE001
                 problems.add(path, f"{label}.translations[{j}]: {exc}")
+
+    for i, rec in enumerate(payload.get("recordings", [])):
+        label = f"recordings[{i}]"
+        try:
+            odu_byte = resolve_odu(rec.get("odu"))
+            add_recording(
+                db,
+                path=rec["path"],
+                source_id=source_id,
+                odu_byte=odu_byte,
+                duration_seconds=rec.get("durationSeconds"),
+                recorded_on=rec.get("recordedOn"),
+                location=rec.get("location"),
+                restricted=bool(rec.get("restricted", False)),
+                status=rec.get("status", "draft"),
+                notes=rec.get("notes"),
+            )
+        except Exception as exc:  # noqa: BLE001
+            problems.add(path, f"{label}: {exc}")
 
     for i, note in enumerate(payload.get("notes", [])):
         label = f"notes[{i}]"

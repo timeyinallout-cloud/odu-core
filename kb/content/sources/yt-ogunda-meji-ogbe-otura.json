@@ -1,0 +1,21 @@
+{
+  "source": {
+    "slug": "yt-ogunda-meji-ogbe-otura",
+    "kind": "field-recording",
+    "title": "ODU IFA, OGUNDA MEJI, OGBE OTURA",
+    "author": "Babalawo (channel attribution unconfirmed)",
+    "url": "https://www.youtube.com/watch?v=pGKoueTKibU",
+    "rights": "all-rights-reserved",
+    "notes": "Publicly posted video. Recorded here as a citation. Rights remain with the uploader; nothing is reproduced."
+  },
+  "verses": [],
+  "recordings": [
+    {
+      "odu": "ogunda-ogunda",
+      "path": "https://www.youtube.com/watch?v=pGKoueTKibU",
+      "status": "draft",
+      "notes": "Attribution is the uploader's title claim; not confirmed by listening, and the reciter's standing is not established. Draft until someone with the expertise verifies both. A pointer only — no audio copied and no verse text transcribed."
+    }
+  ],
+  "notes": []
+}

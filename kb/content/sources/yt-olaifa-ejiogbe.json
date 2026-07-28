@@ -1,0 +1,21 @@
+{
+  "source": {
+    "slug": "yt-olaifa-ejiogbe",
+    "kind": "field-recording",
+    "title": "2 Verses of Eji Ogbe with Babalawo Olaifa",
+    "author": "Babalawo Lanre Olaifa",
+    "url": "https://www.youtube.com/watch?v=Mqdyl-7MLbA",
+    "rights": "all-rights-reserved",
+    "notes": "Publicly posted video. Recorded here as a citation. Rights remain with the uploader; nothing is reproduced."
+  },
+  "verses": [],
+  "recordings": [
+    {
+      "odu": "ogbe-ogbe",
+      "path": "https://www.youtube.com/watch?v=Mqdyl-7MLbA",
+      "status": "draft",
+      "notes": "Attribution is the uploader's title claim; not confirmed by listening, and the reciter's standing is not established. Draft until someone with the expertise verifies both. A pointer only — no audio copied and no verse text transcribed."
+    }
+  ],
+  "notes": []
+}

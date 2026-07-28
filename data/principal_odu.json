@@ -486,7 +486,8 @@
     "history": {
       "2026-07-28-web-attempt-failed": "Open-web verification failed: the one peer-reviewed table was CAPTCHA-gated with no mirror. A search-engine summary asserted patterns for Ọ̀sá and Òtúrúpọ̀n conflicting with this table; the claim traced to no real page and was not acted on.",
       "2026-07-28-video-corroboration": "A hand-drawn chart in a YouTube Short agreed on 10 of 16. Recorded as corroboration only; not citable.",
-      "2026-07-28-resolved": "Bascom Table 3B confirms Ọ̀sá = 0111 and Òtúrúpọ̀n = 0010. The search-engine claim was wrong. Declining to act on it was correct."
+      "2026-07-28-resolved": "Bascom Table 3B confirms Ọ̀sá = 0111 and Òtúrúpọ̀n = 0010. The search-engine claim was wrong. Declining to act on it was correct.",
+      "2026-07-28-catalogue-error": "Internet Archive item 'sixteencowriesyo0000basc' is catalogued as Bascom (1980) 'Sixteen Cowries: Yoruba Divination from Africa to the New World' but the scanned book is 'Explorations in African Systems of Thought', ed. Karp & Bird — same publisher and year, different work. Borrowed and checked 2026-07-28; NOT used. Bascom 1980 remains unconsulted, so the Lucumí/New World ordering is still unsourced. Catalogue metadata is not evidence of what a scan contains."
     }
   },
   "alternativeOrders": [

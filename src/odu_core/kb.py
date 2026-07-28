@@ -34,6 +34,7 @@ __all__ = [
     "add_verse",
     "add_translation",
     "add_note",
+    "add_recording",
     "verses_for",
     "publishable_for",
     "coverage",
@@ -248,6 +249,48 @@ def add_note(
            (odu_byte, kind, text, language, lineage, region, source_id, status)
            VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
         (odu_byte, kind, text.strip(), language, lineage, region, source_id, status),
+    )
+    db.commit()
+    return int(cur.lastrowid)
+
+
+def add_recording(
+    db: sqlite3.Connection,
+    *,
+    path: str,
+    source_id: int,
+    odu_byte: int | None = None,
+    verse_id: int | None = None,
+    duration_seconds: float | None = None,
+    recorded_on: str | None = None,
+    location: str | None = None,
+    restricted: bool = False,
+    status: str = "draft",
+    notes: str | None = None,
+) -> int:
+    """Record where a recitation can be heard.
+
+    ``path`` may be a local file or a URL. Storing a pointer to a public
+    recording is a citation, not a reproduction — no audio is copied and no
+    verse text is transcribed. That distinction is why this can hold material
+    the corpus itself never could.
+    """
+    if not path.strip():
+        raise KbError("a recording needs a path or URL")
+    if odu_byte is None and verse_id is None:
+        raise KbError("a recording must attach to a figure or a verse")
+    if odu_byte is not None:
+        _check_byte(odu_byte)
+    if db.execute("SELECT 1 FROM source WHERE id = ?", (source_id,)).fetchone() is None:
+        raise KbError(f"no source with id {source_id}")
+
+    cur = db.execute(
+        """INSERT INTO recording
+           (verse_id, odu_byte, path, duration_seconds, recorded_on, location,
+            source_id, restricted, status, notes)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+        (verse_id, odu_byte, path.strip(), duration_seconds, recorded_on,
+         location, source_id, int(restricted), status, notes),
     )
     db.commit()
     return int(cur.lastrowid)
