@@ -49,6 +49,19 @@ python3 scripts/verify_odu.py ogbe --against "Bascom 1969, Table 1, p. 44" --by 
 python3 scripts/verify_odu.py --status
 ```
 
+**Video was tried on 2026-07-28 and is a real lead.** A hand-drawn chart of
+all 16 in a YouTube Short was legible enough to read 10 figures, and all 10
+agree with this table — including **Ọ̀sá (`0111`) and Òtúrúpọ̀n (`0010`)**, the
+pair the untraceable claim had swapped. That contradicts the phantom claim but
+does not verify anything: the source is an anonymous Short and cannot be cited.
+Six figures (Ògúndá, Ìká, Òtúrá, Ìrẹtẹ̀, Ọ̀sẹ́, Òfún) were not legible.
+
+Video is worth pursuing further. Ifá is an oral and visual tradition, so a
+recorded practitioner drawing the figures is arguably closer to the source than
+an anthropologist's transcription. The obstacle is attribution — a citable
+record needs a named, checkable person, which a lecture from a named scholar or
+an institutional recording would give and an anonymous Short does not.
+
 **Check Ọ̀sá and Òtúrúpọ̀n first.** They are the two an unverified claim
 disputed, so they are where a real error is most likely to be hiding. If a
 source disagrees, mark `--dispute` rather than editing the table.

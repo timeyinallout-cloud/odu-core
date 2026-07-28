@@ -343,6 +343,33 @@
       "each consecutive seniority pair is a bitwise complement or reversal"
     ],
     "note": "Structural checks are enforced by tests and catch transcription errors, but they cannot establish that the table matches tradition. Only a primary source can. Record each check with scripts/verify_odu.py.",
-    "webVerificationAttempted": "2026-07-28: attempted from public web sources and FAILED. No primary or peer-reviewed table could be read — the Scientific African paper is CAPTCHA-gated with no mirror, and no page found actually carried the bit patterns. A search-engine summary asserted patterns differing from this table for Ọ̀sá and Òtúrúpọ̀n, but that claim could not be traced to any real page and was NOT acted on. Status of all 16 remains unverified."
+    "webVerificationAttempted": "2026-07-28: attempted from public web sources and FAILED. No primary or peer-reviewed table could be read — the Scientific African paper is CAPTCHA-gated with no mirror, and no page found actually carried the bit patterns. A search-engine summary asserted patterns differing from this table for Ọ̀sá and Òtúrúpọ̀n, but that claim could not be traced to any real page and was NOT acted on. Status of all 16 remains unverified.",
+    "corroboration": {
+      "note": "NOT verification. Recorded because it is independent visual evidence and because it bears directly on the one claim that disputed this table. Source quality is too low to change any figure's status: an anonymous YouTube Short showing a hand-drawn chart. It cannot be cited, and a practitioner's authority cannot be checked from a video.",
+      "source": "YouTube Short 'THE IMPRINTS OF THE SIXTEEN MAJOR ODU IFA, USING THE OPELE.', channel @charlesurubusi9492, https://www.youtube.com/shorts/Fq-wZvjXRdg",
+      "readOn": "2026-07-28",
+      "convention": "Open circle read as one mark (bit 1), filled circle as two marks (bit 0), top row most significant — the same convention this dataset uses.",
+      "agrees": [
+        "ogbe",
+        "oyeku",
+        "iwori",
+        "odi",
+        "irosun",
+        "owonrin",
+        "obara",
+        "okanran",
+        "osa",
+        "oturupon"
+      ],
+      "notRead": [
+        "ogunda",
+        "ika",
+        "otura",
+        "irete",
+        "ose",
+        "ofun"
+      ],
+      "bearingOnDispute": "Ọ̀sá read as 0111 and Òtúrúpọ̀n as 0010, matching this dataset. The untraceable search-engine claim had them swapped. That claim is now contradicted by the only real evidence found, but both remain unverified and should still be checked first against a citable source."
+    }
   }
 }
