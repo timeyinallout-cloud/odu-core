@@ -16,9 +16,9 @@ DATA    := data/principal_odu.json
 DERIVED := data/odu_256.json
 
 .DEFAULT_GOAL := build
-.PHONY: build test check clean site web ts kb parity verify serve-site serve-web
+.PHONY: build test check clean site art web ts kb parity verify serve-site serve-web
 
-build: $(DERIVED) kb site web ts
+build: $(DERIVED) kb site art web ts
 
 # Everything downstream depends on this, so it is a real file target rather
 # than a phony one — nothing rebuilds if the canonical data has not changed.
@@ -32,6 +32,10 @@ kb: $(DERIVED)
 ## Generate the knowledge base site.
 site: kb
 	$(PY) scripts/build_kb_site.py
+
+## Generate the contact sheet of all 256 figures, drawn and playable.
+art: site
+	$(PY) scripts/build_art.py
 
 ## Generate the self-contained mnemonic demo page.
 web: $(DERIVED)

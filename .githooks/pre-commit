@@ -1,0 +1,27 @@
+#!/bin/sh
+# Local CI. Enable once with:  git config core.hooksPath .githooks
+#
+# Kept fast enough to run on every commit — the whole suite is well under a
+# second. Skip deliberately with `git commit --no-verify`.
+set -e
+
+printf '  running Python tests…    '
+python3 -m pytest tests/ -q >/dev/null 2>&1 && echo "ok" || { echo "FAILED"; python3 -m pytest tests/ -q; exit 1; }
+
+printf '  validating content…      '
+python3 scripts/ingest.py --check >/dev/null 2>&1 && echo "ok" || { echo "FAILED"; python3 scripts/ingest.py --check; exit 1; }
+
+printf '  verification coverage…   '
+if PYTHONPATH=src python3 -m odu_core.cli verify >/dev/null 2>&1; then
+  echo "ok (16 of 16)"
+else
+  echo "INCOMPLETE"
+  PYTHONPATH=src python3 -m odu_core.cli verify || true
+  echo "  a figure has lost its source — commit blocked"
+  exit 1
+fi
+
+if command -v node >/dev/null 2>&1 && [ -d ts/dist ]; then
+  printf '  running TypeScript tests… '
+  (cd ts && npm test >/dev/null 2>&1) && echo "ok" || { echo "FAILED"; (cd ts && npm test); exit 1; }
+fi

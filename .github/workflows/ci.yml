@@ -1,0 +1,53 @@
+name: CI
+
+# Committed but dormant while the repo is local — it runs the moment there is
+# a remote. The same checks are enforced now by .githooks/pre-commit.
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      # Node from the official builds, which include Amaro — the distro
+      # packages often do not, and native TypeScript stripping needs it.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install
+        run: |
+          python -m pip install --quiet pytest
+          npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+
+      - name: Build all derived artifacts
+        run: make
+
+      - name: Python tests
+        run: python -m pytest tests/ -q
+
+      - name: TypeScript tests
+        run: cd ts && npm test
+
+      # The foundation must stay sourced. This exits non-zero the moment any
+      # of the 16 principal figures loses its verification.
+      - name: Verification coverage
+        run: PYTHONPATH=src python -m odu_core.cli verify
+
+      - name: Content files validate
+        run: python scripts/ingest.py --check
+
+      # A derived file that differs from what the source generates means
+      # someone edited an artifact by hand.
+      - name: Derived artifacts are up to date
+        run: |
+          git diff --exit-code -- data/odu_256.json ts/test/fixtures/parity.json \
+            || { echo "::error::derived files are stale — run 'make' and commit"; exit 1; }
