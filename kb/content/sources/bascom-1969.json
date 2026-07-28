@@ -271,9 +271,30 @@
   ],
   "notes": [
     {
+      "odu": "ogbe-ogbe",
+      "kind": "alternative-name",
+      "text": "Ogbè Méjì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-oyeku",
+      "kind": "alternative-name",
+      "text": "Ogbè Ọ̀yẹ̀kú",
+      "language": "yo",
+      "status": "published"
+    },
+    {
       "odu": "ogbe-oyeku",
       "kind": "alternative-name",
       "text": "Ogbè Yẹ̀kú",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-iwori",
+      "kind": "alternative-name",
+      "text": "Ogbè Ìwòrì",
       "language": "yo",
       "status": "published"
     },
@@ -287,7 +308,21 @@
     {
       "odu": "ogbe-odi",
       "kind": "alternative-name",
+      "text": "Ogbè Òdí",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-odi",
+      "kind": "alternative-name",
       "text": "Ogbè Dí",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-obara",
+      "kind": "alternative-name",
+      "text": "Ogbè Ọ̀bàrà",
       "language": "yo",
       "status": "published"
     },
@@ -301,7 +336,21 @@
     {
       "odu": "ogbe-okanran",
       "kind": "alternative-name",
+      "text": "Ogbè Ọ̀kànràn",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-okanran",
+      "kind": "alternative-name",
       "text": "Ogbè Kànràn",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-irosun",
+      "kind": "alternative-name",
+      "text": "Ogbè Ìrosùn",
       "language": "yo",
       "status": "published"
     },
@@ -315,6 +364,13 @@
     {
       "odu": "ogbe-ogunda",
       "kind": "alternative-name",
+      "text": "Ogbè Ògúndá",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-ogunda",
+      "kind": "alternative-name",
       "text": "Ogbè Gúndá",
       "language": "yo",
       "status": "published"
@@ -322,7 +378,35 @@
     {
       "odu": "ogbe-ika",
       "kind": "alternative-name",
+      "text": "Ogbè Ìká",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-ika",
+      "kind": "alternative-name",
       "text": "Ogbè Ká",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "oyeku-ogbe",
+      "kind": "alternative-name",
+      "text": "Ọ̀yẹ̀kú Ogbè",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "oyeku-oyeku",
+      "kind": "alternative-name",
+      "text": "Ọ̀yẹ̀kú Méjì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "oyeku-iwori",
+      "kind": "alternative-name",
+      "text": "Ọ̀yẹ̀kú Ìwòrì",
       "language": "yo",
       "status": "published"
     },
@@ -336,7 +420,21 @@
     {
       "odu": "oyeku-odi",
       "kind": "alternative-name",
+      "text": "Ọ̀yẹ̀kú Òdí",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "oyeku-odi",
+      "kind": "alternative-name",
       "text": "Ọ̀yẹ̀kú Dí",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "oyeku-owonrin",
+      "kind": "alternative-name",
+      "text": "Ọ̀yẹ̀kú Ọ̀wọ́nrín",
       "language": "yo",
       "status": "published"
     },
@@ -348,9 +446,51 @@
       "status": "published"
     },
     {
+      "odu": "iwori-ogbe",
+      "kind": "alternative-name",
+      "text": "Ìwòrì Ogbè",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "iwori-oyeku",
+      "kind": "alternative-name",
+      "text": "Ìwòrì Ọ̀yẹ̀kú",
+      "language": "yo",
+      "status": "published"
+    },
+    {
       "odu": "iwori-oyeku",
       "kind": "alternative-name",
       "text": "Ìwòrì Yẹ̀kú",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "iwori-iwori",
+      "kind": "alternative-name",
+      "text": "Ìwòrì Méjì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "iwori-ofun",
+      "kind": "alternative-name",
+      "text": "Ìwòrì Òfún",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "odi-odi",
+      "kind": "alternative-name",
+      "text": "Òdí Méjì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "odi-okanran",
+      "kind": "alternative-name",
+      "text": "Òdí Ọ̀kànràn",
       "language": "yo",
       "status": "published"
     },
@@ -364,7 +504,56 @@
     {
       "odu": "odi-irosun",
       "kind": "alternative-name",
+      "text": "Òdí Ìrosùn",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "odi-irosun",
+      "kind": "alternative-name",
       "text": "Òdí Rosùn",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "okanran-okanran",
+      "kind": "alternative-name",
+      "text": "Ọ̀kànràn Méjì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "irosun-obara",
+      "kind": "alternative-name",
+      "text": "Ìrosùn Ọ̀bàrà",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "irosun-irosun",
+      "kind": "alternative-name",
+      "text": "Ìrosùn Méjì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "irosun-ose",
+      "kind": "alternative-name",
+      "text": "Ìrosùn Ọ̀sẹ́",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "owonrin-owonrin",
+      "kind": "alternative-name",
+      "text": "Ọ̀wọ́nrín Méjì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "owonrin-irete",
+      "kind": "alternative-name",
+      "text": "Ọ̀wọ́nrín Ìrẹtẹ̀",
       "language": "yo",
       "status": "published"
     },
@@ -378,7 +567,28 @@
     {
       "odu": "ogunda-iwori",
       "kind": "alternative-name",
+      "text": "Ògúndá Ìwòrì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogunda-iwori",
+      "kind": "alternative-name",
       "text": "Ògúndá Wòrì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogunda-ogunda",
+      "kind": "alternative-name",
+      "text": "Ògúndá Méjì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "osa-ogunda",
+      "kind": "alternative-name",
+      "text": "Ọ̀sá Ògúndá",
       "language": "yo",
       "status": "published"
     },
@@ -390,9 +600,51 @@
       "status": "published"
     },
     {
+      "odu": "osa-osa",
+      "kind": "alternative-name",
+      "text": "Ọ̀sá Méjì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ose-otura",
+      "kind": "alternative-name",
+      "text": "Ọ̀sẹ́ Òtúrá",
+      "language": "yo",
+      "status": "published"
+    },
+    {
       "odu": "ose-otura",
       "kind": "alternative-name",
       "text": "Ọ̀sẹ́ Túrá",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ose-ose",
+      "kind": "alternative-name",
+      "text": "Ọ̀sẹ́ Méjì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ofun-ogbe",
+      "kind": "alternative-name",
+      "text": "Òfún Ogbè",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ofun-iwori",
+      "kind": "alternative-name",
+      "text": "Òfún Ìwòrì",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ofun-odi",
+      "kind": "alternative-name",
+      "text": "Òfún Òdí",
       "language": "yo",
       "status": "published"
     },

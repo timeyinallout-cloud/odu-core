@@ -9,10 +9,12 @@ things this project could not otherwise have honestly:
 
 1. **Real page references.** Citation-only verse records — where the verse
    lives, without reproducing a word of copyrighted text.
-2. **Attested contracted names.** His notation ``Ogbe - (Ọ)yẹku`` marks the
-   elision: the contracted form is *Ogbe Yẹku*. These are the traditional
-   compound names the dataset has been carrying as ``null`` precisely because
-   they must be sourced rather than generated.
+2. **Attested names.** His notation ``Ogbe - (Ọ)yẹku`` marks a vowel that may
+   be elided in speech; the name itself keeps it, and is *Ogbè Ọ̀yẹ̀kú*. These
+   are the compound names the dataset carried as ``null`` precisely because
+   they must be sourced rather than generated — and Bascom listing them under
+   the same construction this dataset uses confirms the convention rather than
+   merely repeating it.
 
 Transcribed by eye from the Internet Archive scan on 2026-07-28. The raw
 notation is preserved on every record so a later reader can check the
@@ -121,33 +123,47 @@ def drop_initial_vowel(name: str) -> str:
     return unicodedata.normalize("NFC", decomposed[i:])
 
 
-def contracted(first: str, second: str, notation: str) -> str | None:
-    """Build the contracted name in the dataset's own tone-marked orthography.
+def attested_name(first: str, second: str) -> str:
+    """The full name Bascom lists a figure under, in this dataset's orthography.
 
-    Bascom prints ``Ogbe - (Ọ)yẹku`` — the parenthesised letter is elided, so
-    the name is spoken *Ogbe Yẹku*. He omits tone marks throughout, which would
-    leave these 19 names orthographically inconsistent with the rest of the
-    dataset. In a tone language that is not a cosmetic difference.
+    Bascom prints the parenthesised letter in ``Ogbe - (Ọ)yẹku`` to mark it as
+    *optional* — elided in speech — not absent from the name. The name is
+    ``Ogbè Ọ̀yẹ̀kú``, with the vowel.
 
-    So the elision is taken from Bascom and the tone marks from our own
-    principal names, which are themselves verified against his Table 1 and
-    Table 3. Nothing here is inferred: both inputs are sourced, and the
-    operation is dropping a vowel.
+    An earlier version of this file read the parenthesis as deletion and
+    recorded the elided form as primary. That was wrong, and it was an
+    inference presented as a source reading. Corrected on the authority of a
+    Yorùbá speaker, 2026-07-29.
 
-    Open linguistic question, deliberately not resolved: whether elision shifts
-    the tone of the syllables that remain. The forms below assume it does not.
+    Note what this yields: for compound figures the attested name matches the
+    name this dataset constructs by concatenation. That is not redundancy —
+    it is Bascom confirming that the construction convention is correct, which
+    is a different and stronger claim than the dataset making it up.
     """
-    if " - (" not in notation:
-        return None
     head = principal(first).name
+    if first == second:
+        # Bascom writes every doubled figure as "<Principal> Meji", including
+        # Ogbe — where this dataset uses the traditional "Èjì Ogbè" instead.
+        return f"{head} Méjì"
+    return f"{head} {principal(second).name}"
+
+
+def elided_form(first: str, second: str, notation: str) -> str | None:
+    """The spoken contraction, where Bascom's parentheses mark one.
+
+    Recorded as a variant beside the full name, never in place of it. Whether
+    elision shifts the tone of the syllables that remain is unresolved.
+    """
+    if " - (" not in notation or first == second:
+        return None
     tail = drop_initial_vowel(principal(second).name)
     if not tail:
         return None
-    return f"{head} {tail[0].upper()}{tail[1:]}"
+    return f"{principal(first).name} {tail[0].upper()}{tail[1:]}"
 
 
 def main() -> int:
-    verses, notes, derived = [], [], 0
+    verses, notes, derived, elisions = [], [], 0, 0
 
     for first, second, notation, count, pages in ENTRIES:
         odu = from_legs(principal(first), principal(second))
@@ -162,13 +178,21 @@ def main() -> int:
             ),
         })
 
-        name = contracted(first, second, notation)
-        if name:
-            derived += 1
+        derived += 1
+        notes.append({
+            "odu": odu.slug,
+            "kind": "alternative-name",
+            "text": attested_name(first, second),
+            "language": "yo",
+            "status": "published",
+        })
+        elided = elided_form(first, second, notation)
+        if elided:
+            elisions += 1
             notes.append({
                 "odu": odu.slug,
                 "kind": "alternative-name",
-                "text": name,
+                "text": elided,
                 "language": "yo",
                 "status": "published",
             })
@@ -197,18 +221,21 @@ def main() -> int:
     # base. One transcription, two outputs — never two transcriptions.
     names = {}
     for first, second, notation, _count, pages in ENTRIES:
-        name = contracted(first, second, notation)
+        name = attested_name(first, second)
         if not name:
             continue
         odu = from_legs(principal(first), principal(second))
         names[odu.slug] = {
             "traditionalName": name,
+            "elidedForm": elided_form(first, second, notation),
             "source": f"Bascom 1969, p. v-vi ({notation})",
             "note": (
-                "Contracted form. Elision from Bascom's notation; tone marks "
-                "carried over from this dataset's principal names, which are "
-                "verified against Bascom Table 1 p. 4 and Table 3 p. 48. "
-                "Bascom himself omits tone marks."
+                "Full attested name. Bascom's parenthesised letter marks a "
+                "vowel that may be elided in speech, not one absent from the "
+                "name — elidedForm records that variant where he marks one. "
+                "Tone marks carried over from this dataset's principal names, "
+                "themselves verified against his Table 1 p. 4 and Table 3 "
+                "p. 48; Bascom omits tone throughout."
             ),
         }
 
@@ -234,8 +261,8 @@ def main() -> int:
 
     print(f"wrote {OUT.relative_to(ROOT)}")
     print(f"  {len(verses)} citation-only verse records")
-    print(f"  {derived} contracted names derived from Bascom's elision notation")
-    print(f"  {len(ENTRIES) - derived} entries carry no contraction in the source")
+    print(f"  {derived} attested names")
+    print(f"  {elisions} of them also record a spoken elision")
     print(f"wrote {NAMES.relative_to(ROOT)} — {len(names)} of 256 named")
     return 0
 

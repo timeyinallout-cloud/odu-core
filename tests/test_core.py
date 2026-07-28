@@ -259,11 +259,11 @@ class TestTraditionalNames:
             expected = names.get(o["slug"], {}).get("traditionalName")
             assert o["traditionalName"] == expected, o["slug"]
 
-    def test_contracted_names_carry_tone_marks(self):
+    def test_attested_names_carry_tone_marks(self):
         """Yorùbá tone is meaningful; a tone-less name is a different word.
 
         The source (Bascom) omits tone marks, so these are composed: the
-        elision is his, the tone comes from our own verified principal names.
+        naming is his, the tone comes from our own verified principal names.
         Losing it again would leave the corpus inconsistent with itself.
         """
         import json
@@ -282,8 +282,8 @@ class TestTraditionalNames:
             )
             assert unicodedata.is_normalized("NFC", name), f"{slug}: not NFC"
 
-    def test_contracted_name_starts_with_its_principal(self):
-        """The head of a contracted name is the first leg, unaltered."""
+    def test_attested_name_starts_with_its_principal(self):
+        """The head of an attested name is the first leg, unaltered."""
         import json
         from odu_core.data import DATA_PATH
         from odu_core import principal
@@ -297,3 +297,26 @@ class TestTraditionalNames:
                 f"{slug}: {entry['traditionalName']!r} does not open with "
                 f"{principal(first).name!r}"
             )
+
+    def test_elided_form_is_a_variant_never_a_replacement(self):
+        """Where a source marks elision, both forms are kept.
+
+        The parenthesis in Bascom's ``Ogbe - (Ọ)yẹku`` marks a vowel that may
+        drop in speech, not one missing from the name. Recording only the
+        contraction would lose the name itself.
+        """
+        import json
+        from odu_core.data import DATA_PATH
+
+        names = json.loads(
+            (DATA_PATH.parent / "compound_names.json").read_text(encoding="utf-8")
+        )["names"]
+        with_elision = {k: v for k, v in names.items() if v.get("elidedForm")}
+        assert with_elision, "no elided variants recorded"
+        for slug, entry in with_elision.items():
+            full, elided = entry["traditionalName"], entry["elidedForm"]
+            assert full != elided, f"{slug}: elided form duplicates the name"
+            # The contraction is shorter precisely because a vowel dropped.
+            assert len(elided) < len(full), f"{slug}: {elided!r} not shorter"
+            head = full.split(" ")[0]
+            assert elided.startswith(head), f"{slug}: heads differ"

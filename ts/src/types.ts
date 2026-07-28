@@ -36,6 +36,11 @@ export interface Odu {
   readonly traditionalName: string | null;
   /** Where the traditional name came from. `null` whenever the name is. */
   readonly traditionalNameSource: string | null;
+  /**
+   * The name as contracted in speech, where a source marks the elision.
+   * A variant of {@link traditionalName}, never a replacement for it.
+   */
+  readonly elidedForm: string | null;
   readonly isMeji: boolean;
   /** Position in the traditional 256 ordering, 1-256. */
   readonly seniorityRank: number;

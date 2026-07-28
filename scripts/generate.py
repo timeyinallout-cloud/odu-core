@@ -67,6 +67,7 @@ def build() -> dict:
                 "slug": o.slug,
                 "traditionalName": (names.get(o.slug) or {}).get("traditionalName"),
                 "traditionalNameSource": (names.get(o.slug) or {}).get("source"),
+                "elidedForm": (names.get(o.slug) or {}).get("elidedForm"),
                 "isMeji": o.is_meji,
                 "seniorityRank": o.seniority_rank,
                 "right": {"slug": o.right.slug, "name": o.right.name, "nibble": o.right.nibble},
