@@ -123,6 +123,24 @@ Its test suite asserts against `ts/test/fixtures/parity.json`, generated from
 the Python implementation, so the two cannot silently disagree about a name, a
 seniority rank, or a checksum.
 
+Source files import with `.ts` extensions, so Node runs them directly with
+native type stripping — no build step for a quick check:
+
+```sh
+node -e 'import("./ts/src/index.ts").then(m => console.log(m.fromByte(44).name))'
+```
+
+`tsc` rewrites those to `.js` on the way into `dist/`. It does **not** rewrite
+them in declaration files, which would leave `dist/*.d.ts` pointing at a
+`./types.ts` that isn't there and break every TypeScript consumer — so
+`npm run build` runs `scripts/fix-decl-extensions.mjs` afterwards, and
+`test/dist.test.js` fails the build if any `.ts` specifier survives. Build
+through `npm run build` or `make`, never bare `tsc`.
+
+Native stripping needs a Node built with Amaro. Distro packages often are not
+(`node -p 'process.config.variables.node_use_amaro'` must print `true`); an
+official nodejs.org or nvm build is.
+
 ## Knowledge base
 
 Sourced content keyed to the 256 figures.

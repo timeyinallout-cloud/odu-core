@@ -17,8 +17,8 @@
  */
 
 import { createHash } from "node:crypto";
-import { allOdu, find, fold, fromByte, fromLegs } from "./core.js";
-import type { Odu } from "./types.js";
+import { allOdu, find, fold, fromByte, fromLegs } from "./core.ts";
+import type { Odu } from "./types.ts";
 
 /** Figures appended for the checksum. One figure is one byte of SHA-256. */
 export const CHECKSUM_FIGURES = 1;

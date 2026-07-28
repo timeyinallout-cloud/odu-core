@@ -5,7 +5,7 @@
  * generated `data/odu_256.json` rather than re-deriving the mapping.
  */
 
-export * from "./types.js";
+export * from "./types.ts";
 export {
   allOdu,
   bySeniority,
@@ -21,7 +21,7 @@ export {
   seniorOf,
   specVersion,
   verification,
-} from "./core.js";
+} from "./core.ts";
 export {
   CHECKSUM_FIGURES,
   ChecksumError,
@@ -33,4 +33,4 @@ export {
   phraseBits,
   toPhrase,
   type Style,
-} from "./mnemonic.js";
+} from "./mnemonic.ts";

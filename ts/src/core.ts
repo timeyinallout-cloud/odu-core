@@ -10,7 +10,7 @@
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import type { Convention, Dataset, Odu, Verification } from "./types.js";
+import type { Convention, Dataset, Odu, Verification } from "./types.ts";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 

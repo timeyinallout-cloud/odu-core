@@ -41,8 +41,11 @@ web: $(DERIVED)
 parity: $(DERIVED)
 	$(PY) scripts/export_parity.py
 
+# Via npm rather than tsc directly: the build has a post-compile step that
+# fixes import extensions in the emitted declarations, and skipping it ships a
+# package whose types no consumer can resolve.
 ts: parity
-	$(TSC) -p ts
+	cd ts && npm run build
 
 test: build
 	$(PY) -m pytest tests/ -q
