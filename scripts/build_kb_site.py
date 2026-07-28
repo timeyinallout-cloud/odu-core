@@ -85,7 +85,8 @@ PAGE = """<!doctype html>
 
 FOOTER = (
     'Generated from <code>data/principal_odu.json</code>, spec {spec}. '
-    '<strong>The bit patterns are unverified against a primary source.</strong> '
+    'All 16 principal figures verified against Bascom (1969), Table 1 p. 4 and '
+    'Table 3 col. B p. 48. '
     'Content appears only where a citable source exists — see '
     '<a href="{root}index.html">the index</a> for coverage.'
 )
@@ -127,19 +128,34 @@ def render_odu_page(odu: Odu, db: sqlite3.Connection | None) -> str:
             (odu.byte,),
         ).fetchall()
 
+    # An attested contracted name is the traditional name of the figure, so it
+    # belongs beside the descriptive one rather than buried under commentary.
+    attested = [n for n in notes if n["kind"] == "alternative-name"]
+
+    detail = [
+        ("Right leg", f"{e(odu.right.name)} <span class='stat'>({odu.right.bits})</span>"),
+        ("Left leg", f"{e(odu.left.name)} <span class='stat'>({odu.left.bits})</span>"),
+        ("Slug", f"<code>{e(odu.slug)}</code>"),
+        ("Seniority", f"{odu.seniority_rank} of 256"),
+        ("Méjì", "yes" if odu.is_meji else "no"),
+    ]
+    if attested:
+        detail.insert(0, (
+            "Attested name",
+            " · ".join(
+                f"{e(n['text'])} <span class='stat'>({e(n['src_author'] or n['src_title'])} "
+                f"{e(n['src_year'] or '')})</span>"
+                for n in attested
+            ),
+        ))
+
     parts = [
         '<div class="crumb"><a href="../index.html">← all 256 figures</a></div>',
         f"<h1>{e(odu.name)}</h1>",
         f'<p class="sub">Byte {odu.byte} · 0x{odu.byte:02X} · {odu.bits}</p>',
         '<div class="pair">',
         figure_block(odu),
-        rows([
-            ("Right leg", f"{e(odu.right.name)} <span class='stat'>({odu.right.bits})</span>"),
-            ("Left leg", f"{e(odu.left.name)} <span class='stat'>({odu.left.bits})</span>"),
-            ("Slug", f"<code>{e(odu.slug)}</code>"),
-            ("Seniority", f"{odu.seniority_rank} of 256"),
-            ("Méjì", "yes" if odu.is_meji else "no"),
-        ]),
+        rows(detail),
         "</div>",
         "<h2>Verses</h2>",
     ]
@@ -156,8 +172,9 @@ def render_odu_page(odu: Odu, db: sqlite3.Connection | None) -> str:
         )
 
     parts.append("<h2>Notes</h2>")
-    if notes:
-        for n in notes:
+    other = [n for n in notes if n["kind"] != "alternative-name"]
+    if other:
+        for n in other:
             cite = " ".join(
                 str(x) for x in (n["src_author"], n["src_year"]) if x
             )

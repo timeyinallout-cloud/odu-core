@@ -221,3 +221,45 @@ class TestReporting:
         s = stats(db)
         assert s["verses"] == 1
         assert s["verses_publishable"] == 0
+
+
+class TestNamesAreFactsNotExpression:
+    """A proper name is not an expressive work; commentary is.
+
+    The distinction matters because most published Ifá scholarship is in
+    copyright. Being unable to record that a figure is *called* something would
+    make the naming data unusable, while reproducing commentary from the same
+    page would be a real infringement.
+    """
+
+    def test_attested_name_publishes_from_a_copyrighted_source(self, db, closed_source):
+        add_note(
+            db, odu_byte=240, kind="alternative-name", text="Ogbe Yẹku",
+            source_id=closed_source, status="published",
+        )
+        rows = db.execute(
+            "SELECT * FROM publishable_note WHERE odu_byte=240"
+        ).fetchall()
+        assert len(rows) == 1
+        assert rows[0]["text"] == "Ogbe Yẹku"
+
+    @pytest.mark.parametrize(
+        "kind", ["commentary", "etymology", "taboo", "regional-variant", "association"]
+    )
+    def test_every_other_kind_stays_gated(self, db, closed_source, kind):
+        add_note(
+            db, odu_byte=241, kind=kind, text="…", source_id=closed_source,
+            status="published",
+        )
+        assert db.execute(
+            "SELECT COUNT(*) FROM publishable_note WHERE odu_byte=241"
+        ).fetchone()[0] == 0
+
+    def test_draft_names_still_do_not_publish(self, db, closed_source):
+        add_note(
+            db, odu_byte=242, kind="alternative-name", text="…",
+            source_id=closed_source, status="draft",
+        )
+        assert db.execute(
+            "SELECT COUNT(*) FROM publishable_note WHERE odu_byte=242"
+        ).fetchone()[0] == 0

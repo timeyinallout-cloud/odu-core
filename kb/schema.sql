@@ -192,9 +192,17 @@ WHERE r.status = 'published'
   AND s.reproduction_allowed = 1
   AND (c.id IS NULL OR c.consent_status = 'granted');
 
+-- Notes are gated like everything else, with one narrow exception: an
+-- 'alternative-name' is a proper name, and a name is a fact rather than an
+-- expressive work — copyright does not reach it. Recording that a figure is
+-- called "Ogbe Yẹku" is not reproducing a book. Every other kind of note can
+-- carry expression (commentary, etymology, taboo) and stays gated.
+--
+-- The exception is deliberately keyed on `kind` and not on note length: a
+-- short piece of commentary is still commentary.
 CREATE VIEW IF NOT EXISTS publishable_note AS
 SELECT n.*
 FROM odu_note n
 JOIN source s ON s.id = n.source_id
 WHERE n.status = 'published'
-  AND s.reproduction_allowed = 1;
+  AND (s.reproduction_allowed = 1 OR n.kind = 'alternative-name');

@@ -7,8 +7,401 @@
     "year": 1969,
     "publisher": "Indiana University Press",
     "rights": "all-rights-reserved",
-    "notes": "Primary reference for the figures and their ordering. Verify data/principal_odu.json against this. Publication details unverified against a physical copy."
+    "notes": "Verified 2026-07-28 via Internet Archive controlled lending (ifadivinationcom0000basc). Table 1 p. 4 and Table 3 col. B p. 48 verified all 16 principal figures. Verses occupy pp. 140-563; bibliography pp. 565-575. Bascom numbers his 256 figures by the Ifẹ order (Table 1), not the southwestern order used as this dataset's default, so his figure numbers do not match seniority_rank."
   },
-  "verses": [],
-  "notes": []
+  "transcription": {
+    "from": "Table of contents, pp. v-vi",
+    "on": "2026-07-28",
+    "method": "read by eye from the Internet Archive scan",
+    "note": "Notation preserved verbatim in each pageReference so the derivation of contracted names can be checked, not trusted."
+  },
+  "verses": [
+    {
+      "odu": "ogbe-ogbe",
+      "pageReference": "Bascom 1969, pp. 140-162 (Ogbe Meji (1-12))",
+      "sequence": null,
+      "status": "published",
+      "notes": "12 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ogbe-oyeku",
+      "pageReference": "Bascom 1969, pp. 164-170 (Ogbe - (Ọ)yẹku (1-3))",
+      "sequence": null,
+      "status": "published",
+      "notes": "3 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ogbe-iwori",
+      "pageReference": "Bascom 1969, pp. 170-180 (Ogbe - (I)wori (1-4))",
+      "sequence": null,
+      "status": "published",
+      "notes": "4 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ogbe-odi",
+      "pageReference": "Bascom 1969, pp. 180-184 (Ogbe - (E)di (1-4))",
+      "sequence": null,
+      "status": "published",
+      "notes": "4 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ogbe-obara",
+      "pageReference": "Bascom 1969, pp. 184-190 (Ogbe - (Ọ)bara (1-4))",
+      "sequence": null,
+      "status": "published",
+      "notes": "4 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ogbe-okanran",
+      "pageReference": "Bascom 1969, pp. 190-202 (Ogbe - (Ọ)kanran (1-6))",
+      "sequence": null,
+      "status": "published",
+      "notes": "6 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ogbe-irosun",
+      "pageReference": "Bascom 1969, pp. 202-212 (Ogbe - (I)rosun (1-5))",
+      "sequence": null,
+      "status": "published",
+      "notes": "5 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ogbe-ogunda",
+      "pageReference": "Bascom 1969, pp. 214-220 (Ogbe - (O)gunda (1-3))",
+      "sequence": null,
+      "status": "published",
+      "notes": "3 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ogbe-ika",
+      "pageReference": "Bascom 1969, pp. 220-228 (Ogbe - (I)ka (1-3))",
+      "sequence": null,
+      "status": "published",
+      "notes": "3 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "oyeku-ogbe",
+      "pageReference": "Bascom 1969, pp. 230-232 (Ọyẹku Ogbe (1-4))",
+      "sequence": null,
+      "status": "published",
+      "notes": "4 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "oyeku-oyeku",
+      "pageReference": "Bascom 1969, pp. 232-258 (Ọyẹku Meji (1-12))",
+      "sequence": null,
+      "status": "published",
+      "notes": "12 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "oyeku-iwori",
+      "pageReference": "Bascom 1969, pp. 258-262 (Ọyẹku - (I)wori (1-3))",
+      "sequence": null,
+      "status": "published",
+      "notes": "3 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "oyeku-odi",
+      "pageReference": "Bascom 1969, pp. 262-264 (Ọyẹku - (E)di (1-3))",
+      "sequence": null,
+      "status": "published",
+      "notes": "3 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "oyeku-owonrin",
+      "pageReference": "Bascom 1969, pp. 266-268 (Ọyẹku - (Ọ)wọnrin (1))",
+      "sequence": null,
+      "status": "published",
+      "notes": "1 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "iwori-ogbe",
+      "pageReference": "Bascom 1969, pp. 268-284 (Iwori Ogbe (1-6))",
+      "sequence": null,
+      "status": "published",
+      "notes": "6 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "iwori-oyeku",
+      "pageReference": "Bascom 1969, pp. 284-286 (Iwori - (Ọ)yẹku (1-2))",
+      "sequence": null,
+      "status": "published",
+      "notes": "2 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "iwori-iwori",
+      "pageReference": "Bascom 1969, pp. 288-308 (Iwori Meji (1-7))",
+      "sequence": null,
+      "status": "published",
+      "notes": "7 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "iwori-ofun",
+      "pageReference": "Bascom 1969, pp. 310 (Iwori Ofun (1))",
+      "sequence": null,
+      "status": "published",
+      "notes": "1 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "odi-odi",
+      "pageReference": "Bascom 1969, pp. 310-318 (Edi Meji (1-5))",
+      "sequence": null,
+      "status": "published",
+      "notes": "5 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "odi-okanran",
+      "pageReference": "Bascom 1969, pp. 318-336 (Edi - (Ọ)kanran (1-8))",
+      "sequence": null,
+      "status": "published",
+      "notes": "8 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "odi-irosun",
+      "pageReference": "Bascom 1969, pp. 338-340 (Edi - (I)rosun (1-2))",
+      "sequence": null,
+      "status": "published",
+      "notes": "2 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "okanran-okanran",
+      "pageReference": "Bascom 1969, pp. 340-344 (Ọkanran Meji (1-3))",
+      "sequence": null,
+      "status": "published",
+      "notes": "3 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "irosun-obara",
+      "pageReference": "Bascom 1969, pp. 346-350 (Irosun Ọbara (1))",
+      "sequence": null,
+      "status": "published",
+      "notes": "1 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "irosun-irosun",
+      "pageReference": "Bascom 1969, pp. 350-354 (Irosun Meji (1-2))",
+      "sequence": null,
+      "status": "published",
+      "notes": "2 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "irosun-ose",
+      "pageReference": "Bascom 1969, pp. 354-358 (Irosun Ọsẹ (1-2))",
+      "sequence": null,
+      "status": "published",
+      "notes": "2 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "owonrin-owonrin",
+      "pageReference": "Bascom 1969, pp. 360-362 (Ọwọnrin Meji (1-2))",
+      "sequence": null,
+      "status": "published",
+      "notes": "2 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "owonrin-irete",
+      "pageReference": "Bascom 1969, pp. 362-368 (Ọwọnrin - (I)rẹtẹ (1))",
+      "sequence": null,
+      "status": "published",
+      "notes": "1 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ogunda-iwori",
+      "pageReference": "Bascom 1969, pp. 368-370 (Ogunda - (I)wori (1))",
+      "sequence": null,
+      "status": "published",
+      "notes": "1 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ogunda-ogunda",
+      "pageReference": "Bascom 1969, pp. 372-374 (Ogunda Meji (1-2))",
+      "sequence": null,
+      "status": "published",
+      "notes": "2 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "osa-ogunda",
+      "pageReference": "Bascom 1969, pp. 374-384 (Ọsa - (O)gunda (1))",
+      "sequence": null,
+      "status": "published",
+      "notes": "1 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "osa-osa",
+      "pageReference": "Bascom 1969, pp. 384-386 (Ọsa Meji (1))",
+      "sequence": null,
+      "status": "published",
+      "notes": "1 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ose-otura",
+      "pageReference": "Bascom 1969, pp. 466 (Ọsẹ - (O)tura (1))",
+      "sequence": null,
+      "status": "published",
+      "notes": "1 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ose-ose",
+      "pageReference": "Bascom 1969, pp. 468-470 (Ọsẹ Meji (1-2))",
+      "sequence": null,
+      "status": "published",
+      "notes": "2 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ofun-ogbe",
+      "pageReference": "Bascom 1969, pp. 470-476 (Ofun Ogbe (1-4))",
+      "sequence": null,
+      "status": "published",
+      "notes": "4 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ofun-iwori",
+      "pageReference": "Bascom 1969, pp. 476-482 (Ofun (I)wori (1-4))",
+      "sequence": null,
+      "status": "published",
+      "notes": "4 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    },
+    {
+      "odu": "ofun-odi",
+      "pageReference": "Bascom 1969, pp. 482-486 (Ofun - (E)di (1-2))",
+      "sequence": null,
+      "status": "published",
+      "notes": "2 verse(s) published for this figure. Text not reproduced: source is under copyright. Mapped on the assumption that Bascom's first-named leg is the right leg (cast first, high nibble here). Not confirmed against a drawn compound figure in the source."
+    }
+  ],
+  "notes": [
+    {
+      "odu": "ogbe-oyeku",
+      "kind": "alternative-name",
+      "text": "Ogbe Yẹku",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-iwori",
+      "kind": "alternative-name",
+      "text": "Ogbe Wori",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-odi",
+      "kind": "alternative-name",
+      "text": "Ogbe Di",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-obara",
+      "kind": "alternative-name",
+      "text": "Ogbe Bara",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-okanran",
+      "kind": "alternative-name",
+      "text": "Ogbe Kanran",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-irosun",
+      "kind": "alternative-name",
+      "text": "Ogbe Rosun",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-ogunda",
+      "kind": "alternative-name",
+      "text": "Ogbe Gunda",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogbe-ika",
+      "kind": "alternative-name",
+      "text": "Ogbe Ka",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "oyeku-iwori",
+      "kind": "alternative-name",
+      "text": "Ọyẹku Wori",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "oyeku-odi",
+      "kind": "alternative-name",
+      "text": "Ọyẹku Di",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "oyeku-owonrin",
+      "kind": "alternative-name",
+      "text": "Ọyẹku Wọnrin",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "iwori-oyeku",
+      "kind": "alternative-name",
+      "text": "Iwori Yẹku",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "odi-okanran",
+      "kind": "alternative-name",
+      "text": "Edi Kanran",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "odi-irosun",
+      "kind": "alternative-name",
+      "text": "Edi Rosun",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "owonrin-irete",
+      "kind": "alternative-name",
+      "text": "Ọwọnrin Rẹtẹ",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ogunda-iwori",
+      "kind": "alternative-name",
+      "text": "Ogunda Wori",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "osa-ogunda",
+      "kind": "alternative-name",
+      "text": "Ọsa Gunda",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ose-otura",
+      "kind": "alternative-name",
+      "text": "Ọsẹ Tura",
+      "language": "yo",
+      "status": "published"
+    },
+    {
+      "odu": "ofun-odi",
+      "kind": "alternative-name",
+      "text": "Ofun Di",
+      "language": "yo",
+      "status": "published"
+    }
+  ]
 }
