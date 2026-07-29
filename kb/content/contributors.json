@@ -1,3 +1,15 @@
 {
+  "note": "People whose attestations the corpus holds. Consent is required per person, is recorded here, and is withdrawable — setting consentStatus to 'withdrawn' removes their material from the next build without any other action. Nothing is assumed: a contributor with no consentStatus fails the ingest.",
+  "example": {
+    "slug": "example-not-loaded",
+    "name": "A. Person",
+    "role": "babalawo | iyanifa | scholar | translator | transcriber | reciter | editor",
+    "region": "e.g. Ibadan",
+    "lineage": "if relevant and if they wish it recorded",
+    "consentStatus": "granted | pending | withdrawn",
+    "consentTerms": "what exactly they agreed to — be specific; 'general permission' is not consent to anything in particular",
+    "contact": "so consent can be revisited, not for publication",
+    "_comment": "This block is documentation. Only entries inside 'contributors' are loaded."
+  },
   "contributors": []
 }

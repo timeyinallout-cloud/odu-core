@@ -133,8 +133,8 @@ def render_odu_page(odu: Odu, db: sqlite3.Connection | None) -> str:
     attested = [n for n in notes if n["kind"] == "alternative-name"]
 
     detail = [
-        ("Right leg", f"{e(odu.right.name)} <span class='stat'>({odu.right.bits})</span>"),
-        ("Left leg", f"{e(odu.left.name)} <span class='stat'>({odu.left.bits})</span>"),
+        ("Right leg", f"<span lang='yo'>{e(odu.right.name)}</span> <span class='stat'>({odu.right.bits})</span>"),
+        ("Left leg", f"<span lang='yo'>{e(odu.left.name)}</span> <span class='stat'>({odu.left.bits})</span>"),
         ("Slug", f"<code>{e(odu.slug)}</code>"),
         ("Seniority", f"{odu.seniority_rank} of 256"),
         ("Méjì", "yes" if odu.is_meji else "no"),
@@ -143,7 +143,7 @@ def render_odu_page(odu: Odu, db: sqlite3.Connection | None) -> str:
         detail.insert(0, (
             "Attested name",
             " · ".join(
-                f"{e(n['text'])} <span class='stat'>({e(n['src_author'] or n['src_title'])} "
+                f"<span lang='yo'>{e(n['text'])}</span> <span class='stat'>({e(n['src_author'] or n['src_title'])} "
                 f"{e(n['src_year'] or '')})</span>"
                 for n in attested
             ),
@@ -151,7 +151,7 @@ def render_odu_page(odu: Odu, db: sqlite3.Connection | None) -> str:
 
     parts = [
         '<div class="crumb"><a href="../index.html">← all 256 figures</a></div>',
-        f"<h1>{e(odu.name)}</h1>",
+        f'<h1 lang="yo">{e(odu.name)}</h1>',
         f'<p class="sub">Byte {odu.byte} · 0x{odu.byte:02X} · {odu.bits}</p>',
         '<div class="pair">',
         figure_block(odu),
@@ -204,7 +204,7 @@ def render_index(db: sqlite3.Connection | None) -> str:
         cells.append(
             f'<a class="cell{has}" href="odu/{e(odu.slug)}.html" '
             f'data-s="{e(odu.slug)} {e(odu.name.lower())} {odu.byte} {odu.bits}">'
-            f'{e(odu.name)}<span class="b">{odu.byte} · {odu.bits}</span></a>'
+            f'<span lang="yo">{e(odu.name)}</span><span class="b">{odu.byte} · {odu.bits}</span></a>'
         )
 
     if summary:

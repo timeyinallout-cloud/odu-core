@@ -78,6 +78,24 @@ ENTRIES = [
     ("ofun", "ogbe",        "Ofun Ogbe (1-4)",             4, "470-476"),
     ("ofun", "iwori",       "Ofun (I)wori (1-4)",          4, "476-482"),
     ("ofun", "odi",         "Ofun - (E)di (1-2)",          2, "482-486"),
+    ("irete", "okanran",    "Irẹtẹ Ọkanran (1)",           1, "386-392"),
+    ("irete", "irosun",     "Irẹtẹ - (I)rosun (1)",        1, "392-398"),
+    ("irete", "owonrin",    "Irẹtẹ - (Ọ)wọnrin (1)",       1, "398-404"),
+    ("irete", "osa",        "Irete - Ọsa (1-3)",           3, "404-416"),
+    ("irete", "ose",        "Irẹtẹ - (Ọ)ṣẹ (1-2)",         2, "416-428"),
+    ("otura", "obara",      "Otura - (Ọ)bara (1-4)",       4, "428-440"),
+    ("otura", "irosun",     "Otura Irosun (1-4)",          4, "440-446"),
+    ("oturupon", "otura",   "Oturupọn - (O)tura (1)",      1, "446-450"),
+    ("ika", "ika",          "Ika Meji (1-3)",              3, "450-454"),
+    ("ose", "ogbe",         "Ọsẹ Ogbe (1-4)",              4, "456-466"),
+    ("ofun", "obara",       "Ofun - (Ọ)bara (1-4)",        4, "488-494"),
+    ("ofun", "okanran",     "Ofun - (Ọ)kanran (1-4)",      4, "496-502"),
+    ("ofun", "irosun",      "Ofun - (I)rosun (1-5)",       5, "502-514"),
+    ("ofun", "owonrin",     "Ofun - (Ọ)wọnrin (1-4)",      4, "516-522"),
+    ("ofun", "ogunda",      "Ofun - (O)gunda (1-6)",       6, "522-534"),
+    ("ofun", "osa",         "Ofun - (Ọ)sa (1-3)",          3, "534-540"),
+    ("ofun", "ose",         "Ofun - (Ọ)ṣẹ (1-4)",          4, "540-548"),
+    ("ofun", "ofun",        "Ofun Meji (1-6)",             6, "548-558"),
 ]
 
 SOURCE = {
@@ -103,9 +121,14 @@ SOURCE = {
 # right leg — the one cast first, which is this dataset's high nibble. His
 # contents give no drawn figures to check it against.
 LEG_ORDER_NOTE = (
-    "Mapped on the assumption that Bascom's first-named leg is the right leg "
-    "(cast first, high nibble here). Not confirmed against a drawn compound "
-    "figure in the source."
+    "Bascom's first-named leg is mapped to the right leg (high nibble here). "
+    "Supported by his Figure 2, 'Marking the Ifa Figures', p. 41, which "
+    "numbers the eight marks 1-8 with the odd numbers filling the RIGHT column "
+    "and the even the left — so the right column is the one marked first. A "
+    "compound figure is named first-cast leg first, which makes the "
+    "first-named leg the right one. Stated precisely: the diagram proves the "
+    "marking order; the step from 'marked first' to 'named first' rests on "
+    "that naming convention and was not read verbatim from the text."
 )
 
 

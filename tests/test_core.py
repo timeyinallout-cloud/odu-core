@@ -320,3 +320,38 @@ class TestTraditionalNames:
             assert len(elided) < len(full), f"{slug}: {elided!r} not shorter"
             head = full.split(" ")[0]
             assert elided.startswith(head), f"{slug}: heads differ"
+
+    def test_disputed_status_is_reportable(self, tmp_path, monkeypatch):
+        """The `disputed` path must work before it is needed.
+
+        Sources genuinely disagree — Bascom recorded 21 orderings besides the
+        one used here — so this status will be reached eventually. An untested
+        path breaks at exactly the moment it matters.
+        """
+        import json
+        from odu_core.data import DATA_PATH
+
+        raw = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+        raw["odu"][0]["verification"] = {
+            "status": "disputed",
+            "checkedAgainst": "Hypothetical source, p. 1",
+            "checkedOn": "2026-07-29",
+            "checkedBy": "test",
+            "note": "recorded disagreement",
+        }
+        target = tmp_path / "principal_odu.json"
+        target.write_text(json.dumps(raw, ensure_ascii=False), encoding="utf-8")
+
+        import odu_core.data as data_mod
+
+        monkeypatch.setattr(data_mod, "DATA_PATH", target)
+        for fn in (data_mod._raw, data_mod.principal_odu, data_mod.verification_summary):
+            fn.cache_clear()
+
+        summary = data_mod.verification_summary()
+        assert summary["disputed"] == 1
+        assert not summary["complete"], "a disputed figure must not count as verified"
+        assert summary["verified"] + summary["unverified"] + summary["disputed"] == 16
+
+        for fn in (data_mod._raw, data_mod.principal_odu, data_mod.verification_summary):
+            fn.cache_clear()

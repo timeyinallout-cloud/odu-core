@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it, and cite the primary sources it rests on."
+title: "odu-core: the 256 Odù Ifá as a canonical byte mapping"
+abstract: >-
+  A verified mapping between the 256 Odù Ifá and the 256 values of a byte,
+  with Yorùbá orthography preserved. All 16 principal figures are verified
+  against Bascom (1969). Seniority follows the southwestern Yorùbá order;
+  the Ifẹ variant is recorded alongside it.
+type: dataset
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/timeyin/odu-core"
+keywords:
+  - Odù Ifá
+  - Ifá divination
+  - Yorùbá
+  - heritage computing
+  - binary encoding
+authors:
+  - family-names: Bemi
+    given-names: Timeyin
+
+references:
+  - type: book
+    title: "Ifa Divination: Communication Between Gods and Men in West Africa"
+    authors:
+      - family-names: Bascom
+        given-names: William R.
+    year: 1969
+    publisher:
+      name: Indiana University Press
+    notes: >-
+      The primary source. Table 1 p. 4 and Table 3 column B p. 48 verify all
+      16 principal figures and the seniority order used here. Cite this
+      alongside the dataset — the dataset is a transcription, not a discovery.
+  - type: book
+    title: "Sixteen Great Poems of Ifá"
+    authors:
+      - family-names: Abimbọla
+        given-names: Wande
+    year: 1975
+    publisher:
+      name: "OAU Centre for Linguistic and Historical Studies by Oral Tradition, Niamey"
+    notes: >-
+      Frequently miscited as a UNESCO publication. UNESCO funded it; the OAU
+      published it. Recorded but not yet consulted.

@@ -35,6 +35,28 @@ Three things came out of it worth keeping:
 The tradition label is now `southwestern-yoruba`, Bascom's own term, rather
 than the vaguer `yoruba-nigerian`. Spec bumped to `1.0.0`.
 
+## Settled 2026-07-29
+
+| Item | Outcome |
+|---|---|
+| Leg order | **Corroborated.** Bascom Figure 2 p. 41 numbers the eight marks 1-8 with odd numbers in the right column — the right leg is marked first. First-named = right leg = high nibble holds. |
+| Corpus | 36 -> **54** records. A second contents page held 18 entries missed on the first pass. |
+| Second source | Not obtained. `docs/second-source-enquiry.md` has a drafted enquiry and three routes. |
+| `disputed` path | Now exercised end to end by a test. |
+| Contributor model | Documented template in `kb/content/contributors.json`. No fabricated consent. |
+| Citation | `CITATION.cff`, citing Bascom alongside the dataset. |
+| Versioning | `CHANGELOG.md`, including the corrections made along the way. |
+| Data licence | `LICENSE-DATA.md` — MIT code, CC BY-SA compilation, nothing claimed over the verses. |
+| Yorùbá interface | `lang="yo"` on every Yorùbá string (512 across the site). Translation deliberately deferred — see `docs/decisions.md`. |
+
+### The one caveat on leg order
+
+Figure 2 proves the *marking* order: right column first. The step from "marked
+first" to "named first" rests on the naming convention and was not read
+verbatim from Bascom's text. That is a materially stronger position than the
+bare assumption it replaces, and the residual gap is stated in
+`build_bascom_content.py` rather than hidden.
+
 ## Also done (2026-07-28)
 
 | | |

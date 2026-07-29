@@ -167,7 +167,7 @@ def main() -> int:
             f'<div class="fig" tabindex="0" data-byte="{odu.byte}" '
             f'title="{odu.name} — {rhythm.beats} strokes">'
             f'{to_svg(odu, size=140, show_name=False)}'
-            f'<span class="nm">{odu.name}</span>'
+            f'<span class="nm" lang="yo">{odu.name}</span>'
             f'<span class="bt">{odu.byte} · {odu.bits}</span></div>'
         )
         data.append({

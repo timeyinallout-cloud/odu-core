@@ -324,3 +324,25 @@ class TestRecordings:
 
         with pytest.raises(KbError, match="not a valid figure"):
             add_recording(db, path="https://x/v", source_id=closed_source, odu_byte=bad)
+
+
+class TestYorubaIsMarkedAsYoruba:
+    """Yorùbá strings in generated HTML must carry lang="yo".
+
+    Tone marks in an unmarked English context are read as noise by screen
+    readers and indexed wrongly by search engines. For a project whose whole
+    point is that the orthography is meaningful, that is a correctness bug.
+    """
+
+    def test_generated_pages_mark_yoruba(self):
+        from pathlib import Path
+
+        site = Path(__file__).resolve().parents[1] / "site"
+        if not site.exists():
+            pytest.skip("site not built")
+        for name in ("index.html", "odu/ogbe-oyeku.html", "art.html"):
+            page = site / name
+            if not page.exists():
+                continue
+            html = page.read_text(encoding="utf-8")
+            assert 'lang="yo"' in html or "lang='yo'" in html, f"{name} marks no Yorùbá"
