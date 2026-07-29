@@ -182,6 +182,14 @@ JOIN publishable_verse v ON v.id = t.verse_id
 WHERE t.status = 'published'
   AND s.reproduction_allowed = 1;
 
+-- A recording record holds a path, never audio — it says where a recitation
+-- can be heard, which reproduces nothing. That is the same distinction that
+-- lets a citation-only verse publish from a rights-reserved source above, so
+-- the rule is applied consistently: pointers publish, reproductions do not.
+--
+-- `restricted` remains an absolute bar. It is not a rights question — it marks
+-- material that should not circulate to the uninitiated regardless of who owns
+-- the copyright, and public availability is no evidence either way.
 CREATE VIEW IF NOT EXISTS publishable_recording AS
 SELECT r.*
 FROM recording r
@@ -189,7 +197,6 @@ JOIN source s ON s.id = r.source_id
 LEFT JOIN contributor c ON c.id = r.reciter_id
 WHERE r.status = 'published'
   AND r.restricted = 0
-  AND s.reproduction_allowed = 1
   AND (c.id IS NULL OR c.consent_status = 'granted');
 
 -- Notes are gated like everything else, with one narrow exception: an

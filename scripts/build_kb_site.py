@@ -116,9 +116,16 @@ def rows(pairs: list[tuple[str, str]]) -> str:
 def render_odu_page(odu: Odu, db: sqlite3.Connection | None) -> str:
     verses: list[sqlite3.Row] = []
     notes: list[sqlite3.Row] = []
+    recordings: list[sqlite3.Row] = []
     if db is not None:
         verses = db.execute(
             "SELECT * FROM publishable_verse WHERE odu_byte=? ORDER BY sequence, id",
+            (odu.byte,),
+        ).fetchall()
+        recordings = db.execute(
+            "SELECT r.*, s.title AS src_title, s.author AS src_author "
+            "FROM publishable_recording r JOIN source s ON s.id=r.source_id "
+            "WHERE r.odu_byte=? ORDER BY r.id",
             (odu.byte,),
         ).fetchall()
         notes = db.execute(
@@ -170,6 +177,20 @@ def render_odu_page(odu: Odu, db: sqlite3.Connection | None) -> str:
             '<p class="empty">No verse has been recorded for this figure yet. '
             "Entries require a citable source.</p>"
         )
+
+    parts.append("<h2>Recitations</h2>")
+    if recordings:
+        for r in recordings:
+            who = e(r["src_author"] or r["src_title"])
+            parts.append(
+                f'<p><a href="{e(r["path"])}" rel="noopener noreferrer nofollow" '
+                f'target="_blank">{who}</a><br>'
+                f'<span class="stat">a recitation of this figure — linked, not hosted; '
+                f'attribution confirmed, the reciter\'s standing is not established'
+                f'</span></p>'
+            )
+    else:
+        parts.append('<p class="empty">No recitation cited for this figure yet.</p>')
 
     parts.append("<h2>Notes</h2>")
     other = [n for n in notes if n["kind"] != "alternative-name"]

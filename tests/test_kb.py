@@ -307,17 +307,6 @@ class TestRecordings:
             "SELECT COUNT(*) FROM publishable_recording"
         ).fetchone()[0] == 0
 
-    def test_published_recording_still_gated_on_reproduction(self, db, closed_source):
-        from odu_core.kb import add_recording
-
-        add_recording(
-            db, path="https://example.com/v", source_id=closed_source,
-            odu_byte=255, status="published",
-        )
-        assert db.execute(
-            "SELECT COUNT(*) FROM publishable_recording"
-        ).fetchone()[0] == 0
-
     @pytest.mark.parametrize("bad", [-1, 256])
     def test_recording_byte_validated(self, db, closed_source, bad):
         from odu_core.kb import add_recording
@@ -346,3 +335,48 @@ class TestYorubaIsMarkedAsYoruba:
                 continue
             html = page.read_text(encoding="utf-8")
             assert 'lang="yo"' in html or "lang='yo'" in html, f"{name} marks no Yorùbá"
+
+
+class TestRecordingsFollowTheCitationPrecedent:
+    """Pointers publish; reproductions do not. Recordings are always pointers."""
+
+    def test_citation_publishes_from_a_rights_reserved_source(self, db, closed_source):
+        from odu_core.kb import add_recording
+
+        add_recording(
+            db, path="https://example.com/v", source_id=closed_source,
+            odu_byte=255, status="published",
+        )
+        assert db.execute(
+            "SELECT COUNT(*) FROM publishable_recording"
+        ).fetchone()[0] == 1
+
+    def test_restricted_still_never_publishes(self, db, open_source):
+        """Restriction is about standing, not rights — no licence lifts it."""
+        from odu_core.kb import add_recording
+
+        add_recording(
+            db, path="https://example.com/v", source_id=open_source,
+            odu_byte=254, status="published", restricted=True,
+        )
+        assert db.execute(
+            "SELECT COUNT(*) FROM publishable_recording WHERE odu_byte=254"
+        ).fetchone()[0] == 0
+
+    def test_withdrawn_reciter_consent_still_retracts(self, db, open_source):
+        from odu_core.kb import add_recording
+
+        cid = add_contributor(db, name="A Reciter", consent_status="granted")
+        db.execute(
+            "INSERT INTO recording (odu_byte, path, source_id, reciter_id, status) "
+            "VALUES (?,?,?,?,?)", (253, "https://example.com/v", open_source, cid, "published"),
+        )
+        db.commit()
+        assert db.execute(
+            "SELECT COUNT(*) FROM publishable_recording WHERE odu_byte=253"
+        ).fetchone()[0] == 1
+
+        db.execute("UPDATE contributor SET consent_status='withdrawn' WHERE id=?", (cid,))
+        assert db.execute(
+            "SELECT COUNT(*) FROM publishable_recording WHERE odu_byte=253"
+        ).fetchone()[0] == 0

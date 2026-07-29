@@ -55,7 +55,15 @@ class TestRoundTrip:
 
 class TestChecksum:
     def test_dropped_figure_is_caught(self):
-        figures = to_phrase(os.urandom(16))
+        """Fixed payload, not random.
+
+        A one-byte checksum misses about 1 in 256 corruptions by design. With a
+        random payload this asserted a certainty the design does not offer and
+        failed roughly once every 256 runs — which is exactly often enough to
+        be dismissed as a fluke when CI goes red. The rate is asserted
+        separately in test_corruption_is_caught_at_the_expected_rate.
+        """
+        figures = to_phrase(b"a dropped figure must not decode cleanly")
         with pytest.raises(ChecksumError):
             from_phrase(figures[:-2] + figures[-1:])
 

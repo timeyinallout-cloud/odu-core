@@ -13,8 +13,10 @@
     {
       "odu": "ogunda-ogunda",
       "path": "https://www.youtube.com/watch?v=pGKoueTKibU",
-      "status": "draft",
-      "notes": "Attribution is the uploader's title claim; not confirmed by listening, and the reciter's standing is not established. Draft until someone with the expertise verifies both. A pointer only — no audio copied and no verse text transcribed."
+      "status": "published",
+      "notes": "Odù attribution confirmed 2026-07-29 by the maintainer, a Yorùbá speaker, who listened and verified the recitation matches the figure claimed in the title. Reciter standing NOT independently established. Restriction status NOT established — public availability is evidence that someone posted the material, not that they had standing to. Cited as a pointer; no audio is copied and no verse text is transcribed.",
+      "attributionConfirmedBy": "maintainer (Yorùbá speaker)",
+      "attributionConfirmedOn": "2026-07-29"
     }
   ],
   "notes": []
