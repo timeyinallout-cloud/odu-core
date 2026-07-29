@@ -9,7 +9,7 @@ abstract: >-
 type: dataset
 version: 1.0.0
 license: MIT
-repository-code: "https://github.com/timeyin/odu-core"
+repository-code: "https://github.com/timeyinallout-cloud/odu-core"
 keywords:
   - Odù Ifá
   - Ifá divination
