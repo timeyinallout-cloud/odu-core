@@ -260,6 +260,24 @@ python3 -m pytest tests/ -q
 The mapping is small enough to test exhaustively, so every assertion about the
 256 figures checks all 256 rather than sampling.
 
+## Authorship
+
+**Timeyin Bemi** — author and maintainer.
+
+The Yorùbá orthography in this dataset is his. That is a substantive
+contribution rather than a formality: the contracted names carry tone marks
+because a Yorùbá speaker determined that Bascom's parenthesised letters mark an
+*optional* vowel rather than a deleted one, and corrected an earlier reading
+that had it backwards. Tone is meaning in Yorùbá, and a dataset that dropped it
+would have been quietly wrong in a way no test could catch.
+
+Built with [Claude Code](https://claude.com/claude-code); individual commits
+carry co-author trailers. The verification against Bascom (1969) was performed
+through Internet Archive controlled lending on the maintainer's account.
+
+If anything here misrepresents the tradition, that is a defect worth reporting
+regardless of what the licence permits — see `LICENSE-DATA.md`.
+
 ## License
 
 MIT for the code and the structural mapping. Verse content added later needs
