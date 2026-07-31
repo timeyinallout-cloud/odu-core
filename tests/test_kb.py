@@ -265,6 +265,47 @@ class TestNamesAreFactsNotExpression:
         ).fetchone()[0] == 0
 
 
+class TestRestrictedNotesNeverPublish:
+    """Restriction bars telling; the rights carve-out only permits copying.
+
+    `verse` and `recording` have always had this bar. Notes did not, which left
+    no way to hold initiation-restricted commentary in the corpus for
+    scholarship without also publishing it — the only lever was withholding
+    the record entirely.
+    """
+
+    def test_restricted_note_never_publishes(self, db, open_source):
+        add_note(
+            db, odu_byte=243, kind="taboo", text="…", source_id=open_source,
+            status="published", restricted=True,
+        )
+        assert db.execute(
+            "SELECT COUNT(*) FROM publishable_note WHERE odu_byte=243"
+        ).fetchone()[0] == 0
+        assert db.execute(
+            "SELECT COUNT(*) FROM odu_note WHERE odu_byte=243"
+        ).fetchone()[0] == 1  # retained for scholarship
+
+    def test_restriction_overrides_the_name_exception(self, db, closed_source):
+        """The one kind that publishes from a closed source still cannot."""
+        add_note(
+            db, odu_byte=244, kind="alternative-name", text="Ogbe Yẹku",
+            source_id=closed_source, status="published", restricted=True,
+        )
+        assert db.execute(
+            "SELECT COUNT(*) FROM publishable_note WHERE odu_byte=244"
+        ).fetchone()[0] == 0
+
+    def test_notes_are_unrestricted_by_default(self, db, open_source):
+        add_note(
+            db, odu_byte=245, kind="commentary", text="…",
+            source_id=open_source, status="published",
+        )
+        assert db.execute(
+            "SELECT COUNT(*) FROM publishable_note WHERE odu_byte=245"
+        ).fetchone()[0] == 1
+
+
 class TestRecordings:
     """A recording is a pointer, which is why it can exist where text cannot."""
 

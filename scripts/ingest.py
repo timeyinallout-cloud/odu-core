@@ -259,6 +259,7 @@ def ingest_source_file(db, path: Path, contributors: dict[str, int],
                 language=note.get("language", "yo"),
                 lineage=note.get("lineage"),
                 region=note.get("region"),
+                restricted=bool(note.get("restricted", False)),
                 status=note.get("status", "draft"),
             )
         except Exception as exc:  # noqa: BLE001

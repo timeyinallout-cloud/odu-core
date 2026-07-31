@@ -235,9 +235,15 @@ def add_note(
     language: str = "yo",
     lineage: str | None = None,
     region: str | None = None,
+    restricted: bool = False,
     status: str = "draft",
 ) -> int:
-    """Record commentary about a figure as a whole."""
+    """Record commentary about a figure as a whole.
+
+    ``restricted`` marks initiation-restricted material. It is a bar on
+    telling, not on reproduction, so it overrides the ``alternative-name``
+    rights exception as well: a restricted note never publishes.
+    """
     _check_byte(odu_byte)
     if not text.strip():
         raise KbError("a note needs text")
@@ -246,9 +252,11 @@ def add_note(
 
     cur = db.execute(
         """INSERT INTO odu_note
-           (odu_byte, kind, text, language, lineage, region, source_id, status)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
-        (odu_byte, kind, text.strip(), language, lineage, region, source_id, status),
+           (odu_byte, kind, text, language, lineage, region, source_id,
+            restricted, status)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+        (odu_byte, kind, text.strip(), language, lineage, region, source_id,
+         int(restricted), status),
     )
     db.commit()
     return int(cur.lastrowid)

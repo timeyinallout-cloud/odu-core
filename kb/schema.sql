@@ -139,6 +139,12 @@ CREATE TABLE IF NOT EXISTS odu_note (
     lineage   TEXT,
     region    TEXT,
     source_id INTEGER NOT NULL REFERENCES source(id) ON DELETE RESTRICT,
+
+    -- Commentary can be initiation-restricted too — a 'taboo' note most
+    -- obviously, but not only. Same bar as verse and recording: flagged
+    -- material stays for scholarship and never reaches a published view.
+    restricted INTEGER NOT NULL DEFAULT 0 CHECK (restricted IN (0, 1)),
+
     status    TEXT NOT NULL DEFAULT 'draft' CHECK (status IN (
                   'draft', 'review', 'published', 'withdrawn')),
     added_on  TEXT NOT NULL DEFAULT (date('now'))
@@ -207,9 +213,14 @@ WHERE r.status = 'published'
 --
 -- The exception is deliberately keyed on `kind` and not on note length: a
 -- short piece of commentary is still commentary.
+--
+-- `restricted` sits outside that exception and bars everything, names
+-- included. The rights carve-out answers "may this be reproduced?"; a
+-- restriction answers "may this be told?" — and no licence lifts the second.
 CREATE VIEW IF NOT EXISTS publishable_note AS
 SELECT n.*
 FROM odu_note n
 JOIN source s ON s.id = n.source_id
 WHERE n.status = 'published'
+  AND n.restricted = 0
   AND (s.reproduction_allowed = 1 OR n.kind = 'alternative-name');
