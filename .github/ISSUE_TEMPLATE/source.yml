@@ -1,0 +1,28 @@
+name: New source
+description: You can reach a source we cannot
+labels: [source]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Everything verified so far rests on one book. A second independent
+        source is the single most useful thing anyone could add.
+  - type: input
+    attributes:
+      label: Source
+      placeholder: "Author, title, year, publisher"
+    validations: {required: true}
+  - type: dropdown
+    attributes:
+      label: What it could settle
+      multiple: true
+      options:
+        - The 16 principal figures, independently
+        - Seniority ordering (including Lucumí)
+        - Compound names beyond the 54 sourced
+        - Verses, with rights or consent to cite
+        - Something else
+  - type: textarea
+    attributes:
+      label: Access and rights
+      description: Where it can be consulted, and whether anything may be reproduced or only cited.

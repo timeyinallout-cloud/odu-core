@@ -1,0 +1,29 @@
+name: Correction
+description: Something in the dataset is wrong
+labels: [correction]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections are the most valuable thing this project can receive.
+        A source helps enormously, but if you know it's wrong and can't cite it,
+        say so anyway — we would rather mark something disputed than leave it
+        confidently wrong.
+  - type: input
+    attributes:
+      label: Which figure
+      placeholder: "e.g. Ọ̀sá, or byte 44, or ogbe-oyeku"
+    validations: {required: true}
+  - type: textarea
+    attributes:
+      label: What is wrong, and what should it be
+    validations: {required: true}
+  - type: textarea
+    attributes:
+      label: Source, if you have one
+      description: A book and page, a recording, a lineage, or your own knowledge as a practitioner or speaker — all are citable, and we will record which it was.
+  - type: checkboxes
+    attributes:
+      label: Restriction
+      options:
+        - label: This material should not circulate publicly, and I am reporting it for that reason

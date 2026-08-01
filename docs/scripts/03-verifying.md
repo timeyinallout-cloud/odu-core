@@ -2,7 +2,7 @@
 
 **The strongest one. Lead the series with it if the audience is technical.**
 
-**Length** ~7 min · **Shots**: terminal, search results, the CAPTCHA, the
+**Length** ~9 min · **Shots**: terminal, search results, the CAPTCHA, the
 YouTube Short, Bascom pp. 4 / 47 / 48
 
 ---
@@ -11,7 +11,7 @@ YouTube Short, Bascom pp. 4 / 47 / 48
 
 *Visual: `make test` running green.*
 
-> A hundred and sixty-nine passing tests. A published library, a command-line
+> Two hundred and sixteen passing tests. A published library, a command-line
 > tool, a knowledge base, two language bindings.
 >
 > All of it derived from sixteen rows in one file.
@@ -144,19 +144,61 @@ YouTube Short, Bascom pp. 4 / 47 / 48
 > Bascom's own ordering would have silently repointed every record in the
 > database — and every test would still have passed.
 
-**[6:45 — close]**
+**[6:45 — it happened twice more]**
+
+*Visual: the UNESCO catalogue record, then the Internet Archive item page.*
+
+> That would be a decent story if it happened once. It happened three times in
+> a week.
+>
+> A book everyone cites as "Abimbola 1975, UNESCO" — including published
+> academic bibliographies. UNESCO's own catalogue says the publisher was the
+> Organisation of African Unity in Niamey. UNESCO funded it. That distinction
+> decides whether it's openly licensed, and it isn't.
+>
+> And an Internet Archive item catalogued as Bascom's *Sixteen Cowries*. I
+> borrowed it. The scan is a different book entirely — same publisher, same
+> year, different title. If I'd trusted the catalogue I'd have cited page
+> numbers from a book I never opened.
+
+**[7:30 — the one I couldn't catch]**
+
+> Then, after all sixteen figures were verified against a primary source, I got
+> the naming wrong anyway.
+>
+> Bascom writes the compound names with a letter in parentheses. I read the
+> parenthesis as deletion — the vowel is dropped. I wrote a confident
+> explanation of why that reading was correct.
+>
+> It marks the vowel as *optional*. Elided in speech, present in the name. A
+> Yorùbá speaker told me, and he was right.
+
+*Beat.*
+
+> I had a primary source, a verification workflow, two hundred tests, and I
+> still encoded an inference as a fact — because I was reading a tone language
+> I don't speak.
+>
+> No amount of infrastructure substitutes for someone who knows the thing.
+
+**[8:15 — close]**
 
 ```
 odu verify
 16 of 16 figures verified against a source
 ```
 
-> Sixteen of sixteen, cited by page and by table.
+> Sixteen of sixteen, cited by table and by page. It's public now, and the
+> tests run on every push.
 >
-> The infrastructure took a weekend. The sixteen rows took the whole project.
+> Two hundred and two of the two hundred and fifty-six figures still have no
+> traditional name. There are no verses at all. Those are nulls that mean *no
+> source found* — not gaps waiting to be filled.
+>
+> The infrastructure took a fortnight. The sixteen rows took the whole project.
 > That ratio is what digitising oral tradition actually looks like, and the
 > pressure to fill an empty database because empty looks like failure is
-> immense.
+> constant.
 >
 > Empty isn't failure. Wrong is failure.
 
