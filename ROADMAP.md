@@ -10,7 +10,7 @@ Status as of 2026-07-28. Phases refer to the original five-phase plan.
 | Phase 2 — mnemonic encoder | checksummed phrases, `odu` CLI, browser demo |
 | Phase 3 — knowledge base | schema, text-based corpus, ingest, static site |
 | TypeScript binding | reads the generated dataset, parity-tested against Python |
-| Build tooling | `make`, 158 tests (129 Python + 29 TS) |
+| Build tooling | `make`, 219 tests (190 Python + 29 TS) |
 
 ## Resolved
 
@@ -61,35 +61,35 @@ bare assumption it replaces, and the residual gap is stated in
 
 | | |
 |---|---|
-| Corpus | 36 sourced verse citations, 19 attested compound names, 4 sources |
+| Corpus | 54 sourced verse citations, 54 attested compound names, 9 sources |
 | Phase 4 | `odu_core.generative` + `site/art.html` — 256 figures drawn and playable |
-| CI | `.githooks/pre-commit` active; `.github/workflows/ci.yml` ready for a remote |
-| Phase 5 | Three full scripts in `docs/scripts/`, plan in `docs/content-plan.md` |
-| Packaging | Both packages at 1.0.0, tracking the data spec. `RELEASING.md`. Not published. |
+| CI | `.githooks/pre-commit` active; GitHub Actions green on every push |
+| Phase 5 | All six scripts in `docs/scripts/`, plus a shot runbook |
+| Packaging | Both at 1.0.0, tracking the data spec. Registries still untouched. |
 
 ## Still open
 
-### Push to a remote
-Deferred by choice — staying local for now. CI activates the moment there is
-one. This remains the only single point of failure: nine commits, one machine.
+### Published — no longer open
 
-### Publish the packages
-Prepared but not run, per the local-only decision. See `RELEASING.md` for the
-checklist and the two open questions (npm scope, PyPI name availability).
+The repository is public at `github.com/timeyinallout-cloud/odu-core`, v1.0.0
+is released, and Zenodo has minted
+[`10.5281/zenodo.21743991`](https://doi.org/10.5281/zenodo.21743991). CI runs
+on every push. PyPI and npm remain deliberately untouched — see `RELEASING.md`
+for the checklist and the two open questions (npm scope, PyPI name).
 
-### The remaining 221 compound names — not obtainable from Bascom
+### The remaining 202 compound names — not obtainable from Bascom
 
-19 of 240 are sourced and now reach `data/odu_256.json`. **The other 221 are
-not in Bascom's book at all.** His contents list only the figures he published
-verses for — 36 of 256 — and the contracted forms appear only in that list.
-Paging through pp. 140–563 would revisit the same 36 headings.
+54 of 256 are sourced and reach `data/odu_256.json`. **The other 202 are not
+in Bascom's book at all.** His contents index the figures he published verses
+for — 54 of 256 — and the contracted forms appear only in that list. Paging
+through pp. 140–563 would revisit the same 54 headings.
 
 So this needs a different source, and no legitimate one has been found. The
 contracted names are lineage-specific, which is why they must be sourced
 rather than derived: the elision that turns *Ogbe Ọyẹku* into *Ogbe Yẹku* is
 a spoken convention, not a spelling rule that can be applied mechanically.
 
-`traditionalName: null` on the other 221 is therefore a true statement about
+`traditionalName: null` on the other 202 is therefore a true statement about
 the evidence, and should stay until a source exists.
 
 ### A second independent source — the real remaining weakness
@@ -132,15 +132,6 @@ the schema has never processed a real verse, and every design decision in it is
 untested against reality while changing it is still cheap.
 
 ## Not blocked
-
-### Push to a remote — 5 minutes, do this first
-
-Six commits, no remote, one copy on one laptop. A preservation project that
-exists in exactly one place is one disk failure from nothing.
-
-```sh
-gh repo create odu-core --private --source=. --push
-```
 
 ### Phase 5 — content
 

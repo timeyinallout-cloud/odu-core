@@ -51,12 +51,12 @@ taking.
 
 ---
 
-## 3. I tried to verify my own dataset and failed
+## 3. I tried to verify my own dataset and nearly got fooled
 
 **This is the strongest episode. Lead with it if the channel is technical.**
 
-**Hook.** 155 passing tests. A published library, a CLI, a knowledge base, two
-language bindings. All of it derived from 16 rows I have never verified.
+**Hook.** 219 passing tests. A published library, a CLI, a knowledge base, two
+language bindings. All of it derived from 16 rows I had never checked.
 
 **Body — what actually happened, in order:**
 
@@ -72,6 +72,12 @@ language bindings. All of it derived from 16 rows I have never verified.
    those patterns.** The claim traced to no source at all.
 4. Nothing was changed. Status stayed `unverified` — a true statement — rather
    than becoming `disputed` on an unattributable claim.
+5. Bascom was then borrowed through the Internet Archive. All 16 matched,
+   including the two the phantom claim disputed. It reached `16 of 16`.
+6. It happened twice more — a miscitation repeated in academic
+   bibliographies, and a library catalogue pointing at the wrong book. Then
+   a Yorùbá speaker corrected a reading of the naming that verification had
+   not caught, because it was a language question rather than a source one.
 
 **The point.** The most important line of code in the project is the one that
 refuses to store a verse without a source. Not because it prevents laziness,
@@ -123,21 +129,23 @@ the limit than that it sells the idea.
 
 ---
 
-## 6. Generative visuals — safe now, with one restriction
+## 6. The figures already tell you the rhythm
 
-Bit patterns are structurally certain: 16 legs, 256 combinations, no dispute.
-Names are what is unverified. So visuals and rhythms keyed to **patterns** can
-be built today; anything **labelled with a name** waits for verification.
+Double and single marks map to drum strokes almost too neatly: one mark, one
+strike; two marks, two. Nothing is invented — the rhythm is transcribed.
 
-Double and single marks map to drum strokes almost too neatly. That is the
-episode: derive the rhythm from the figure, play it, and never once claim to
-know what the figure is called.
+Written before verification, this episode carried a restriction: build from
+bit patterns, never label output with a figure's name. **That restriction is
+lifted.** Names, ranks and patterns are all sourced now, which is worth saying
+on camera — it is the reason this episode comes last.
 
 ---
 
 ## Production notes
 
-- Every episode ends on the current verification count. It is `0 of 16` today.
-  Watching it move is a better narrative spine than any roadmap.
+- Every episode ends on the current verification count. It reached `16 of 16`
+  on 28 July 2026; the count that still moves is names, at 54 of 256.
 - Never show a verse on screen that is not sourced on screen.
-- The repository is the receipt. Say what is unverified before anyone asks.
+- The repository is the receipt. Say what is unsourced before anyone asks —
+  202 of the 256 figures still have no attested name, and that is the honest
+  number, not an embarrassing one.

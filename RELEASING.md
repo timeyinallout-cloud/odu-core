@@ -1,7 +1,9 @@
 # Releasing
 
-Nothing here is published yet, deliberately — the repository is local-only.
-These are the steps for when that changes, and the checks that must pass first.
+The repository is public and v1.0.0 is released and archived at
+[`10.5281/zenodo.21743991`](https://doi.org/10.5281/zenodo.21743991).
+The package registries are still deliberately untouched; these are the
+steps for when that changes, and the checks that must pass first.
 
 ## Version policy
 
@@ -19,7 +21,7 @@ anything encoded under the old spec silently becomes wrong.
 
 ```sh
 make clean && make          # rebuild every derived artifact from source
-make test                   # 169 Python + TypeScript tests
+make test                   # 190 Python + 29 TypeScript tests
 odu verify                  # must report 16 of 16 and exit 0
 python3 scripts/ingest.py --check
 git status --short          # must be empty: no stale derived files
@@ -59,4 +61,4 @@ in the declarations, and skipping it ships types no consumer can resolve.
 - [ ] Confirm the PyPI name `odu-core` is free.
 - [ ] Add a remote and let CI run green once.
 - [ ] Consider whether the compound-name data is complete enough to publish —
-      19 of 240 traditional names are sourced; the rest remain `null`.
+      54 of 256 traditional names are sourced; the rest remain `null`.

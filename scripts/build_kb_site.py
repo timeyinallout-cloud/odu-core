@@ -89,6 +89,10 @@ FOOTER = (
     'Table 3 col. B p. 48. '
     'Content appears only where a citable source exists — see '
     '<a href="{root}index.html">the index</a> for coverage.'
+    '<br><br>Archived at '
+    '<a href="https://doi.org/10.5281/zenodo.21743991" rel="noopener">'
+    'doi:10.5281/zenodo.21743991</a> — please cite Bascom alongside it, as this '
+    'dataset is a transcription rather than a discovery.'
 )
 
 
