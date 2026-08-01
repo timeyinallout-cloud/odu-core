@@ -1,0 +1,76 @@
+name: pages
+
+# Publishes the knowledge base, the generative art page and the encoder demo
+# to GitHub Pages, so the project is usable by someone who will never clone it.
+#
+# The site is BUILT here rather than committed. `site/` and `web/index.html`
+# are gitignored on purpose — they are derived from data/ and kb/, and a
+# generated artifact in source control is the one thing this repo has been
+# careful to avoid. Building on deploy also means the published pages can never
+# drift from the data they claim to show.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Allow one deploy at a time; a queued run supersedes an older one rather than
+# racing it. Never cancel a run already publishing.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Build the data, the knowledge base and the pages
+        run: |
+          make site
+          make art
+          make web
+
+      # The corpus is default-deny: publication reads only the publishable_*
+      # views, and a note or verse without a permitting source never reaches
+      # them. This asserts the built site agrees with the database rather than
+      # trusting that it does — the whole project rests on that gate holding.
+      - name: Check the publication gate held
+        run: |
+          python3 scripts/ingest.py --check
+          PYTHONPATH=src python3 -m odu_core.cli verify
+
+      - name: Assemble the site
+        run: |
+          mkdir -p _site
+          cp -r site/. _site/
+          mkdir -p _site/encoder
+          cp web/index.html _site/encoder/index.html
+          # Jekyll would otherwise ignore any path starting with an underscore.
+          touch _site/.nojekyll
+          echo "built:"; find _site -maxdepth 2 -type f | head -20
+          echo "pages: $(find _site -name '*.html' | wc -l)"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

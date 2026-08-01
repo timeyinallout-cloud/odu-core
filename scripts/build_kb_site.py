@@ -68,6 +68,8 @@ pre.fig{font-family:var(--mono);font-size:.8rem;line-height:1.3;background:var(-
 .empty{color:var(--dim);font-style:italic;font-size:.92rem}
 .pair{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:flex-start}
 .stat{font-family:var(--mono);font-size:.85rem;color:var(--dim)}
+.ways{font-size:.95rem;color:var(--dim);margin:.4rem 0 1rem}
+.ways a{color:var(--accent)}
 footer{color:var(--dim);font-size:.82rem;margin-top:3rem;border-top:1px solid var(--line);
   padding-top:1rem}
 code{font-family:var(--mono);font-size:.85em}
@@ -251,6 +253,12 @@ def render_index(db: sqlite3.Connection | None) -> str:
   may hold a page reference rather than reproduced text. Entries appear as they are sourced.
 </div>
 <p class="stat">{stat_line}</p>
+<p class="ways">
+  Also here:
+  <a href="art.html">the 256 figures as generative art</a> &middot;
+  <a href="encoder/">turn any text into Odù</a> &middot;
+  <a href="https://github.com/timeyinallout-cloud/odu-core">the data and the code</a>
+</p>
 <input id="q" type="search" placeholder="Filter by name, slug, byte, or bit pattern…"
        autocomplete="off" aria-label="Filter figures">
 <div class="grid" id="g">{''.join(cells)}</div>
