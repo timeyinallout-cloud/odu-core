@@ -59,7 +59,7 @@ pattern precisely because ordering is contested and structure is not.
 
 ## Citing this
 
-See `CITATION.cff`. Please cite Bascom alongside it — this dataset is a
+DOI [`10.5281/zenodo.21743992`](https://doi.org/10.5281/zenodo.21743992) for this version; [`10.5281/zenodo.21743991`](https://doi.org/10.5281/zenodo.21743991) always resolves to the latest. See `CITATION.cff`. Please cite Bascom alongside it — this dataset is a
 transcription, not a discovery.
 
 ## Contributing

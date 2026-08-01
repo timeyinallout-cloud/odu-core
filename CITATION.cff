@@ -8,6 +8,7 @@ abstract: >-
   the Ifẹ variant is recorded alongside it.
 type: dataset
 version: 1.0.0
+doi: 10.5281/zenodo.21743991
 license: MIT
 repository-code: "https://github.com/timeyinallout-cloud/odu-core"
 keywords:

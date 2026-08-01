@@ -2,6 +2,8 @@
 
 The 256 Odù Ifá as a canonical byte mapping, with Yorùbá orthography intact.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21743991.svg)](https://doi.org/10.5281/zenodo.21743991)
+
 An Odù figure is two legs of four lines each, and every line carries either one
 mark or two. That is four bits per leg, eight bits per figure, and exactly 256
 figures — a bijection with the byte that needs no padding and loses nothing.
@@ -263,6 +265,8 @@ The mapping is small enough to test exhaustively, so every assertion about the
 ## Authorship
 
 **Timeyin Bemi** — author and maintainer.
+
+Archived at Zenodo: [`10.5281/zenodo.21743991`](https://doi.org/10.5281/zenodo.21743991) (this DOI always resolves to the latest version). Please cite Bascom (1969) alongside it — this dataset is a transcription, not a discovery.
 
 The Yorùbá orthography in this dataset is his. That is a substantive
 contribution rather than a formality: the contracted names carry tone marks
