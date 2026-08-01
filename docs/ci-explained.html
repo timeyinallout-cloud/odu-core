@@ -1,0 +1,371 @@
+<title>How the Odù CI verifies itself</title>
+
+<style>
+  :root {
+    --ground: #efe7d6;
+    --panel: #f7f2e7;
+    --ink: #241a12;
+    --ink-soft: #6b5c4c;
+    --ink-faint: #97877a;
+    --rule: #d9cdb8;
+    --accent: #7a4b1e;
+    --accent-soft: #a8622d;
+    --pass: #3d6b45;
+    --pass-bg: #e2ecdf;
+    --halt: #a03028;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #191108;
+      --panel: #241a10;
+      --ink: #ece2d2;
+      --ink-soft: #a99781;
+      --ink-faint: #7d6d5c;
+      --rule: #3a2c1c;
+      --accent: #d9a566;
+      --accent-soft: #c9a227;
+      --pass: #86c092;
+      --pass-bg: #1e2e21;
+      --halt: #e08076;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #191108;
+    --panel: #241a10;
+    --ink: #ece2d2;
+    --ink-soft: #a99781;
+    --ink-faint: #7d6d5c;
+    --rule: #3a2c1c;
+    --accent: #d9a566;
+    --accent-soft: #c9a227;
+    --pass: #86c092;
+    --pass-bg: #1e2e21;
+    --halt: #e08076;
+  }
+  :root[data-theme="light"] {
+    --ground: #efe7d6;
+    --panel: #f7f2e7;
+    --ink: #241a12;
+    --ink-soft: #6b5c4c;
+    --ink-faint: #97877a;
+    --rule: #d9cdb8;
+    --accent: #7a4b1e;
+    --accent-soft: #a8622d;
+    --pass: #3d6b45;
+    --pass-bg: #e2ecdf;
+    --halt: #a03028;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 4rem 1.5rem 6rem;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16.5px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 54rem; margin: 0 auto; display: flex; flex-direction: column; gap: 3.25rem; }
+
+  /* ---- masthead ---- */
+  .masthead { display: flex; flex-direction: column; gap: 1rem; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: .7rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent-soft);
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 2.9rem);
+    line-height: 1.12;
+    font-weight: 600;
+    margin: 0;
+    text-wrap: balance;
+    letter-spacing: -.015em;
+  }
+  .standfirst {
+    font-family: var(--serif);
+    font-size: 1.18rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 40ch;
+  }
+
+  /* ---- run strip ---- */
+  .runs {
+    display: flex; flex-wrap: wrap; gap: .5rem;
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    padding: 1rem 0;
+  }
+  .run {
+    display: flex; align-items: baseline; gap: .7rem;
+    font-family: var(--mono); font-size: .78rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-soft);
+    padding: .3rem .7rem .3rem .55rem;
+    background: var(--pass-bg);
+    border-radius: 3px;
+  }
+  .run b { color: var(--pass); font-weight: 600; }
+  .run .id { color: var(--ink-faint); }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.45rem; font-weight: 600; letter-spacing: -.01em;
+    margin: 0 0 .5rem; text-wrap: balance;
+  }
+  section > p { margin: 0 0 1rem; max-width: 62ch; color: var(--ink-soft); }
+  section > p strong { color: var(--ink); font-weight: 600; }
+  section > p:last-child { margin-bottom: 0; }
+
+  /* ---- gate chain ---- */
+  .chain { display: flex; flex-direction: column; gap: .5rem; margin-top: 1.5rem; }
+
+  .gate {
+    display: grid;
+    grid-template-columns: 2.4rem 1fr;
+    gap: 0 1.1rem;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1rem 1.15rem 1.05rem;
+    position: relative;
+  }
+  .gate.provenance { border-color: var(--accent); }
+
+  /* the mark: one stroke for an ordinary gate, two for a provenance gate —
+     the same single/double distinction the figures themselves use */
+  .mark {
+    grid-row: 1 / span 3;
+    display: flex; gap: 3px; align-items: flex-start; padding-top: .34rem;
+  }
+  .mark i {
+    display: block; width: 3px; height: 1.05rem; border-radius: 2px;
+    background: var(--ink-faint);
+  }
+  .gate.provenance .mark i { background: var(--accent); }
+
+  .gate h3 {
+    grid-column: 2;
+    margin: 0; font-size: 1.02rem; font-weight: 600; letter-spacing: -.005em;
+    display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap;
+  }
+  .tag {
+    font-family: var(--mono); font-size: .62rem; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--accent);
+    border: 1px solid var(--accent); border-radius: 2px;
+    padding: .1rem .38rem; font-weight: 500;
+  }
+  .cmd {
+    grid-column: 2;
+    font-family: var(--mono); font-size: .78rem;
+    color: var(--ink-soft);
+    margin: .4rem 0 .55rem;
+    overflow-x: auto; white-space: pre;
+    padding-bottom: .1rem;
+  }
+  .catches { grid-column: 2; margin: 0; font-size: .93rem; color: var(--ink-soft); max-width: 60ch; }
+  .catches b { color: var(--ink); font-weight: 600; }
+
+  .halt {
+    grid-column: 2;
+    margin: .6rem 0 0; padding-top: .55rem;
+    border-top: 1px dashed var(--rule);
+    font-size: .84rem; color: var(--halt);
+    font-family: var(--mono);
+  }
+
+  .arrow {
+    text-align: center; color: var(--ink-faint); font-size: .85rem;
+    line-height: 1; margin: -.1rem 0;
+  }
+
+  /* ---- diagram ---- */
+  .diagram {
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 4px;
+    padding: 1.4rem 1rem; overflow-x: auto; margin-top: 1.25rem;
+  }
+  .diagram pre.mermaid { margin: 0; background: none; text-align: center; }
+
+  /* ---- note ---- */
+  .note {
+    border-left: 2px solid var(--accent);
+    padding: .2rem 0 .2rem 1.1rem;
+    color: var(--ink-soft); font-size: .95rem; max-width: 62ch;
+  }
+  .note strong { color: var(--ink); }
+
+  /* ---- local mirror ---- */
+  .mirror {
+    font-family: var(--mono); font-size: .8rem;
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 4px;
+    padding: 1rem 1.15rem; margin-top: 1.25rem;
+    overflow-x: auto; white-space: pre; line-height: 1.85;
+    color: var(--ink-soft);
+  }
+  .mirror .ok { color: var(--pass); }
+
+  footer {
+    border-top: 1px solid var(--rule); padding-top: 1.25rem;
+    font-size: .85rem; color: var(--ink-faint);
+    display: flex; flex-direction: column; gap: .3rem;
+  }
+  footer code { font-family: var(--mono); font-size: .95em; color: var(--ink-soft); }
+
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible, .gate:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  @media (max-width: 34rem) {
+    body { padding-top: 2.5rem; }
+    .gate { grid-template-columns: 1.6rem 1fr; gap: 0 .8rem; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">odu-core · continuous integration</div>
+    <h1>What the CI actually checks</h1>
+    <p class="standfirst">Seven gates run in order on every push. Three are ordinary software checks. Four exist because this dataset makes claims about a tradition, and those claims have to stay attached to their sources — and stay true.</p>
+    <div class="runs">
+      <span class="run"><b>✓ passed</b> <span>23s</span> <span class="id">run 30431435242</span></span>
+      <span class="run"><b>✓ passed</b> <span>34s</span> <span class="id">run 30431175830</span></span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Why two of the gates are unusual</h2>
+    <p>A normal test suite proves the code does what its author said. It cannot prove that what the author said is <em>true</em> — a dataset can be internally consistent, fully tested, and still wrong about the world.</p>
+    <p>So four gates check something tests can't: that every one of the 16 principal figures still carries a citation to a primary source, that no generated file has drifted from the data it was generated from, and that the numbers stated in the prose are still true. Those are marked below with a <strong>double stroke</strong> — the same single-and-double distinction the Odù figures themselves use.</p>
+  </section>
+
+  <section>
+    <h2>The chain</h2>
+    <p>Each gate halts the run. Nothing downstream executes once one fails, so the first red step is always the real cause rather than a symptom.</p>
+
+    <div class="chain">
+
+      <div class="gate">
+        <div class="mark"><i></i></div>
+        <h3>Build every derived artifact</h3>
+        <div class="cmd">make</div>
+        <p class="catches">Regenerates the 256-figure dataset, the knowledge base, the site, the contact sheet and the TypeScript package from source — on a clean checkout, with none of the local state a laptop accumulates.</p>
+        <p class="halt">fails → the build is not reproducible from a fresh clone</p>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="gate">
+        <div class="mark"><i></i></div>
+        <h3>Python suite</h3>
+        <div class="cmd">python -m pytest tests/ -q</div>
+        <p class="catches">190 tests. Every assertion about the 256 figures checks all 256 rather than sampling — the mapping is small enough to test exhaustively, so it is.</p>
+        <p class="halt">fails → the mapping, encoder or knowledge base is broken</p>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="gate">
+        <div class="mark"><i></i></div>
+        <h3>TypeScript suite</h3>
+        <div class="cmd">cd ts &amp;&amp; npm test</div>
+        <p class="catches">29 tests, including a parity fixture generated from the Python side. The two implementations cannot silently disagree about a name, a seniority rank or a checksum.</p>
+        <p class="halt">fails → the bindings have drifted apart</p>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="gate provenance">
+        <div class="mark"><i></i><i></i></div>
+        <h3>Verification coverage <span class="tag">provenance</span></h3>
+        <div class="cmd">odu verify</div>
+        <p class="catches">Exits non-zero unless <b>all 16 principal figures</b> are marked verified, each with a source, a date and a named checker. Currently 16 of 16, against Bascom (1969), Table 1 p. 4 and Table 3 col. B p. 48.</p>
+        <p class="halt">fails → a figure lost its citation; the foundation is unsourced</p>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="gate provenance">
+        <div class="mark"><i></i><i></i></div>
+        <h3>Content files validate <span class="tag">provenance</span></h3>
+        <div class="cmd">python scripts/ingest.py --check</div>
+        <p class="catches">Parses the corpus without writing anything. Every verse and note must name a source; text from a rights-reserved source is refused rather than stored; a figure reference that doesn't resolve fails rather than landing on the wrong Odù.</p>
+        <p class="halt">fails → unattributed or unlicensed content reached the corpus</p>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="gate provenance">
+        <div class="mark"><i></i><i></i></div>
+        <h3>Documented claims are still true <span class="tag">provenance</span></h3>
+        <div class="cmd">python scripts/check_claims.py</div>
+        <p class="catches">Compares numbers stated in the documentation against live values, and fails on phrases that were true once. Added after an audit found <b>eleven</b> stale claims — a release guide announcing the project was unpublished days after release, a roadmap counting 221 unnamed figures against the actual 202.</p>
+        <p class="halt">fails → a sentence stopped being true and nothing noticed</p>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="gate provenance">
+        <div class="mark"><i></i><i></i></div>
+        <h3>Derived artifacts are current <span class="tag">provenance</span></h3>
+        <div class="cmd">git diff --exit-code -- data/odu_256.json ts/test/fixtures/parity.json</div>
+        <p class="catches">After <b>make</b> has run, a generated file that differs from what the source produces means someone edited an artifact by hand — or committed a source change without regenerating.</p>
+        <p class="halt">fails → a derived file was hand-edited, or is stale</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>What the staleness gate protects</h2>
+    <p>Everything in the project descends from one hand-curated file. That is the point of the architecture — but it means a change at the top has to flow all the way down, and a missed dependency leaves two surfaces disagreeing while every test still passes.</p>
+
+    <div class="diagram">
+<pre class="mermaid">
+graph TD
+    A["principal_odu.json<br/><i>the verified 16</i>"] --> G["generate.py"]
+    B["compound_names.json<br/><i>attested names</i>"] --> G
+    G --> D["odu_256.json"]
+    D --> T["TypeScript package"]
+    D --> W["mnemonic demo"]
+    D --> P["parity fixture"]
+    C["kb/content/<br/><i>the corpus</i>"] --> I["ingest.py"]
+    I --> K[("odu.db")]
+    K --> S["site + contact sheet"]
+    D --> S
+</pre>
+    </div>
+
+    <p class="note"><strong>This gate has already earned its place.</strong> The Makefile once omitted <code>compound_names.json</code> as a prerequisite of <code>odu_256.json</code>. Renaming the attested figures updated the site but not the TypeScript package — the two surfaces served different names, and every test stayed green. The staleness check caught it on the first run afterwards.</p>
+  </section>
+
+  <section>
+    <h2>The same gates run before every commit</h2>
+    <p>CI is the backstop, not the first line. A local hook runs the same checks in well under a second, so a bad commit is stopped before it exists rather than reported minutes later.</p>
+    <div class="mirror">$ git commit
+  running Python tests…     <span class="ok">ok</span>
+  validating content…       <span class="ok">ok</span>
+  verification coverage…    <span class="ok">ok (16 of 16)</span>
+  running TypeScript tests… <span class="ok">ok</span></div>
+    <p class="note">Enabled once with <code>git config core.hooksPath .githooks</code>, and bypassable with <code>--no-verify</code> when you genuinely mean to.</p>
+  </section>
+
+  <footer>
+    <div>Workflow: <code>.github/workflows/ci.yml</code> — triggers on push to <code>main</code> and on pull requests.</div>
+    <div>Runners: Ubuntu, Python 3.13, Node 24 from the official builds.</div>
+    <div>Both runs above are real, from 29 July 2026, and passed on first execution after the repository was created.</div>
+    <div>Dataset archived at <a href="https://doi.org/10.5281/zenodo.21743991" rel="noopener">doi:10.5281/zenodo.21743991</a> — please cite Bascom (1969) alongside it, as this dataset is a transcription rather than a discovery.</div>
+  </footer>
+
+</div>

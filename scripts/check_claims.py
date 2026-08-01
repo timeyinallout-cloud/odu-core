@@ -101,6 +101,54 @@ SKIP = {
 }
 
 
+def check_ci_page() -> list[str]:
+    """The published CI explainer must match the workflow it describes.
+
+    It is prose about a YAML file, so it goes stale the moment a gate is added.
+    That happened once: a seventh gate landed and the page still said six. The
+    ordinary/provenance split had also been wrong since the page was written —
+    the total was checked, the breakdown never was.
+    """
+    page = ROOT / "docs" / "ci-explained.html"
+    workflow = ROOT / ".github" / "workflows" / "ci.yml"
+    if not page.exists() or not workflow.exists():
+        return []
+
+    html = page.read_text(encoding="utf-8")
+    yml = workflow.read_text(encoding="utf-8")
+
+    # Steps that are actual gates, not environment setup.
+    steps = re.findall(r"^\s+- name: (.+)$", yml, re.M)
+    gates = [s for s in steps if s.strip() != "Install"]
+
+    blocks = re.findall(r'<div class="gate( provenance)?">', html)
+    ordinary = sum(1 for b in blocks if not b)
+    provenance = sum(1 for b in blocks if b)
+
+    words = {3: "Three", 4: "Four", 5: "Five", 6: "Six", 7: "Seven", 8: "Eight"}
+    out = []
+    if len(blocks) != len(gates):
+        out.append(
+            f"docs/ci-explained.html: describes {len(blocks)} gates, the workflow "
+            f"runs {len(gates)} ({', '.join(gates)})"
+        )
+    stated = re.search(
+        r"(\w+) gates run in order.*?(\w+) are ordinary.*?(\w+) exist", html, re.S
+    )
+    if not stated:
+        out.append("docs/ci-explained.html: gate summary sentence not found")
+    else:
+        total, ordn, prov = stated.groups()
+        if (total, ordn, prov) != (words.get(len(blocks)), words.get(ordinary),
+                                   words.get(provenance)):
+            out.append(
+                f"docs/ci-explained.html: says {total}/{ordn} ordinary/{prov} "
+                f"provenance, body has {words.get(len(blocks))}/"
+                f"{words.get(ordinary)}/{words.get(provenance)}"
+            )
+    return out
+
+
 def main() -> int:
     live = live_values()
     problems: list[str] = []
@@ -133,6 +181,8 @@ def main() -> int:
         for pattern, why in FORBIDDEN:
             if re.search(pattern, text):
                 problems.append(f"{rel}: contains {pattern!r} — {why}")
+
+    problems.extend(check_ci_page())
 
     print("live values:", ", ".join(f"{k}={v}" for k, v in live.items()))
     print()
