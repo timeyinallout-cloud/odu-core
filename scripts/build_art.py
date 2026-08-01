@@ -71,10 +71,9 @@ one mark, one strike; two marks, two.</p>
 <div class="sheet" id="sheet">{cells}</div>
 
 <footer>
-  Generated from <code>data/principal_odu.json</code>, spec {spec}. All 16
-  principal figures verified against Bascom (1969), Table 1 p. 4 and Table 3
-  col. B p. 48. Audio is synthesised in the browser; nothing is loaded from
-  anywhere.
+  Generated from <code>data/principal_odu.json</code>, spec {spec}. Audio is
+  synthesised in the browser; nothing is loaded from anywhere.
+  <br><br>Verified against Bascom (1969), <i>Ifa Divination</i>, Table 1 p. 4 and Table 3 col. B p. 48. Archived at <a href="https://doi.org/10.5281/zenodo.21743991" rel="noopener">doi:10.5281/zenodo.21743991</a> — please cite Bascom alongside it, as this dataset is a transcription rather than a discovery.
 </footer>
 </main>
 <script>
