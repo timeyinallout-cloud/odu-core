@@ -11,6 +11,9 @@ python3 -m pytest tests/ -q >/dev/null 2>&1 && echo "ok" || { echo "FAILED"; pyt
 printf '  validating content…      '
 python3 scripts/ingest.py --check >/dev/null 2>&1 && echo "ok" || { echo "FAILED"; python3 scripts/ingest.py --check; exit 1; }
 
+printf '  documented claims…       '
+python3 scripts/check_claims.py >/dev/null 2>&1 && echo "ok" || { echo "STALE"; python3 scripts/check_claims.py; exit 1; }
+
 printf '  verification coverage…   '
 if PYTHONPATH=src python3 -m odu_core.cli verify >/dev/null 2>&1; then
   echo "ok (16 of 16)"

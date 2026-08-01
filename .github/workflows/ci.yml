@@ -45,6 +45,12 @@ jobs:
       - name: Content files validate
         run: python scripts/ingest.py --check
 
+      # Documentation goes stale silently. This compares numbers stated in the
+      # prose against the live values, and fails on phrases that were true once
+      # and are not now.
+      - name: Documented claims are still true
+        run: python scripts/check_claims.py
+
       # A derived file that differs from what the source generates means
       # someone edited an artifact by hand.
       - name: Derived artifacts are up to date

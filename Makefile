@@ -17,7 +17,7 @@ NAMES   := data/compound_names.json
 DERIVED := data/odu_256.json
 
 .DEFAULT_GOAL := build
-.PHONY: build test check clean site art web ts kb parity verify serve-site serve-web
+.PHONY: build test check claims clean site art web ts kb parity verify serve-site serve-web
 
 build: $(DERIVED) kb site art web ts
 
@@ -61,8 +61,13 @@ test: build
 ## Validate without writing: content files parse, and how much is verified.
 check: $(DERIVED)
 	$(PY) scripts/ingest.py --check
+	$(PY) scripts/check_claims.py
 	$(TSC) -p ts --noEmit
 	-$(PY) -c "import sys; sys.path.insert(0,'src'); from odu_core.cli import main; sys.exit(main(['verify']))"
+
+## Check that numbers stated in the documentation are still true.
+claims:
+	$(PY) scripts/check_claims.py
 
 ## Report verification coverage of the 16 principal figures.
 verify:
