@@ -40,6 +40,10 @@ site: kb
 art: site
 	$(PY) scripts/build_art.py
 
+## Build the "do these two files match?" page.
+verify-page: site
+	$(PY) scripts/build_verify.py
+
 ## Generate the self-contained mnemonic demo page.
 web: $(DERIVED)
 	$(PY) scripts/build_web.py

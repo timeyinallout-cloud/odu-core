@@ -21,7 +21,7 @@ anything encoded under the old spec silently becomes wrong.
 
 ```sh
 make clean && make          # rebuild every derived artifact from source
-make test                   # 190 Python + 29 TypeScript tests
+make test                   # 211 Python + 29 TypeScript tests
 odu verify                  # must report 16 of 16 and exit 0
 python3 scripts/ingest.py --check
 git status --short          # must be empty: no stale derived files

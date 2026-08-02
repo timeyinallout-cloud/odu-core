@@ -39,6 +39,7 @@ jobs:
         run: |
           make site
           make art
+          make verify-page
           make web
 
       # The corpus is default-deny: publication reads only the publishable_*

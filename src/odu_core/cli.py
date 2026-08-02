@@ -69,6 +69,26 @@ def cmd_random(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_fingerprint(args: argparse.Namespace) -> int:
+    from .fingerprint import digest, fingerprint
+
+    exits = 0
+    for path in args.paths:
+        try:
+            raw = digest(path, length=args.bytes)
+            figures = fingerprint(path, length=args.bytes)
+        except OSError as exc:
+            print(f"odu: {exc}", file=sys.stderr)
+            exits = 1
+            continue
+        if len(args.paths) > 1:
+            print(f"{path}:")
+        _emit(figures, args.style, args.quiet)
+        if not args.quiet:
+            print(f"sha256[:{args.bytes}]: {raw.hex()}", file=sys.stderr)
+    return exits
+
+
 def cmd_decode(args: argparse.Namespace) -> int:
     text = args.phrase if args.phrase else sys.stdin.read()
     try:
@@ -198,6 +218,27 @@ def build_parser() -> argparse.ArgumentParser:
         "verify", help="report verification coverage (exits 1 while incomplete)"
     )
     vfy.set_defaults(func=cmd_verify)
+
+    fpr = sub.add_parser(
+        "fingerprint",
+        help="a short, sayable fingerprint for a file",
+        description=(
+            "Four figures you can read down a phone to check two people hold "
+            "the same file. The last figure is a checksum, so a "
+            "mistranscription is caught. This is a truncated SHA-256 — at the "
+            "default three bytes it detects accidents, not tampering."
+        ),
+    )
+    fpr.add_argument("paths", nargs="+", metavar="FILE")
+    fpr.add_argument(
+        "--bytes", type=int, default=3,
+        help="payload bytes to keep (default 3; more is safer but unsayable)",
+    )
+    fpr.add_argument("--style", default="display",
+                     choices=["display", "slug", "numbered"])
+    fpr.add_argument("-q", "--quiet", action="store_true",
+                     help="just the phrase, no hex on stderr")
+    fpr.set_defaults(func=cmd_fingerprint)
 
     return parser
 

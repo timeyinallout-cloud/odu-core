@@ -100,7 +100,7 @@ layer is built for memory, teaching, and art.
 
 ```sh
 make          # everything, in dependency order
-make test     # Python (190) and TypeScript (29) suites
+make test     # Python (211) and TypeScript (29) suites
 make check    # validate content, type-check, report verification coverage
 make clean    # remove derived artifacts
 ```

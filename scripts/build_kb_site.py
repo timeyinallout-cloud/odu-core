@@ -257,6 +257,7 @@ def render_index(db: sqlite3.Connection | None) -> str:
   Also here:
   <a href="art.html">the 256 figures as generative art</a> &middot;
   <a href="encoder/">turn any text into Odù</a> &middot;
+  <a href="verify/">check two files match</a> &middot;
   <a href="https://github.com/timeyinallout-cloud/odu-core">the data and the code</a>
 </p>
 <input id="q" type="search" placeholder="Filter by name, slug, byte, or bit pattern…"
