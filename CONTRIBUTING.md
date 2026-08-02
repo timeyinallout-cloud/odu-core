@@ -56,7 +56,7 @@ exactly that, and it is an absolute bar. Tell us and it comes down.
 git clone https://github.com/timeyinallout-cloud/odu-core
 cd odu-core
 make                      # build every derived artifact
-make test                 # 211 Python + 29 TypeScript
+make test                 # 220 Python + 29 TypeScript
 python3 scripts/ingest.py --check
 ```
 

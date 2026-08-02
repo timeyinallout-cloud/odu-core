@@ -135,3 +135,79 @@ class TestItsLimits:
         else:
             pytest.skip("no collision inside the search budget; the bound holds")
         assert True   # found one: exactly why this is not a security control
+
+
+class TestTheCommandLineContract:
+    """`odu fingerprint` is how other programs use this.
+
+    The contract other tools depend on: exit codes mean pass/fail, --json is
+    machine-readable, and the CLI must agree with the library — a disagreement
+    would be invisible until two people compared answers from different tools.
+    """
+
+    def _run(self, *args, stdin=None):
+        import subprocess
+        root = Path(__file__).resolve().parents[1]
+        return subprocess.run(
+            [sys.executable, "-m", "odu_core.cli", "fingerprint", *args],
+            capture_output=True, text=True, cwd=root, input=stdin,
+            env={"PYTHONPATH": str(root / "src"), "PATH": "/usr/bin:/bin"},
+        )
+
+    def test_the_cli_agrees_with_the_library(self, tmp_path):
+        f = tmp_path / "clip.mp4"
+        f.write_bytes(b"a render")
+        out = self._run(str(f), "-q", "--style", "slug").stdout.strip()
+        assert out == fp.say(f, style="slug")
+
+    def test_stdin_agrees_too(self, tmp_path):
+        """Reading a pipe must not hash the data twice."""
+        r = self._run("-", "-q", "--style", "slug", stdin="hello world")
+        assert r.stdout.strip() == fp.say(b"hello world", style="slug")
+
+    def test_json_is_one_object_per_file(self, tmp_path):
+        import json as _json
+
+        a, b = tmp_path / "a", tmp_path / "b"
+        a.write_bytes(b"one"); b.write_bytes(b"two")
+        lines = self._run(str(a), str(b), "--json").stdout.strip().splitlines()
+        assert len(lines) == 2
+        for line, path in zip(lines, (a, b)):
+            d = _json.loads(line)
+            assert d["path"] == str(path)
+            assert d["sha256_prefix"] == fp.digest(path).hex()
+            assert d["slug"] == fp.say(path, style="slug")
+            assert len(d["figures"]) == 4
+
+    def test_check_exits_zero_on_a_match(self, tmp_path):
+        f = tmp_path / "x"
+        f.write_bytes(b"content")
+        assert self._run(str(f), "--check", fp.say(f, style="slug")).returncode == 0
+
+    def test_check_exits_one_on_a_mismatch(self, tmp_path):
+        """The whole point: a script can branch on this."""
+        f = tmp_path / "x"
+        f.write_bytes(b"content")
+        wrong = " ".join(["ogbe-ogbe"] * 4)
+        assert self._run(str(f), "--check", wrong).returncode == 1
+
+    def test_check_reports_both_phrases_when_they_differ(self, tmp_path):
+        f = tmp_path / "x"
+        f.write_bytes(b"content")
+        r = self._run(str(f), "--check", " ".join(["ogbe-ogbe"] * 4))
+        assert "expected" in r.stderr and "got" in r.stderr
+
+    def test_a_missing_file_exits_nonzero(self):
+        assert self._run("/nope/missing.bin").returncode != 0
+
+    def test_an_unparseable_phrase_exits_nonzero(self, tmp_path):
+        f = tmp_path / "x"
+        f.write_bytes(b"content")
+        assert self._run(str(f), "--check", "not-a-figure").returncode != 0
+
+    def test_quiet_prints_only_the_phrase(self, tmp_path):
+        f = tmp_path / "x"
+        f.write_bytes(b"content")
+        r = self._run(str(f), "-q", "--style", "slug")
+        assert len(r.stdout.strip().splitlines()) == 1
+        assert r.stderr.strip() == ""

@@ -75,6 +75,36 @@ odu table            # the 16 principal Odù
 odu spec             # the bit conventions in use
 ```
 
+### Fingerprinting a file
+
+Four figures you can read down a phone to check two people hold the same file.
+The last is a checksum, so a mistranscription is caught rather than accepted.
+
+```sh
+odu fingerprint render.mp4
+odu fingerprint *.mp4 --json          # one object per file, for other programs
+cat render.mp4 | odu fingerprint -    # reads standard input
+odu fingerprint render.mp4 --check "otura-odi ika-irete oturupon-osa ofun-ogunda"
+```
+
+`--check` exits **0** on a match and **1** on a mismatch, which is what lets a
+Makefile, a backup script or a CI job use this without importing anything:
+
+```sh
+if odu fingerprint backup.tar --check "$EXPECTED" -q; then
+  echo "backup intact"
+fi
+```
+
+There is a browser version at **[/verify/](https://timeyinallout-cloud.github.io/odu-core/verify/)** —
+drop a file on each side and compare them by eye or by ear. It hashes locally
+and uploads nothing.
+
+This is a truncated SHA-256. At the default three bytes it is 24 bits, so it
+detects **accidents** — a truncated download, a file that rotted, the wrong
+take sent — and not tampering. Anyone who wants two files to share a
+fingerprint can arrange it in seconds. For that, compare the whole digest.
+
 Slug form (`ika-odi`) is the canonical written form — ASCII, one token per
 figure. Display form keeps full orthography and needs a separator, since figure
 names are themselves two words. Both parse back.
@@ -100,7 +130,7 @@ layer is built for memory, teaching, and art.
 
 ```sh
 make          # everything, in dependency order
-make test     # Python (211) and TypeScript (29) suites
+make test     # Python (220) and TypeScript (29) suites
 make check    # validate content, type-check, report verification coverage
 make clean    # remove derived artifacts
 ```

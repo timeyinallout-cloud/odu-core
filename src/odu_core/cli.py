@@ -70,16 +70,62 @@ def cmd_random(args: argparse.Namespace) -> int:
 
 
 def cmd_fingerprint(args: argparse.Namespace) -> int:
+    """Fingerprint files, or check one against an expected phrase.
+
+    Built to be driven by other programs as much as by people. `--json` gives
+    one object per line, `-` reads stdin so it can sit in a pipe, and `--check`
+    turns the command into a test that exits 0 or 1 — which is what lets a
+    Makefile, a backup script or a CI job use this without importing anything.
+    """
+    import json as _json
+
     from .fingerprint import digest, fingerprint
+    from .mnemonic import PhraseError, format_phrase, parse_phrase, to_phrase
+
+    def _source(path: str):
+        return sys.stdin.buffer if path == "-" else path
+
+    if args.check is not None:
+        if len(args.paths) != 1:
+            raise SystemExit("odu: --check takes exactly one file")
+        try:
+            want = tuple(parse_phrase(args.check))
+        except PhraseError as exc:
+            raise SystemExit(f"odu: {exc}") from exc
+        try:
+            got = fingerprint(_source(args.paths[0]), length=args.bytes)
+        except OSError as exc:
+            raise SystemExit(f"odu: {exc}") from exc
+        ok = got == want
+        if not args.quiet:
+            print("match" if ok else "MISMATCH")
+        if not ok:
+            print(f"  expected {format_phrase(want, 'slug')}", file=sys.stderr)
+            print(f"  got      {format_phrase(got, 'slug')}", file=sys.stderr)
+        return 0 if ok else 1
 
     exits = 0
     for path in args.paths:
         try:
-            raw = digest(path, length=args.bytes)
-            figures = fingerprint(path, length=args.bytes)
+            raw = digest(_source(path), length=args.bytes)
         except OSError as exc:
             print(f"odu: {exc}", file=sys.stderr)
             exits = 1
+            continue
+        # Build the phrase from the digest we already have. Passing `raw` back
+        # into fingerprint() would hash it a second time and give a different,
+        # wrong answer — and stdin cannot be read twice anyway.
+        figures = to_phrase(raw)
+        if args.json:
+            print(_json.dumps({
+                "path": path,
+                "sha256_prefix": raw.hex(),
+                "bytes": args.bytes,
+                "slug": format_phrase(figures, "slug"),
+                "display": format_phrase(figures, "display"),
+                "figures": [f.slug for f in figures],
+                "figure_bytes": [f.byte for f in figures],
+            }, ensure_ascii=False))
             continue
         if len(args.paths) > 1:
             print(f"{path}:")
@@ -229,7 +275,8 @@ def build_parser() -> argparse.ArgumentParser:
             "default three bytes it detects accidents, not tampering."
         ),
     )
-    fpr.add_argument("paths", nargs="+", metavar="FILE")
+    fpr.add_argument("paths", nargs="+", metavar="FILE",
+                 help="files to fingerprint; - reads standard input")
     fpr.add_argument(
         "--bytes", type=int, default=3,
         help="payload bytes to keep (default 3; more is safer but unsayable)",
@@ -238,6 +285,10 @@ def build_parser() -> argparse.ArgumentParser:
                      choices=["display", "slug", "numbered"])
     fpr.add_argument("-q", "--quiet", action="store_true",
                      help="just the phrase, no hex on stderr")
+    fpr.add_argument("--json", action="store_true",
+                     help="one JSON object per file, for other programs")
+    fpr.add_argument("--check", metavar="PHRASE",
+                     help="exit 0 if the file matches PHRASE, 1 if it does not")
     fpr.set_defaults(func=cmd_fingerprint)
 
     return parser
