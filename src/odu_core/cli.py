@@ -3,8 +3,11 @@
     odu encode --text "hello"        bytes to a phrase
     odu decode "ika-ogbe iwori-ika"  a phrase back to bytes
     odu random --bytes 32            a fresh random phrase
+    odu fingerprint render.mp4       a file as four Odù you can say
     odu show 44                      one figure, drawn
     odu table                        the 16 principal Odù
+    odu spec                         the bit conventions in use
+    odu verify                       verification coverage; exits 1 if incomplete
 """
 
 from __future__ import annotations

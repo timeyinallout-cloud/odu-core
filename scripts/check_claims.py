@@ -149,6 +149,36 @@ def check_ci_page() -> list[str]:
     return out
 
 
+def check_cli_docstring() -> list[str]:
+    """The CLI's own docstring must list every command it offers.
+
+    It listed five of eight for a while — the three most recently added were
+    invisible to anyone reading the module. A help text that omits a command
+    is worse than no help text, because it reads as complete.
+    """
+    import subprocess
+
+    src = (ROOT / "src" / "odu_core" / "cli.py").read_text(encoding="utf-8")
+    documented = set(re.findall(r"^\s+odu (\w+)", src.split('"""')[1], re.M))
+
+    run = subprocess.run(
+        [sys.executable, "-m", "odu_core.cli", "--help"],
+        cwd=ROOT, capture_output=True, text=True,
+        env={"PYTHONPATH": str(ROOT / "src"), "PATH": "/usr/bin:/bin"},
+    )
+    listed = re.search(r"\{([a-z,]+)\}", run.stdout)
+    if not listed:
+        return ["cli.py: could not read the command list from --help"]
+    actual = set(listed.group(1).split(","))
+
+    out = []
+    if missing := actual - documented:
+        out.append(f"src/odu_core/cli.py: docstring omits {', '.join(sorted(missing))}")
+    if phantom := documented - actual:
+        out.append(f"src/odu_core/cli.py: docstring lists non-existent {', '.join(sorted(phantom))}")
+    return out
+
+
 def main() -> int:
     live = live_values()
     problems: list[str] = []
@@ -183,6 +213,7 @@ def main() -> int:
                 problems.append(f"{rel}: contains {pattern!r} — {why}")
 
     problems.extend(check_ci_page())
+    problems.extend(check_cli_docstring())
 
     print("live values:", ", ".join(f"{k}={v}" for k, v in live.items()))
     print()
