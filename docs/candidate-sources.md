@@ -6,7 +6,8 @@ towards a second independent attestation. **Nothing here is verified, and
 nothing here is in the KB.** A lead becomes a source only after someone reads
 the actual text and records the table and page.
 
-## 1. Olagunju et al. (2023) — strongest lead
+## 1. Olagunju et al. (2023) — CONSULTED 2026-08-14. Corroborates the order,
+##    conflicts on two figures.
 
 > Olagunju, A. S., James, A. A., Adeyefa, E. O., & Joseph, F. L. (2023).
 > *Algebraic characterization of Ifa main divination codes.*
@@ -24,28 +25,101 @@ It is also **open access**, indexed in DOAJ, in an Elsevier journal — so unlik
 Abimbola 1975 it can be read legitimately rather than through an unauthorised
 upload.
 
-**Preliminary signal, NOT verification.** A search-engine summary reported the
-order as: ogbe, oyeku, iwori, odi, irosun, iwonri, obara, okanran, ogunda, osa,
-ika, oturupon, otura, irete, ose, ofun. Compared against
-`data/principal_odu.json`, that agrees with our `southwestern-yoruba` order at
-**16 of 16 positions**, and is *not* the Ifẹ variant recorded in
-`alternativeOrders`. If the paper's own table says the same, this is genuine
-independent corroboration of the predominant ordering.
+**Read directly on 2026-08-14** — Table 1, *"Two-arm representation of the
+signature of 16 principal Odu"*, which gives hierarchy, name, méjì name and the
+four marks per figure. Confirmed **open access under a Creative Commons licence**
+on the article page.
 
-**What still has to be done by hand**, because a summary is not a citation:
+Compared against `data/principal_odu.json` on **marks**, not bit values, so the
+comparison holds regardless of either side's 0/1 mapping:
 
-1. Open the DOI and read the actual table.
-2. Record which mark is 1. Our frozen convention is **single mark = 1, double =
-   0**, top-to-bottom with the top most significant, right leg = high nibble.
-   A paper agreeing on the *order* while using the opposite bit convention
-   corroborates the seniority list only — say so precisely rather than claiming
-   the patterns are confirmed.
-3. Check whether it cites its own source for the ordering, or asserts it. A
-   paper repeating Bascom is not independent, and that distinction is the whole
-   point of looking for a second source.
-4. Note the licence (DOAJ suggests CC BY) before quoting anything.
+| | result |
+|---|---|
+| seniority ranks | **16 of 16 agree** |
+| mark patterns | **14 of 16 agree** |
+| conflicts | **Ọ̀sá and Òtúrúpọ̀n — exactly transposed** |
 
-`scripts/` has the source-entry path; do not shortcut it.
+Ours (from Bascom): Ọ̀sá `II I I I`, Òtúrúpọ̀n `II II I II`.
+Olagunju et al.: Ọ̀sá `II II I II`, Òtúrúpọ̀n `II I I I`.
+
+Every other figure matches mark for mark, and the ordering is the predominant
+`southwestern-yoruba` one, not the Ifẹ variant. So this is **genuine independent
+corroboration of the seniority ordering** — the single-source weakness on the
+ordering is now materially reduced.
+
+### The conflict is the interesting part
+
+ROADMAP and the memory of this project record an earlier claim that Ọ̀sá and
+Òtúrúpọ̀n were transposed in our data, which was investigated, found
+**untraceable**, and rightly not acted on — Bascom's Table 1 p. 4 and Table 3
+col. B p. 48 were read directly and confirm our assignment.
+
+That claim now has a traceable source. It is not a rumour and it is not an error
+in our reading; it is a **published disagreement** between:
+
+* Bascom (1969), read via controlled lending — our assignment, and
+* Olagunju et al. (2023), peer-reviewed and open access — the transposition.
+
+**Do not silently change the data.** Our figures were verified against the
+primary source we actually read, and the frozen convention means any change to a
+mark pattern changes byte values. The honest record is that two published
+sources disagree on these two figures, exactly as they disagree on seniority
+ordering across lineages.
+
+### It is independent of Bascom — checked
+
+The decisive question was whether this restates Bascom (in which case the
+conflict would just be a transcription slip) or attests independently. Its
+reference list was read in full on 2026-08-14: **15 references, and Bascom
+appears in none of them.**
+
+Its Ifá sources are the Nigerian scholarly and practitioner literature:
+
+* **Abimbola, W. (1976). *IFA: An Exposition of Ifa Literary Corpus.* Oxford
+  University Press** — the very counterweight this project has been seeking, and
+  the one Bascom cannot supply: Abimbola was a babaláwo.
+* Adegbindin, O. (2014); Ogunleye, A. R. (2011, 2019); Falokun, F. (1992);
+  Ilori, K. A. (1986); Paul-Kolade, T. (2020); Odeyemi, I. (2016).
+* **Oluwade, D. & Longe, O. (2003). On the code characteristics of the Ifa
+  divination codes.** *J. Comput. Sci. Appl.* 9(1) — the Longe work previously
+  noted as a lead with no located text.
+
+The remainder are abstract-algebra textbooks supporting the group-theoretic
+argument.
+
+**So the Ọ̀sá / Òtúrúpọ̀n conflict is a disagreement between two independent
+lineages of scholarship**, not an error in either reading:
+
+| | Ọ̀sá | Òtúrúpọ̀n |
+|---|---|---|
+| Bascom (1969), American anthropologist, southwestern Yorùbá informants | `II I I I` | `II II I II` |
+| Olagunju et al. (2023), via Abimbola (1976) and the Nigerian literature | `II II I II` | `II I I I` |
+
+This is the same *kind* of variation already recorded for seniority ordering,
+where Bascom himself found 86 lists from 61 sources. It is now attested for mark
+patterns too, on exactly two figures.
+
+### What this changes
+
+1. **The ordering weakness is materially reduced.** A source that does not cite
+   Bascom independently gives the same `southwestern-yoruba` order, 16 of 16.
+2. **A new, sharper open question replaces it**: which mark pattern belongs to
+   Ọ̀sá. Both assignments are published; ours is verified against the source we
+   read directly.
+3. **Abimbola 1976 is now the priority acquisition** — not 1975. It is cited here
+   as an Oxford University Press book, which is far more likely to be reachable
+   through a library than the CELHTO imprint. Consulting it directly would settle
+   whether the transposition originates with Abimbola or with this paper's
+   reading of him.
+
+### Still to check
+
+* Whether Olagunju et al. state a source for Table 1 specifically, or present it
+  as common knowledge drawn from the corpus above.
+* Whether the companion paper (Olagunju et al. 2018) carries the same table.
+* Their bit convention: the paper represents signatures "using indexes 0 and 1".
+  This does not affect the mark comparison, which was done on marks, but it
+  matters before citing any byte value of theirs.
 
 ## 2. Abimbola (1975) — the intended counterweight, still not legitimately reachable
 

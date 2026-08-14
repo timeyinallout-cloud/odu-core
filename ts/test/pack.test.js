@@ -3,7 +3,7 @@
 // It did not, for the first attempted publish: package.json declares
 // files: ["dist", "data"], but npm resolves that against ts/, while the data
 // lives at the repo root. The tarball shipped 9 files, none of them JSON, and
-// `import "@odu/core"` failed on first use with "could not find odu_256.json".
+// `import "odu-core"` failed on first use with "could not find odu_256.json".
 //
 // A checkout never sees this — core.ts has a ../../data fallback that resolves
 // fine locally. Only an installed copy breaks, and npm will not let a version

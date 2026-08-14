@@ -1,5 +1,5 @@
 {
-  "name": "@odu/core",
+  "name": "odu-core",
   "version": "1.0.0",
   "description": "The 256 Od\u00f9 If\u00e1 as a canonical byte mapping, with Yor\u00f9b\u00e1 orthography intact.",
   "type": "module",
@@ -33,8 +33,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/timeyinallout-cloud/odu-core"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

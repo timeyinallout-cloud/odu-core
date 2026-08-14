@@ -56,9 +56,18 @@ in the declarations, and skipping it ships types no consumer can resolve.
 
 ## Before the first publish
 
-- [ ] Decide the npm scope. `@odu/core` is currently a placeholder and may not
-      be claimable.
-- [ ] Confirm the PyPI name `odu-core` is free.
-- [ ] Add a remote and let CI run green once.
+- [x] Decide the npm name. **Unscoped `odu-core`** (2026-08-14) — the scoped
+      `@odu/core` would need an `odu` organisation created first, and the
+      unscoped name is free and matches the PyPI name. `publishConfig.access`
+      was removed with it: that field only means anything for scoped packages.
+- [x] Confirm the PyPI name `odu-core` is free. Checked 2026-08-14: 404 on
+      pypi.org, and `npm view odu-core` 404 likewise.
+- [x] Add a remote and let CI run green once. Live since 2026-08-02.
+- [x] Verify the tarball actually carries `data/`. It did not — `files: [dist,
+      data]` resolves against `ts/`, while the JSON lives at the repo root, so
+      the first tarball shipped 9 files with no JSON and failed on import. A
+      `prepack` step now stages it and `test/pack.test.js` guards it. **Always
+      install the tarball into a scratch project and import it before
+      publishing**; a checkout cannot show this class of bug.
 - [ ] Consider whether the compound-name data is complete enough to publish —
       54 of 256 traditional names are sourced; the rest remain `null`.

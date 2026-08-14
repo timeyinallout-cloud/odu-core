@@ -145,7 +145,7 @@ re-deriving the mapping. Two implementations that each compute the table can
 drift apart; one that computes and one that reads cannot.
 
 ```ts
-import { fromByte, toPhrase, formatPhrase } from "@odu/core";
+import { fromByte, toPhrase, formatPhrase } from "odu-core";
 
 fromByte(255).name;                        // 'Èjì Ogbè'
 formatPhrase(toPhrase(new TextEncoder().encode("Ifá")));
