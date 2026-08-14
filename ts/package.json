@@ -1,7 +1,7 @@
 {
   "name": "odu-core",
   "version": "1.0.0",
-  "description": "The 256 Od\u00f9 If\u00e1 as a canonical byte mapping, with Yor\u00f9b\u00e1 orthography intact.",
+  "description": "The 256 Odù Ifá as a canonical byte mapping, with Yorùbá orthography intact.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -32,6 +32,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/timeyinallout-cloud/odu-core"
+    "url": "git+https://github.com/timeyinallout-cloud/odu-core.git"
   }
 }
