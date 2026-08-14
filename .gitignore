@@ -11,3 +11,7 @@ kb/odu.db
 node_modules/
 package-lock.json
 ts/dist/
+
+# Syncthing metadata (see the Kali <-> Pop!_OS sync)
+.stfolder/
+.stignore

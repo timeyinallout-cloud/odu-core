@@ -138,11 +138,14 @@ untested against reality while changing it is still cheap.
 Plan written: `docs/content-plan.md`. Six episodes, none dependent on
 verification. The strongest is episode 3, the failed verification attempt above.
 
-### CI — ~20 minutes
+### CI — done (2026-08-02)
 
-Nothing runs `make check`. A GitHub Actions workflow running both suites plus
-`odu verify` would turn the verification gap into a visible red badge instead of
-something to remember. `odu verify` already exits non-zero while incomplete.
+`.github/workflows/ci.yml` runs on every push to
+`github.com/timeyinallout-cloud/odu-core` and has been green throughout. It
+covers everything `make check` does — both suites, `odu verify`, the ingest
+check, `check_claims.py`, and a guard that derived artifacts match their
+sources — so the verification gap is a visible red badge rather than something
+to remember.
 
 ### Phase 4 — generative art and music
 

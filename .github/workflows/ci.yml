@@ -1,7 +1,8 @@
 name: CI
 
-# Committed but dormant while the repo is local — it runs the moment there is
-# a remote. The same checks are enforced now by .githooks/pre-commit.
+# Live since 2026-08-02 on github.com/timeyinallout-cloud/odu-core, green on
+# every push. `.githooks/pre-commit` enforces the same checks locally, so a
+# failure here means the hook was bypassed rather than that the check is new.
 on:
   push:
     branches: [main, master]
