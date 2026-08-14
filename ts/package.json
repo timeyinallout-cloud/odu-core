@@ -27,7 +27,8 @@
   "scripts": {
     "build": "../node_modules/.bin/tsc && node scripts/fix-decl-extensions.mjs",
     "test": "node --test \"test/*.test.js\"",
-    "check": "../node_modules/.bin/tsc --noEmit"
+    "check": "../node_modules/.bin/tsc --noEmit",
+    "prepack": "node scripts/copy-data.mjs"
   },
   "repository": {
     "type": "git",

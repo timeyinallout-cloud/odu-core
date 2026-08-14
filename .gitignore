@@ -15,3 +15,7 @@ ts/dist/
 # Syncthing metadata (see the Kali <-> Pop!_OS sync)
 .stfolder/
 .stignore
+
+# Staged at pack time by ts/scripts/copy-data.mjs from the root data/.
+# A build artifact, not a second copy of the source of truth.
+ts/data/
