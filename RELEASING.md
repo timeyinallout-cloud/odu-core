@@ -47,12 +47,29 @@ copy reads the same bytes as a checkout.
 
 ```sh
 cd ts && npm run build && npm pack --dry-run
-npm publish                        # not run yet
+npm publish                        # PUBLISHED 2026-08-15
 ```
 
 `npm run build`, never bare `tsc` — a post-compile step fixes import extensions
 in the declarations, and skipping it ships types no consumer can resolve.
 `test/dist.test.js` fails the build if that step is missed.
+
+## PUBLISHED 2026-08-15
+
+Both registries carry 1.0.0:
+
+* https://pypi.org/project/odu-core/
+* https://www.npmjs.com/package/odu-core
+
+Verified after publication by installing each from its registry into a scratch
+project and importing it — not by trusting the upload's exit code. The npm side
+resolves byte 0 to Ọ̀yẹ̀kú Méjì and byte 255 to Èjì Ogbè, orthography intact.
+
+**npm 2FA note:** `npm publish` cannot prompt for an OTP when authenticated with
+a web-login token — it fails straight to `E403`. Passing `--otp=` works, and so
+does the browser re-auth flow npm offers on a fresh login, which is what
+succeeded. A granular token with "bypass 2FA" also works but npm is restricting
+those.
 
 ## Before the first publish
 
