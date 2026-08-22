@@ -1,3 +1,10 @@
+[project.urls]
+Homepage = "https://timeyinallout-cloud.github.io/odu-core/"
+Documentation = "https://timeyinallout-cloud.github.io/odu-core/"
+Source = "https://github.com/timeyinallout-cloud/odu-core"
+Changelog = "https://github.com/timeyinallout-cloud/odu-core/blob/main/CHANGELOG.md"
+"Dataset (Zenodo)" = "https://doi.org/10.5281/zenodo.21743991"
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
