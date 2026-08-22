@@ -33,5 +33,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/timeyinallout-cloud/odu-core.git"
+  },
+  "homepage": "https://timeyinallout-cloud.github.io/odu-core/",
+  "bugs": {
+    "url": "https://github.com/timeyinallout-cloud/odu-core/issues"
   }
 }

@@ -4,11 +4,13 @@ The 256 Odù Ifá as a canonical byte mapping, with Yorùbá orthography intact.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21743991.svg)](https://doi.org/10.5281/zenodo.21743991)
 [![PyPI](https://img.shields.io/pypi/v/odu-core.svg)](https://pypi.org/project/odu-core/)
+[![npm](https://img.shields.io/npm/v/odu-core.svg)](https://www.npmjs.com/package/odu-core)
 [![Docs](https://img.shields.io/badge/docs-github.io-blue)](https://timeyinallout-cloud.github.io/odu-core/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ```sh
-pip install odu-core
+pip install odu-core     # Python
+npm install odu-core     # TypeScript / JavaScript
 ```
 
 An Odù figure is two legs of four lines each, and every line carries either one
