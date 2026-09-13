@@ -7,6 +7,7 @@ build/
 .venv/
 web/index.html
 web/learn.html
+web/print.html
 site/
 kb/odu.db
 node_modules/

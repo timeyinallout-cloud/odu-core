@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Print a fingerprint — odu-core</title>
+<style>
+  :root {
+    --bg: #fbf9f6; --fg: #1c1a17; --dim: #6b6560; --line: #e0dad2;
+    --card: #fff; --accent: #7a4b1e; --ok: #2f6b3f; --bad: #a03028;
+    --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16140f; --fg: #ece6dd; --dim: #9a938a; --line: #2f2a23;
+      --card: #1e1b16; --accent: #d9a566; --ok: #7cc08e; --bad: #e08076;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2rem 1.25rem 4rem; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+  }
+  main { max-width: 40rem; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin: 0 0 .3rem; letter-spacing: -.01em; }
+  .sub { color: var(--dim); margin: 0 0 1.5rem; }
+  .crumb { font-size: .85rem; color: var(--dim); margin-bottom: 1.25rem; }
+  .crumb a { color: var(--accent); }
+  .warn {
+    border-left: 3px solid var(--accent); background: var(--card);
+    padding: .75rem 1rem; margin: 0 0 1.75rem; font-size: .9rem; color: var(--dim);
+  }
+  .warn strong { color: var(--fg); }
+
+  section {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.15rem 1.35rem; margin-bottom: 1.25rem;
+  }
+  h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: .09em;
+       color: var(--dim); margin: 0 0 .9rem; font-weight: 600; }
+  label { display: block; font-size: .8rem; color: var(--dim); margin: .8rem 0 .3rem; }
+  label:first-of-type { margin-top: 0; }
+  input[type=text], textarea {
+    width: 100%; background: var(--bg); color: var(--fg); font-family: var(--mono);
+    border: 1px solid var(--line); border-radius: 6px; padding: .6rem .7rem; font-size: .88rem;
+  }
+  .drop {
+    border: 1.5px dashed var(--line); border-radius: 8px; padding: 1.1rem;
+    text-align: center; font-size: .85rem; color: var(--dim); cursor: pointer;
+  }
+  .drop.over { border-color: var(--accent); color: var(--accent); }
+  .drop input { display: none; }
+  .row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-top: .9rem; }
+  button {
+    background: var(--accent); color: var(--bg); border: 0; border-radius: 6px;
+    padding: .55rem 1rem; font-size: .85rem; font-weight: 600; cursor: pointer;
+  }
+  button.ghost { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+  button:disabled { opacity: .5; cursor: default; }
+  .fmt { display: flex; gap: .4rem; }
+  .fmt button { background: transparent; color: var(--fg); border: 1px solid var(--line); font-weight: 400; }
+  .fmt button.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 600; }
+  .meta { font-size: .82rem; margin-top: .6rem; color: var(--dim); }
+  .meta.bad { color: var(--bad); }
+  .meta.ok { color: var(--ok); }
+
+  /* -- the print card itself -- */
+  .stage { display: flex; justify-content: center; padding: 1.5rem 0; overflow-x: auto; }
+  .printCard {
+    background: #fbf9f6; color: #1c1a17; border: 1px solid #e0dad2; border-radius: 4px;
+    padding: .35in .3in; box-shadow: 0 2px 12px rgba(0,0,0,.12);
+  }
+  .printCard.card { width: 6in; }
+  .printCard.plaque { width: 5in; }
+  .figRow { display: flex; gap: .18in; justify-content: center; }
+  .printCard.plaque .figRow { flex-wrap: wrap; width: 4.4in; }
+  .figCell { text-align: center; }
+  .printCard.card .figCell svg { width: 1.15in; height: 1.15in; }
+  .printCard.plaque .figCell svg { width: 2.1in; height: 2.1in; }
+  .figCell .nm { display: block; font-size: 7pt; color: #6b6560; margin-top: 2pt; font-family: ui-sans-serif, sans-serif; }
+  .caption {
+    text-align: center; margin-top: .18in; font-family: ui-monospace, monospace;
+    font-size: 7.5pt; color: #6b6560; word-break: break-word;
+  }
+  .label {
+    text-align: center; margin-top: .08in; font-family: ui-sans-serif, sans-serif;
+    font-size: 9pt; color: #1c1a17; font-weight: 600;
+  }
+
+  footer { color: var(--dim); font-size: .82rem; margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+
+  @media print {
+    body { padding: 0; background: #fff; }
+    main > *:not(#stageWrap) { display: none !important; }
+    .stage { padding: 0; }
+    .printCard { box-shadow: none; border: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="crumb"><a href="./index.html">← Odù Mnemonic</a></p>
+  <h1>Print a fingerprint</h1>
+  <p class="sub">Any file becomes four figures — the same short, spoken/readable
+    fingerprint <a href="https://github.com/timeyinallout-cloud/odu-core#fingerprinting-a-file">the CLI</a>
+    prints, laid out as something you can actually print or engrave.</p>
+
+  <div class="warn">
+    <strong>This is a keepsake, not a security check.</strong> A four-figure
+    fingerprint is 24 bits — enough to catch an accident (the wrong file, a
+    truncated copy), not enough to prove authenticity to anyone motivated to
+    fake it. Made for a memento, not a signature.
+  </div>
+
+  <section>
+    <h2>Source</h2>
+    <label for="drop">A file (hashed locally — nothing uploaded)</label>
+    <div class="drop" id="drop">Drop a file here, or click to choose one
+      <input type="file" id="fileInput">
+    </div>
+    <label for="text">…or type/paste text instead</label>
+    <textarea id="text" rows="2" placeholder="e.g. a name, a date, a message"></textarea>
+    <label for="label">Caption under the figures (optional)</label>
+    <input type="text" id="label" placeholder="e.g. a name, an anniversary, a project name" maxlength="60">
+    <div class="row">
+      <span class="fmt">
+        <button id="fmtCard" class="active">Card</button>
+        <button id="fmtPlaque">Plaque</button>
+      </span>
+      <button id="genBtn">Generate</button>
+      <button id="printBtn" class="ghost" disabled>Print…</button>
+      <button id="downloadBtn" class="ghost" disabled>Download SVG</button>
+    </div>
+    <div class="meta" id="meta"></div>
+    <div class="meta">Downloaded SVG renders correctly in a browser or
+      Inkscape. Some laser-engraving software reads the figures (real SVG
+      shapes) but not the caption text (embedded as HTML) — if a tool balks,
+      print to PDF instead and use that.</div>
+  </section>
+
+  <div class="stage" id="stageWrap" style="display:none">
+    <div class="printCard card" id="printArea">
+      <div class="figRow" id="figRow"></div>
+      <div class="label" id="labelOut" style="display:none"></div>
+      <div class="caption" id="captionOut"></div>
+    </div>
+  </div>
+
+  <footer>
+    Hashing happens in your browser (Web Crypto SHA-256) — the file never
+    leaves your machine. Figures are drawn server-side at build time from
+    the canonical data, same as everywhere else in
+    <a href="https://github.com/timeyinallout-cloud/odu-core">odu-core</a>.
+  </footer>
+</main>
+<script>
+const DATA = /*__PRINT_DATA__*/null;
+
+async function checksumByte(bytes) {
+  const digest = await crypto.subtle.digest('SHA-256', bytes);
+  return new Uint8Array(digest)[0];
+}
+
+// Matches odu_core.fingerprint.fingerprint(): truncate the real digest to
+// 3 bytes first, THEN checksum *that* truncated payload -- not the file's
+// full digest. Same algorithm, ported, not reinvented independently.
+async function fingerprintFigures(bytes) {
+  const full = new Uint8Array(await crypto.subtle.digest('SHA-256', bytes));
+  const payload = full.slice(0, 3);
+  const c = await checksumByte(payload);
+  return [...payload, c].map(b => DATA.odu[b]);
+}
+
+let format = 'card';
+document.getElementById('fmtCard').onclick = () => setFormat('card');
+document.getElementById('fmtPlaque').onclick = () => setFormat('plaque');
+function setFormat(f) {
+  format = f;
+  document.getElementById('fmtCard').classList.toggle('active', f === 'card');
+  document.getElementById('fmtPlaque').classList.toggle('active', f === 'plaque');
+  document.getElementById('printArea').className = 'printCard ' + f;
+}
+
+const drop = document.getElementById('drop');
+const fileInput = document.getElementById('fileInput');
+let droppedFile = null;
+drop.onclick = () => fileInput.click();
+fileInput.onchange = () => { droppedFile = fileInput.files[0] || null; updateDropLabel(); };
+['dragover', 'dragenter'].forEach(ev => drop.addEventListener(ev, e => {
+  e.preventDefault(); drop.classList.add('over');
+}));
+['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, () => drop.classList.remove('over')));
+drop.addEventListener('drop', e => {
+  e.preventDefault();
+  const f = e.dataTransfer.files[0];
+  if (f) { droppedFile = f; updateDropLabel(); }
+});
+function updateDropLabel() {
+  drop.firstChild.textContent = droppedFile
+    ? `${droppedFile.name} (${droppedFile.size.toLocaleString()} bytes) — click to change`
+    : 'Drop a file here, or click to choose one';
+}
+
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+async function generate() {
+  const meta = document.getElementById('meta');
+  const textVal = document.getElementById('text').value;
+  try {
+    let bytes;
+    let sourceLabel;
+    if (droppedFile) {
+      bytes = new Uint8Array(await droppedFile.arrayBuffer());
+      sourceLabel = droppedFile.name;
+    } else if (textVal.trim()) {
+      bytes = new TextEncoder().encode(textVal);
+      sourceLabel = 'typed text';
+    } else {
+      meta.className = 'meta bad';
+      meta.textContent = 'Choose a file or type some text first.';
+      return;
+    }
+
+    const figs = await fingerprintFigures(bytes);
+    const figRow = document.getElementById('figRow');
+    figRow.innerHTML = '';
+    figs.forEach(o => {
+      const cell = document.createElement('div');
+      cell.className = 'figCell';
+      cell.innerHTML = o.svg + `<span class="nm">${escapeHtml(o.name)}</span>`;
+      figRow.appendChild(cell);
+    });
+
+    const label = document.getElementById('label').value.trim();
+    const labelOut = document.getElementById('labelOut');
+    labelOut.style.display = label ? '' : 'none';
+    labelOut.textContent = label;
+
+    document.getElementById('captionOut').textContent =
+      figs.map(f => f.slug).join(' · ') + `  —  from ${sourceLabel}`;
+
+    document.getElementById('stageWrap').style.display = '';
+    document.getElementById('printBtn').disabled = false;
+    document.getElementById('downloadBtn').disabled = false;
+    meta.className = 'meta ok';
+    meta.textContent = `${figs.length} figures generated from ${bytes.length.toLocaleString()} byte(s).`;
+  } catch (e) {
+    meta.className = 'meta bad';
+    meta.textContent = e.message || String(e);
+  }
+}
+
+document.getElementById('genBtn').onclick = generate;
+document.getElementById('printBtn').onclick = () => window.print();
+document.getElementById('downloadBtn').onclick = () => {
+  const area = document.getElementById('printArea');
+  const w = area.offsetWidth, h = area.offsetHeight;
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const wrapper = document.createElementNS(svgNS, 'svg');
+  wrapper.setAttribute('xmlns', svgNS);
+  wrapper.setAttribute('width', w);
+  wrapper.setAttribute('height', h);
+  wrapper.setAttribute('viewBox', `0 0 ${w} ${h}`);
+  const fo = document.createElementNS(svgNS, 'foreignObject');
+  fo.setAttribute('width', w);
+  fo.setAttribute('height', h);
+  const clone = area.cloneNode(true);
+  clone.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
+  fo.appendChild(clone);
+  wrapper.appendChild(fo);
+  const blob = new Blob([new XMLSerializer().serializeToString(wrapper)], {type: 'image/svg+xml'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'odu-fingerprint.svg';
+  a.click();
+  URL.revokeObjectURL(url);
+};
+</script>
+</body>
+</html>

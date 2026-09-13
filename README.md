@@ -109,6 +109,11 @@ There is a browser version at **[/verify/](https://timeyinallout-cloud.github.io
 drop a file on each side and compare them by eye or by ear. It hashes locally
 and uploads nothing.
 
+`web/print.html` turns the same fingerprint into something physical: drop a
+file (or type text), and it draws the four figures as a print- or
+engraving-ready card or plaque, with an optional caption. A keepsake, not a
+signature — the "accidents, not tampering" limit above applies here too.
+
 This is a truncated SHA-256. At the default three bytes it is 24 bits, so it
 detects **accidents** — a truncated download, a file that rotted, the wrong
 take sent — and not tampering. Anyone who wants two files to share a
@@ -139,7 +144,7 @@ layer is built for memory, teaching, and art.
 
 ```sh
 make          # everything, in dependency order
-make test     # Python (226) and TypeScript (29) suites
+make test     # Python (230) and TypeScript (29) suites
 make check    # validate content, type-check, report verification coverage
 make clean    # remove derived artifacts
 ```

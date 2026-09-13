@@ -44,11 +44,13 @@ art: site
 verify-page: site
 	$(PY) scripts/build_verify.py
 
-## Generate the self-contained mnemonic demo page, plus the principal-Odù
-## flashcard quiz (scoped to the 16 verified figures only).
+## Generate the self-contained mnemonic demo page, the principal-Odù
+## flashcard quiz (scoped to the 16 verified figures only), and the
+## print/engraving fingerprint card.
 web: $(DERIVED)
 	$(PY) scripts/build_web.py
 	$(PY) scripts/build_learn.py
+	$(PY) scripts/build_print.py
 
 ## Export the parity fixture, then build and type-check the TypeScript package.
 parity: $(DERIVED)
@@ -88,7 +90,7 @@ serve-web: web
 # ts/test/fixtures/parity.json is deliberately kept: it is version-controlled,
 # and a diff to it during review is how cross-language drift becomes visible.
 clean:
-	rm -rf site/ web/index.html web/learn.html kb/odu.db ts/dist
+	rm -rf site/ web/index.html web/learn.html web/print.html kb/odu.db ts/dist
 	find . -name __pycache__ -type d -prune -exec rm -rf {} +
 	rm -rf .pytest_cache
 	@echo "removed derived artifacts — 'make' rebuilds them"
