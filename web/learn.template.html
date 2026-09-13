@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn the 16 principal Odù</title>
+<style>
+  :root {
+    --bg: #fbf9f6; --fg: #1c1a17; --dim: #6b6560; --line: #e0dad2;
+    --card: #fff; --accent: #7a4b1e; --ok: #2f6b3f; --bad: #a03028;
+    --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16140f; --fg: #ece6dd; --dim: #9a938a; --line: #2f2a23;
+      --card: #1e1b16; --accent: #d9a566; --ok: #7cc08e; --bad: #e08076;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2rem 1.25rem 4rem; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+  }
+  main { max-width: 40rem; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin: 0 0 .3rem; letter-spacing: -.01em; }
+  .sub { color: var(--dim); margin: 0 0 1.5rem; }
+  .crumb { font-size: .85rem; color: var(--dim); margin-bottom: 1.25rem; }
+  .crumb a { color: var(--accent); }
+  .warn {
+    border-left: 3px solid var(--accent); background: var(--card);
+    padding: .75rem 1rem; margin: 0 0 1.75rem; font-size: .9rem; color: var(--dim);
+  }
+  .warn strong { color: var(--fg); }
+
+  .stats { display: flex; gap: 1.5rem; margin-bottom: 1rem; font-size: .85rem; color: var(--dim); }
+  .stats b { color: var(--fg); font-family: var(--mono); }
+
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 1.75rem 1.5rem; text-align: center; margin-bottom: 1.25rem;
+  }
+  .fig {
+    font-family: var(--mono); font-size: 1.15rem; line-height: 1.5;
+    white-space: pre; display: inline-block; margin: 0 0 .5rem;
+  }
+  .figCaption { color: var(--dim); font-size: .8rem; }
+
+  .choices { display: grid; gap: .5rem; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 26rem) { .choices { grid-template-columns: 1fr; } }
+  .choice {
+    background: var(--bg); color: var(--fg); border: 1px solid var(--line);
+    border-radius: 8px; padding: .7rem .8rem; font-size: .95rem; cursor: pointer;
+    text-align: left; font-family: inherit;
+  }
+  .choice:hover { border-color: var(--accent); }
+  .choice.correct { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, var(--bg)); }
+  .choice.wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 12%, var(--bg)); }
+  .choice:disabled { cursor: default; }
+
+  .reveal {
+    margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line);
+    font-size: .85rem; color: var(--dim); text-align: left; display: none;
+  }
+  .reveal.shown { display: block; }
+  .reveal dt { color: var(--fg); font-weight: 600; margin-top: .5rem; }
+  .reveal dt:first-child { margin-top: 0; }
+  .reveal dd { margin: 0 0 .3rem; }
+
+  button.next {
+    background: var(--accent); color: var(--bg); border: 0; border-radius: 6px;
+    padding: .6rem 1.1rem; font-size: .9rem; cursor: pointer; margin-top: 1rem;
+    display: none;
+  }
+  button.next.shown { display: inline-block; }
+
+  .deck { margin-top: 2rem; }
+  h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: .09em;
+       color: var(--dim); margin: 0 0 .75rem; font-weight: 600; }
+  .deckGrid {
+    display: grid; gap: .35rem; grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  }
+  .deckItem {
+    border: 1px solid var(--line); border-radius: 6px; padding: .4rem .55rem;
+    font-size: .78rem; background: var(--card); display: flex; justify-content: space-between; gap: .4rem;
+  }
+  .deckItem .n { font-family: var(--mono); color: var(--dim); }
+  .deckItem.mastered { border-color: var(--ok); }
+  .deckItem.mastered .n { color: var(--ok); }
+
+  footer { color: var(--dim); font-size: .82rem; margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="crumb"><a href="./index.html">← Odù Mnemonic</a></p>
+  <h1>Learn the 16 principal Odù</h1>
+  <p class="sub">A figure at a time: read the marks, name the Odù. Right leg first, top line
+    most significant — the same convention the library uses everywhere.</p>
+
+  <div class="warn">
+    <strong>Scoped to what's verified.</strong> These are the 16 principal Odù, checked
+    2026-07-28 against Bascom (1969) — every bit pattern and every seniority rank confirmed,
+    no corrections needed. The other 240 figures (compound names, contracted forms) aren't
+    quizzed here on purpose: their traditional names aren't sourced yet, and this tool only
+    teaches what's been checked.
+  </div>
+
+  <div class="stats">
+    <span>Streak <b id="streak">0</b></span>
+    <span>This session <b id="sessionScore">0/0</b></span>
+    <span>Mastered <b id="masteredCount">0</b>/16</span>
+  </div>
+
+  <div class="card">
+    <pre class="fig" id="figDraw"></pre>
+    <div class="figCaption">right leg · left leg — which Odù is this?</div>
+    <div class="choices" id="choices"></div>
+    <dl class="reveal" id="reveal">
+      <dt>Full name</dt><dd id="revMeji"></dd>
+      <dt>Byte value</dt><dd id="revByte"></dd>
+      <dt>Seniority</dt><dd id="revRank"></dd>
+      <dt>Structural note</dt><dd id="revNote"></dd>
+    </dl>
+    <button class="next" id="nextBtn">Next figure →</button>
+  </div>
+
+  <div class="deck">
+    <h2>Progress</h2>
+    <div class="deckGrid" id="deckGrid"></div>
+  </div>
+
+  <footer>
+    Progress is stored only in this browser (localStorage) — nothing is sent anywhere.
+    <a href="https://github.com/timeyinallout-cloud/odu-core">odu-core</a> on GitHub.
+  </footer>
+</main>
+<script>
+const PRINCIPAL = /*__PRINCIPAL_DATA__*/null;
+
+const STORAGE_KEY = 'odu-learn-progress-v1';
+function loadProgress() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch (e) { return {}; }
+}
+function saveProgress(p) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); } catch (e) {}
+}
+let progress = loadProgress(); // { [slug]: streak }
+let streak = 0, sessionRight = 0, sessionTotal = 0;
+let current = null;
+
+function drawFigure(o) {
+  return o.marks.right.map((r, i) => {
+    const l = o.marks.left[i];
+    return (r === 'I' ? '  I' : 'I I') + '  ' + (l === 'I' ? 'I' : 'I I');
+  }).join('\n');
+}
+
+// The library's own tested invariant: consecutive seniority ranks are a
+// bitwise complement or bit-reversal of each other. Surfacing it here ties
+// the flashcard back to something structurally true, not decorative trivia.
+function structuralNote(o) {
+  const partner = PRINCIPAL.find(p => p.rank === (o.rank % 16) + 1) ||
+                  PRINCIPAL.find(p => p.rank === o.rank - 1);
+  if (!partner || partner.slug === o.slug) return 'First in seniority order.';
+  const a = o.nibble, b = partner.nibble;
+  const isComplement = (a ^ b) === 0b1111;
+  const rev = parseInt(a.toString(2).padStart(4, '0').split('').reverse().join(''), 2);
+  const isReversal = rev === b;
+  const relation = isComplement ? 'the bitwise complement of' : isReversal ? 'the bit-reversal of' : 'related to';
+  return `Its 4-bit leg is ${relation} ${partner.name}'s (rank ${partner.rank}).`;
+}
+
+function weightedPick() {
+  // Bias toward figures with a lower streak -- spaced-repetition-lite,
+  // no timers or dates, just "show me what I don't know yet" more often.
+  const weights = PRINCIPAL.map(o => 1 / (1 + (progress[o.slug] || 0)));
+  const total = weights.reduce((a, b) => a + b, 0);
+  let r = Math.random() * total;
+  for (let i = 0; i < PRINCIPAL.length; i++) {
+    r -= weights[i];
+    if (r <= 0) return PRINCIPAL[i];
+  }
+  return PRINCIPAL[PRINCIPAL.length - 1];
+}
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function renderDeck() {
+  const grid = document.getElementById('deckGrid');
+  grid.innerHTML = '';
+  let mastered = 0;
+  PRINCIPAL.forEach(o => {
+    const n = progress[o.slug] || 0;
+    if (n >= 3) mastered++;
+    const div = document.createElement('div');
+    div.className = 'deckItem' + (n >= 3 ? ' mastered' : '');
+    div.innerHTML = `<span>${o.name}</span><span class="n">${n}</span>`;
+    grid.appendChild(div);
+  });
+  document.getElementById('masteredCount').textContent = mastered;
+}
+
+function nextCard() {
+  current = weightedPick();
+  document.getElementById('figDraw').textContent = drawFigure(current);
+  document.getElementById('reveal').classList.remove('shown');
+  document.getElementById('nextBtn').classList.remove('shown');
+
+  const distractors = shuffle(PRINCIPAL.filter(o => o.slug !== current.slug)).slice(0, 3);
+  const options = shuffle([current, ...distractors]);
+
+  const choicesEl = document.getElementById('choices');
+  choicesEl.innerHTML = '';
+  options.forEach(o => {
+    const btn = document.createElement('button');
+    btn.className = 'choice';
+    btn.textContent = o.name;
+    btn.onclick = () => answer(o, btn, choicesEl);
+    choicesEl.appendChild(btn);
+  });
+}
+
+function answer(chosen, btn, choicesEl) {
+  const correct = chosen.slug === current.slug;
+  [...choicesEl.children].forEach(b => {
+    b.disabled = true;
+    if (b.textContent === current.name) b.classList.add('correct');
+  });
+  if (!correct) btn.classList.add('wrong');
+
+  sessionTotal++;
+  streak = correct ? streak + 1 : 0;
+  progress[current.slug] = Math.max(0, (progress[current.slug] || 0) + (correct ? 1 : -1));
+  if (correct) sessionRight++;
+  saveProgress(progress);
+
+  document.getElementById('streak').textContent = streak;
+  document.getElementById('sessionScore').textContent = `${sessionRight}/${sessionTotal}`;
+  document.getElementById('revMeji').textContent = current.mejiName;
+  document.getElementById('revByte').textContent =
+    `${current.byte} (0x${current.byte.toString(16).padStart(2, '0').toUpperCase()}, ${current.bits})`;
+  document.getElementById('revRank').textContent =
+    `${current.rank} of 16 — southwestern Yorùbá order (Bascom's predominant order; see the library's docs for the 21 other recorded rankings)`;
+  document.getElementById('revNote').textContent = structuralNote(current);
+  document.getElementById('reveal').classList.add('shown');
+  document.getElementById('nextBtn').classList.add('shown');
+  renderDeck();
+}
+
+document.getElementById('nextBtn').onclick = nextCard;
+renderDeck();
+nextCard();
+</script>
+</body>
+</html>

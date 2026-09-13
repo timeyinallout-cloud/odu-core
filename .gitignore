@@ -6,6 +6,7 @@ build/
 *.egg-info/
 .venv/
 web/index.html
+web/learn.html
 site/
 kb/odu.db
 node_modules/
